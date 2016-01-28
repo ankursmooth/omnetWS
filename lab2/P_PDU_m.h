@@ -25,7 +25,8 @@
  * {
  *     int ID;
  *     string type;
- * 
+ *     int sourceAdd;
+ *     int destiAdd;
  * }
  * </pre>
  */
@@ -34,6 +35,8 @@ class P_PDU : public ::cPacket
   protected:
     int ID_var;
     opp_string type_var;
+    int sourceAdd_var;
+    int destiAdd_var;
 
   private:
     void copy(const P_PDU& other);
@@ -56,6 +59,10 @@ class P_PDU : public ::cPacket
     virtual void setID(int ID);
     virtual const char * getType() const;
     virtual void setType(const char * type);
+    virtual int getSourceAdd() const;
+    virtual void setSourceAdd(int sourceAdd);
+    virtual int getDestiAdd() const;
+    virtual void setDestiAdd(int destiAdd);
 };
 
 inline void doPacking(cCommBuffer *b, P_PDU& obj) {obj.parsimPack(b);}

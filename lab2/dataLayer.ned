@@ -20,7 +20,9 @@ package lab2;
 //
 simple DataLayer
 {
-    gates:
+  parameters:
+        int nodeId;
+  gates:
         input fromApp;
         output toApp;
         input fromPhysical;

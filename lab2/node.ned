@@ -23,9 +23,9 @@ module Node
         input in;
         output out;
     submodules:
-        aLayer : ApplicationLayer;
-        dLayer : DataLayer;
-        phLayer : PLayer;
+        aLayer : ApplicationLayer{nodeId=nodeID;}
+        dLayer : DataLayer{nodeId=nodeID;}
+        phLayer : PLayer{nodeId=nodeID;}
     
     connections :
         aLayer.out --> dLayer.fromApp;

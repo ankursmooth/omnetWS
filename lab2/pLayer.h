@@ -25,6 +25,7 @@
 class PLayer : public cSimpleModule
 {
   protected:
+    cGate * toNode, *fromNode , * toDL, * fromDL;
     virtual void initialize();
     virtual void handleMessage(cMessage *msg);
 };

@@ -19,5 +19,6 @@
 packet P_PDU {
     int ID;
     string type;
-    
+    int sourceAdd;
+    int destiAdd;
 }

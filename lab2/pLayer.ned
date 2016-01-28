@@ -20,6 +20,8 @@ package lab2;
 //
 simple PLayer
 {
+    parameters:
+        int nodeId;
     gates:
         input fromDL;
         output toDL;

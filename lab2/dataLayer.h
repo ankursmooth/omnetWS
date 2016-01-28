@@ -24,6 +24,9 @@
 class DataLayer : public cSimpleModule
 {
   protected:
+    int id;
+    cGate * fromApp, *toApp, * toPhysical, *fromPhysical;
+
     virtual void initialize();
     virtual void handleMessage(cMessage *msg);
 };

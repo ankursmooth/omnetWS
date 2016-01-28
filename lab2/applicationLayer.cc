@@ -29,11 +29,12 @@ void ApplicationLayer::initialize()
         char msgname[20];
         sprintf(msgname, "msg-%d", ++seq);
         A_PDU *msg = new A_PDU(msgname);
-        msg->setId(seq-1);
+        msg->setID(seq-1);
         msg->setType("Data");
         msg->setSourceAdd(1);
         msg->setDestiAdd(2);
-        scheduleAt(0,msg);
+        cMessage *msg2 = check_and_cast<cMessage*>(msg);
+        scheduleAt(0,msg2);
     }
 
 
@@ -46,7 +47,7 @@ void ApplicationLayer::handleMessage(cMessage *msg)
     if(pkt->getSourceAdd()== id){
 
         send(msg,out);
-        sentCount++;
+
 
     }
     else if(sentCount>9){
@@ -60,12 +61,13 @@ void ApplicationLayer::handleMessage(cMessage *msg)
             sprintf(msgname, "msg-%d", ++seq);
             delete pkt;
             A_PDU *pkt = new A_PDU(msgname);
-            pkt->setId(seq-1);
+            pkt->setID(seq-1);
             pkt->setType("Ack");
             pkt->setSourceAdd(2);
-            pkt->setDestinationAdd(1);
-            cMessage *msg = check_and_cast<cMessage*>(pkt);
-            send(msg,out);
+            pkt->setDestiAdd(1);
+            //cMessage *msg = check_and_cast<cMessage*>(pkt);
+            //send(msg,out);
+            send(pkt,out);
 
         }
         else{
@@ -73,13 +75,14 @@ void ApplicationLayer::handleMessage(cMessage *msg)
             sprintf(msgname, "msg-%d", ++seq);
             delete pkt;
             A_PDU *pkt = new A_PDU(msgname);
-            pkt->setId(seq-1);
+            pkt->setID(seq-1);
             pkt->setType("Data");
             pkt->setSourceAdd(1);
-            pkt->setDestinationAdd(2);
-            cMessage *msg = check_and_cast<cMessage*>(pkt);
-            send(msg,out);
-            sentCount++;
+            pkt->setDestiAdd(2);
+            //cMessage *msg = check_and_cast<cMessage*>(pkt);
+            //send(msg,out);
+            send(pkt,out);
+
         }
     }
 

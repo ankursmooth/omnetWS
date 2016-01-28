@@ -59,6 +59,8 @@ P_PDU::P_PDU(const char *name, int kind) : ::cPacket(name,kind)
 {
     this->ID_var = 0;
     this->type_var = 0;
+    this->sourceAdd_var = 0;
+    this->destiAdd_var = 0;
 }
 
 P_PDU::P_PDU(const P_PDU& other) : ::cPacket(other)
@@ -82,6 +84,8 @@ void P_PDU::copy(const P_PDU& other)
 {
     this->ID_var = other.ID_var;
     this->type_var = other.type_var;
+    this->sourceAdd_var = other.sourceAdd_var;
+    this->destiAdd_var = other.destiAdd_var;
 }
 
 void P_PDU::parsimPack(cCommBuffer *b)
@@ -89,6 +93,8 @@ void P_PDU::parsimPack(cCommBuffer *b)
     ::cPacket::parsimPack(b);
     doPacking(b,this->ID_var);
     doPacking(b,this->type_var);
+    doPacking(b,this->sourceAdd_var);
+    doPacking(b,this->destiAdd_var);
 }
 
 void P_PDU::parsimUnpack(cCommBuffer *b)
@@ -96,6 +102,8 @@ void P_PDU::parsimUnpack(cCommBuffer *b)
     ::cPacket::parsimUnpack(b);
     doUnpacking(b,this->ID_var);
     doUnpacking(b,this->type_var);
+    doUnpacking(b,this->sourceAdd_var);
+    doUnpacking(b,this->destiAdd_var);
 }
 
 int P_PDU::getID() const
@@ -116,6 +124,26 @@ const char * P_PDU::getType() const
 void P_PDU::setType(const char * type)
 {
     this->type_var = type;
+}
+
+int P_PDU::getSourceAdd() const
+{
+    return sourceAdd_var;
+}
+
+void P_PDU::setSourceAdd(int sourceAdd)
+{
+    this->sourceAdd_var = sourceAdd;
+}
+
+int P_PDU::getDestiAdd() const
+{
+    return destiAdd_var;
+}
+
+void P_PDU::setDestiAdd(int destiAdd)
+{
+    this->destiAdd_var = destiAdd;
 }
 
 class P_PDUDescriptor : public cClassDescriptor
@@ -165,7 +193,7 @@ const char *P_PDUDescriptor::getProperty(const char *propertyname) const
 int P_PDUDescriptor::getFieldCount(void *object) const
 {
     cClassDescriptor *basedesc = getBaseClassDescriptor();
-    return basedesc ? 2+basedesc->getFieldCount(object) : 2;
+    return basedesc ? 4+basedesc->getFieldCount(object) : 4;
 }
 
 unsigned int P_PDUDescriptor::getFieldTypeFlags(void *object, int field) const
@@ -179,8 +207,10 @@ unsigned int P_PDUDescriptor::getFieldTypeFlags(void *object, int field) const
     static unsigned int fieldTypeFlags[] = {
         FD_ISEDITABLE,
         FD_ISEDITABLE,
+        FD_ISEDITABLE,
+        FD_ISEDITABLE,
     };
-    return (field>=0 && field<2) ? fieldTypeFlags[field] : 0;
+    return (field>=0 && field<4) ? fieldTypeFlags[field] : 0;
 }
 
 const char *P_PDUDescriptor::getFieldName(void *object, int field) const
@@ -194,8 +224,10 @@ const char *P_PDUDescriptor::getFieldName(void *object, int field) const
     static const char *fieldNames[] = {
         "ID",
         "type",
+        "sourceAdd",
+        "destiAdd",
     };
-    return (field>=0 && field<2) ? fieldNames[field] : NULL;
+    return (field>=0 && field<4) ? fieldNames[field] : NULL;
 }
 
 int P_PDUDescriptor::findField(void *object, const char *fieldName) const
@@ -204,6 +236,8 @@ int P_PDUDescriptor::findField(void *object, const char *fieldName) const
     int base = basedesc ? basedesc->getFieldCount(object) : 0;
     if (fieldName[0]=='I' && strcmp(fieldName, "ID")==0) return base+0;
     if (fieldName[0]=='t' && strcmp(fieldName, "type")==0) return base+1;
+    if (fieldName[0]=='s' && strcmp(fieldName, "sourceAdd")==0) return base+2;
+    if (fieldName[0]=='d' && strcmp(fieldName, "destiAdd")==0) return base+3;
     return basedesc ? basedesc->findField(object, fieldName) : -1;
 }
 
@@ -218,8 +252,10 @@ const char *P_PDUDescriptor::getFieldTypeString(void *object, int field) const
     static const char *fieldTypeStrings[] = {
         "int",
         "string",
+        "int",
+        "int",
     };
-    return (field>=0 && field<2) ? fieldTypeStrings[field] : NULL;
+    return (field>=0 && field<4) ? fieldTypeStrings[field] : NULL;
 }
 
 const char *P_PDUDescriptor::getFieldProperty(void *object, int field, const char *propertyname) const
@@ -261,6 +297,8 @@ std::string P_PDUDescriptor::getFieldAsString(void *object, int field, int i) co
     switch (field) {
         case 0: return long2string(pp->getID());
         case 1: return oppstring2string(pp->getType());
+        case 2: return long2string(pp->getSourceAdd());
+        case 3: return long2string(pp->getDestiAdd());
         default: return "";
     }
 }
@@ -277,6 +315,8 @@ bool P_PDUDescriptor::setFieldAsString(void *object, int field, int i, const cha
     switch (field) {
         case 0: pp->setID(string2long(value)); return true;
         case 1: pp->setType((value)); return true;
+        case 2: pp->setSourceAdd(string2long(value)); return true;
+        case 3: pp->setDestiAdd(string2long(value)); return true;
         default: return false;
     }
 }

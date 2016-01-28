@@ -136,5 +136,6 @@ $O/dataLayer.o: dataLayer.cc \
 	DL_PDU_m.h \
 	dataLayer.h
 $O/pLayer.o: pLayer.cc \
+	P_PDU_m.h \
 	pLayer.h
 
