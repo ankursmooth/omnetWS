@@ -14,6 +14,7 @@
 // 
 
 #include "applicationLayer.h"
+#include "DL_PDU_m.h"
 
 Define_Module(ApplicationLayer);
 
@@ -33,8 +34,8 @@ void ApplicationLayer::initialize()
         msg->setType("Data");
         msg->setSourceAdd(1);
         msg->setDestiAdd(2);
-        cMessage *msg2 = check_and_cast<cMessage*>(msg);
-        scheduleAt(0,msg2);
+        //cMessage *msg2 = check_and_cast<cMessage*>(msg);
+        scheduleAt(0,msg);
     }
 
 
@@ -43,19 +44,20 @@ void ApplicationLayer::initialize()
 void ApplicationLayer::handleMessage(cMessage *msg)
 {
     // TODO - Generated method body
-    A_PDU *pkt = check_and_cast<A_PDU *>(msg);
-    if(pkt->getSourceAdd()== id){
 
+    if(msg->isSelfMessage()){
         send(msg,out);
-
+        sentCount++;
 
     }
     else if(sentCount>9){
         delete msg;
     }
     else {
+        DL_PDU *dpkt = check_and_cast<DL_PDU *>(msg);
 
-
+        A_PDU *pkt = new A_PDU();
+        pkt = check_and_cast<A_PDU *>(dpkt->decapsulate());
         if(strcmp(pkt->getType(),"Data")==0){
             char msgname[20];
             sprintf(msgname, "msg-%d", ++seq);
@@ -82,6 +84,7 @@ void ApplicationLayer::handleMessage(cMessage *msg)
             //cMessage *msg = check_and_cast<cMessage*>(pkt);
             //send(msg,out);
             send(pkt,out);
+            sentCount++;
 
         }
     }

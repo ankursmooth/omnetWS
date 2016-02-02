@@ -131,11 +131,15 @@ $O/P_PDU_m.o: P_PDU_m.cc \
 	P_PDU_m.h
 $O/applicationLayer.o: applicationLayer.cc \
 	A_PDU_m.h \
+	DL_PDU_m.h \
 	applicationLayer.h
 $O/dataLayer.o: dataLayer.cc \
+	A_PDU_m.h \
 	DL_PDU_m.h \
+	P_PDU_m.h \
 	dataLayer.h
 $O/pLayer.o: pLayer.cc \
+	DL_PDU_m.h \
 	P_PDU_m.h \
 	pLayer.h
 

@@ -14,6 +14,8 @@
 // 
 
 #include "dataLayer.h"
+#include "P_PDU_m.h"
+#include "A_PDU_m.h"
 
 Define_Module(DataLayer);
 
@@ -33,44 +35,32 @@ void DataLayer::initialize()
 void DataLayer::handleMessage(cMessage *msg)
 {
     // TODO - Generated method body
-    if(msg->getArrivalGate()==fromApp)
-        A_PDU *pkt = check_and_cast<A_PDU *>(msg);
-    else if(msg->getArrivalGate()==fromPhysical)
-        P_PDU *pkt = check_and_cast<P_PDU *>(msg);
-    else
-        DL_PDU *pkt = check_and_cast<DL_PDU *>(msg);
-    if(pkt->getSourceAdd()== id){
 
-        send(msg,toPhysical);
+    if(msg->getArrivalGate()==fromApp){
+
+        A_PDU *apkt = check_and_cast<A_PDU *>(msg);
+        int seq= apkt->getID();
+
+        char msgname[20];
+        sprintf(msgname, "msg-%d", (seq)%2);
+
+        DL_PDU *pkt = new DL_PDU(msgname);
+        pkt->setID((seq)%2);
+        pkt->setType(apkt->getType());
+        pkt->setSourceAdd(apkt->getSourceAdd());
+        pkt->setDestiAdd(apkt->getDestiAdd());
+        pkt->encapsulate(apkt);
+        //cMessage *msg = check_and_cast<cMessage*>(pkt);
+        send(pkt,toPhysical);
+
+
     }
-    else {
+    else if(msg->getArrivalGate()==fromPhysical){
 
-        int seq= pkt->getID();
-        if(strcmp(pkt->getType(),"Data")==0){
-            char msgname[20];
-            sprintf(msgname, "msg-%d", (++seq)%2);
-            delete pkt;
-            DL_PDU *pkt = new DL_PDU(msgname);
-            pkt->setID((seq-1)%2);
-            pkt->setType("Ack");
-            pkt->setSourceAdd(2);
-            pkt->setDestiAdd(1);
-            cMessage *msg = check_and_cast<cMessage*>(pkt);
-            send(msg,toApp);
-
-        }
-        else{
-            char msgname[20];
-            sprintf(msgname, "msg-%d", (++seq)%2);
-            delete pkt;
-            DL_PDU *pkt = new DL_PDU(msgname);
-            pkt->setID((seq-1)%2);
-            pkt->setType("Data");
-            pkt->setSourceAdd(1);
-            pkt->setDestiAdd(2);
-            cMessage *msg = check_and_cast<cMessage*>(pkt);
-            send(msg,toPhysical);
-
-        }
+            P_PDU *dpkt = check_and_cast<P_PDU *>(msg);
+            DL_PDU *pkt = new DL_PDU();
+            pkt=check_and_cast<DL_PDU *>(dpkt->decapsulate());
+            send(pkt,toApp);
     }
+
 }

@@ -14,7 +14,7 @@
 // 
 
 #include "pLayer.h"
-
+#include "DL_PDU_m.h"
 Define_Module(PLayer);
 
 void PLayer::initialize()
@@ -31,42 +31,28 @@ void PLayer::initialize()
 void PLayer::handleMessage(cMessage *msg)
 {
     // TODO - Generated method body
-    P_PDU *pkt = check_and_cast<P_PDU *>(msg);
-        if(msg->isSelfMessage()){
 
-            send(msg,toNode);
+    if(msg->getArrivalGate()==fromDL){
+
+           DL_PDU *dpkt = check_and_cast<DL_PDU *>(msg);
+           int seq= dpkt->getID();
+           char msgname[20];
+           sprintf(msgname, "msg-%d", (seq)%2);
+
+           P_PDU *pkt = new P_PDU(msgname);
+           pkt->setID((seq)%2);
+           pkt->setType(dpkt->getType());
+           pkt->setSourceAdd(dpkt->getSourceAdd());
+           pkt->setDestiAdd(dpkt->getDestiAdd());
+           pkt->encapsulate(dpkt);
+           //cMessage *msg = check_and_cast<cMessage*>(pkt);
+           send(pkt,toNode);
 
 
-        }
-        else {
+       }
+       else if(msg->getArrivalGate()==fromNode){
 
-            int seq= pkt->getID();
-            if(strcmp(pkt->getType(),"Data")==0){
-                char msgname[20];
 
-                sprintf(msgname, "msg-%d", (++seq)%2);
-                delete pkt;
-                P_PDU *pkt = new P_PDU(msgname);
-                pkt->setID((seq-1)%2);
-                pkt->setType("Ack");
-                pkt->setSourceAdd(2);
-                pkt->setDestiAdd(1);
-                cMessage *msg = check_and_cast<cMessage*>(pkt);
-                send(msg,toDL);
-
-            }
-            else{
-                char msgname[20];
-                sprintf(msgname, "msg-%d", (++seq)%2);
-                delete pkt;
-                P_PDU *pkt = new P_PDU(msgname);
-                pkt->setID((seq-1)%2);
-                pkt->setType("Data");
-                pkt->setSourceAdd(1);
-                pkt->setDestiAdd(2);
-                cMessage *msg = check_and_cast<cMessage*>(pkt);
-                send(msg,toNode);
-
-            }
-        }
+               send(msg,toDL);
+       }
 }
