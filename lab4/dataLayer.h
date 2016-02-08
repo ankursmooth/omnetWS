@@ -29,6 +29,8 @@ private:
    cMessage *message;
    cMessage *event; // pointer to the event object which we'll use for timing
    cMessage *messageWaitcopy;
+   int numSent;
+   int numReceived;
   protected:
    char msgname[20];
     int id;

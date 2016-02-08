@@ -32,6 +32,10 @@ void ApplicationLayer::initialize()
     // TODO - Generated method body
     id=par("nodeId");
     seq=0;
+    numSent = 0;
+    numReceived = 0;
+    WATCH(numSent);
+    WATCH(numReceived);
 //    timeout = 5.0;
 //    timeoutEvent = new cMessage("timeoutEvent");
     in=gate("in");
@@ -58,8 +62,10 @@ void ApplicationLayer::handleMessage(cMessage *msg)
     // TODO - Generated method body
 
     if(msg->isSelfMessage()){
+        msg->setTimestamp();
         send(msg,out);
 
+        numSent++;
 
     }
     else if(sentCount<2){
@@ -67,9 +73,9 @@ void ApplicationLayer::handleMessage(cMessage *msg)
     }
     else {
         DL_PDU *dpkt = check_and_cast<DL_PDU *>(msg);
+        numReceived++;
 
-        A_PDU *pkt = new A_PDU();
-        pkt = check_and_cast<A_PDU *>(dpkt->decapsulate());
+        A_PDU *pkt = check_and_cast<A_PDU *>(dpkt->decapsulate());
         if(strcmp(pkt->getType(),"Data")==0){
             char msgname[20];
             int x=pkt->getID();
@@ -82,6 +88,8 @@ void ApplicationLayer::handleMessage(cMessage *msg)
             pkt->setDestiAdd(1);
             //cMessage *msg = check_and_cast<cMessage*>(pkt);
             //send(msg,out);
+            numSent++;
+            EV<< "sending ack from app layer\n";
             send(pkt,out);
 
         }
@@ -97,6 +105,8 @@ void ApplicationLayer::handleMessage(cMessage *msg)
             pkt->setDestiAdd(2);
             //cMessage *msg = check_and_cast<cMessage*>(pkt);
             //send(msg,out);
+            numSent++;
+            EV<< "sending data from app layer\n";
             send(pkt,out);
 
 

@@ -13,38 +13,24 @@
 // along with this program.  If not, see http://www.gnu.org/licenses/.
 // 
 
-#ifndef __LAB3_DATALAYER_H_
-#define __LAB3_DATALAYER_H_
+package lab4;
 
-#include <omnetpp.h>
-#include "DL_PDU_m.h"
-/**
- * TODO - Generated class
- */
-class DataLayer : public cSimpleModule
+module Hub
 {
-private:
-   simtime_t timeout;  // timeout
-   cMessage *timeoutEvent;
-   cMessage *message;
-   cMessage *event; // pointer to the event object which we'll use for timing
-   cMessage *messageWaitcopy;
-  protected:
-   char msgname[20];
-    int id;
-    cGate * fromApp, *toApp, * toPhysical, *fromPhysical;
-
-    virtual void initialize();
-    virtual void handleMessage(cMessage *msg);
-  public:
-    DataLayer()
-    {
-        timeoutEvent = NULL;
-    }
-
-    virtual ~DataLayer();
-
-
-};
-
-#endif
+ 	gates:
+ 	    input in1;
+ 	    input in2;
+ 	    output out1;
+ 	    output out2;
+    submodules:
+        phLayer1 : PLayer{nodeId=1;}
+        phLayer2 : PLayer{nodeId=2;}
+    connections :
+        phLayer1.toDL --> out1;
+        phLayer1.fromDL <-- in1;
+        phLayer1.toNode --> phLayer2.fromNode;
+        phLayer1.fromNode <-- phLayer2.toNode;
+        phLayer2.toDL --> out2;
+        phLayer2.fromDL <-- in2;
+        
+}

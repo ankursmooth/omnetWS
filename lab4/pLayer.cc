@@ -21,7 +21,10 @@ void PLayer::initialize()
 {
     // TODO - Generated method body
 
-
+    numSent = 0;
+    numReceived = 0;
+    WATCH(numSent);
+    WATCH(numReceived);
     toNode=gate("toNode");
     fromNode=gate("fromNode");
     toDL=gate("toDL");
@@ -46,9 +49,12 @@ void PLayer::handleMessage(cMessage *msg)
 //           pkt->setDestiAdd(dpkt->getDestiAdd());
 //           pkt->encapsulate(dpkt);
            //cMessage *msg = check_and_cast<cMessage*>(pkt);
+
        DL_PDU *dpkt = dynamic_cast<DL_PDU *> (msg);
         if(dpkt){
-            P_PDU *pkt = new P_PDU("p pdu");
+            numSent++;
+            sprintf(msgname, "p pdu of dpdu-%d, typ %c", (dpkt->getID()),dpkt->getType()[0]);
+            P_PDU *pkt = new P_PDU(msgname);
             pkt->setID((dpkt->getID()));
             pkt->setType(dpkt->getType());
             pkt->encapsulate(dpkt);
@@ -62,7 +68,7 @@ void PLayer::handleMessage(cMessage *msg)
        }
        else if(msg->getArrivalGate()==fromNode){
 
-
+               numReceived++;
                send(msg,toDL);
        }
 }

@@ -13,38 +13,35 @@
 // along with this program.  If not, see http://www.gnu.org/licenses/.
 // 
 
-#ifndef __LAB3_DATALAYER_H_
-#define __LAB3_DATALAYER_H_
+#ifndef __LAB3_APPLICATIONLAYER_H_
+#define __LAB3_APPLICATIONLAYER_H_
 
 #include <omnetpp.h>
-#include "DL_PDU_m.h"
+#include "A_PDU_m.h"
+
 /**
  * TODO - Generated class
  */
-class DataLayer : public cSimpleModule
+class ApplicationLayer : public cSimpleModule
 {
-private:
-   simtime_t timeout;  // timeout
-   cMessage *timeoutEvent;
-   cMessage *message;
-   cMessage *event; // pointer to the event object which we'll use for timing
-   cMessage *messageWaitcopy;
+  private :
+//    simtime_t timeout;  // timeout
+//    cMessage *timeoutEvent;
+//    cMessage *message;
+    int numSent;
+    int numReceived;
+    int seq;
   protected:
-   char msgname[20];
     int id;
-    cGate * fromApp, *toApp, * toPhysical, *fromPhysical;
-
+    cGate * in;
+    cGate * out;
+    int sentCount;
     virtual void initialize();
     virtual void handleMessage(cMessage *msg);
-  public:
-    DataLayer()
-    {
-        timeoutEvent = NULL;
-    }
 
-    virtual ~DataLayer();
-
-
+//  public:
+//      ApplicationLayer();
+//      virtual ~ApplicationLayer();
 };
 
 #endif

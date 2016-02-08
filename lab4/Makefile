@@ -1,12 +1,12 @@
 #
-# OMNeT++/OMNEST Makefile for lab3
+# OMNeT++/OMNEST Makefile for lab4
 #
 # This file was generated with the command:
 #  opp_makemake -f --deep -O out
 #
 
 # Name of target to be created (-o option)
-TARGET = lab3$(EXE_SUFFIX)
+TARGET = lab4$(EXE_SUFFIX)
 
 # User interface (uncomment one) (-u option)
 USERIF_LIBS = $(ALL_ENV_LIBS) # that is, $(TKENV_LIBS) $(CMDENV_LIBS)
@@ -29,8 +29,8 @@ O = $(PROJECT_OUTPUT_DIR)/$(CONFIGNAME)/$(PROJECTRELATIVE_PATH)
 
 # Object files for local .cc and .msg files
 OBJS = \
-    $O/applicationLayer.o \
     $O/pLayer.o \
+    $O/applicationLayer.o \
     $O/dataLayer.o \
     $O/P_PDU_m.o \
     $O/A_PDU_m.o \
@@ -112,7 +112,7 @@ msgheaders: $(MSGFILES:.msg=_m.h)
 clean:
 	$(qecho) Cleaning...
 	$(Q)-rm -rf $O
-	$(Q)-rm -f lab3 lab3.exe liblab3.so liblab3.a liblab3.dll liblab3.dylib
+	$(Q)-rm -f lab4 lab4.exe liblab4.so liblab4.a liblab4.dll liblab4.dylib
 	$(Q)-rm -f ./*_m.cc ./*_m.h
 	$(Q)-rm -f results/*_m.cc results/*_m.h
 

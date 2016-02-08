@@ -34,6 +34,10 @@ DataLayer::~DataLayer(){
 void DataLayer::initialize()
 {
     // TODO - Generated method body
+        numSent = 0;
+        numReceived = 0;
+        WATCH(numSent);
+        WATCH(numReceived);
         id=par("nodeId");
         timeout = 5.0;
 
@@ -62,7 +66,7 @@ void DataLayer::handleMessage(cMessage *msg)
                    return;
                }
             }
-            EV << "here...\n";
+
             if(msg->getArrivalGate()==fromApp){
                 messageWaitcopy=msg;
                 if( uniform(0,1)<0.3){
@@ -138,18 +142,20 @@ void DataLayer::handleMessage(cMessage *msg)
        scheduleAt(simTime()+timeout, timeoutEvent);
 
        cancelEvent(event);
+       numSent++;
         send(dpkt,toPhysical);
 
 
     }
     else if(msg->getArrivalGate()==fromPhysical){
+        P_PDU *ppkt = check_and_cast<P_PDU *>(msg);
+           DL_PDU *pkt =check_and_cast<DL_PDU *>(ppkt->decapsulate());
 
-            P_PDU *ppkt = check_and_cast<P_PDU *>(msg);
-            DL_PDU *pkt = new DL_PDU();
-            pkt=check_and_cast<DL_PDU *>(ppkt->decapsulate());
+
             cancelEvent(event);
+            numReceived++;
             if(strcmp(pkt->getType(),"Ack")==0){
-                EV << "Timer cancelled.\n";
+                EV << "Timer cancelled. receied ack from data layer\n";
                 cancelEvent(timeoutEvent);
 
 
@@ -161,10 +167,12 @@ void DataLayer::handleMessage(cMessage *msg)
                 dpkt->setType("Ack");
                 dpkt->setSourceAdd(pkt->getDestiAdd());
                 dpkt->setDestiAdd(pkt->getSourceAdd());
+                numSent++;
+                EV<< "sending ack to data layer and forwarding packet to application\n";
                 send(dpkt,toPhysical);
                 send(pkt,toApp);
             }
-            delete ppkt;
+            //delete ppkt;
 
 
     }

@@ -13,8 +13,8 @@
 // along with this program.  If not, see http://www.gnu.org/licenses/.
 // 
 
-#ifndef __LAB2_PLAYER_H_
-#define __LAB2_PLAYER_H_
+#ifndef __LAB3_PLAYER_H_
+#define __LAB3_PLAYER_H_
 
 #include <omnetpp.h>
 #include "P_PDU_m.h"
