@@ -26,8 +26,13 @@ Define_Module(DataLayer);
 DataLayer::~DataLayer(){
     cancelAndDelete(timeoutEvent);
     cancelAndDelete(event);
-    delete messageWaitcopy;
+    messageWaitcopy= dynamic_cast<cMessage *>(messageWaitcopy);
+    message= dynamic_cast<cMessage *>(message);
+    /*if(messageWaitcopy)
+        delete messageWaitcopy;
+    if(message)
     delete message;
+    */
 }
 
 
@@ -151,18 +156,19 @@ void DataLayer::handleMessage(cMessage *msg)
         P_PDU *ppkt = check_and_cast<P_PDU *>(msg);
            DL_PDU *pkt =check_and_cast<DL_PDU *>(ppkt->decapsulate());
 
-
+            delete ppkt;
             cancelEvent(event);
             numReceived++;
             if(strcmp(pkt->getType(),"Ack")==0){
                 EV << "Timer cancelled. receied ack from data layer\n";
                 cancelEvent(timeoutEvent);
+                delete pkt;
 
 
             }
             else{
                 sprintf(msgname, "dpdu ack-%d", (pkt->getID() +1 )%2);
-                DL_PDU *dpkt = new DL_PDU("");
+                DL_PDU *dpkt = new DL_PDU(msgname);
                 dpkt->setID((pkt->getID() +1 )%2);
                 dpkt->setType("Ack");
                 dpkt->setSourceAdd(pkt->getDestiAdd());

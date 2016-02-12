@@ -38,6 +38,10 @@ void ApplicationLayer::initialize()
     WATCH(numReceived);
 //    timeout = 5.0;
 //    timeoutEvent = new cMessage("timeoutEvent");
+    delayStats.setName("delay stats");
+    delayVector.setName("delay vector");
+    RTTStats.setName("RTT stats");
+    RTTVector.setName("RTT vector");
     in=gate("in");
     out=gate("out");
     sentCount=51;
@@ -68,7 +72,7 @@ void ApplicationLayer::handleMessage(cMessage *msg)
         numSent++;
 
     }
-    else if(sentCount<2){
+    else if(sentCount<22){
         delete msg;
     }
     else {
@@ -80,15 +84,27 @@ void ApplicationLayer::handleMessage(cMessage *msg)
             char msgname[20];
             int x=pkt->getID();
             sprintf(msgname, "APDU ack-%d", x);
+            if(pkt->getSendingTime()==pkt->getTimestamp()){
+                EV<< "eureka\n";
+                bubble("eureka");
+            }
+            //EV<< "no eureka.......................\n.....\n";
+            delayapp=simTime()-pkt->getSendingTime();
+            delayVector.record(delayapp);
+            delayStats.collect(delayapp);
+            delete dpkt;
             delete pkt;
+
             A_PDU *pkt = new A_PDU(msgname);
             pkt->setID(x);
             pkt->setType("Ack");
             pkt->setSourceAdd(2);
             pkt->setDestiAdd(1);
+            pkt->setTimestamp(delayapp);
             //cMessage *msg = check_and_cast<cMessage*>(pkt);
             //send(msg,out);
             numSent++;
+
             EV<< "sending ack from app layer\n";
             send(pkt,out);
 
@@ -97,15 +113,20 @@ void ApplicationLayer::handleMessage(cMessage *msg)
             sentCount--;
             char msgname[20];
             sprintf(msgname, "APDU  data-%d", seq++);
+            delayapp=simTime()-pkt->getSendingTime()+pkt->getTimestamp();
+            delete dpkt;
             delete pkt;
             A_PDU *pkt = new A_PDU(msgname);
             pkt->setID(seq-1);
             pkt->setType("Data");
             pkt->setSourceAdd(1);
             pkt->setDestiAdd(2);
+            RTTVector.record(delayapp);
+            RTTStats.collect(delayapp);
             //cMessage *msg = check_and_cast<cMessage*>(pkt);
             //send(msg,out);
             numSent++;
+            pkt->setTimestamp();
             EV<< "sending data from app layer\n";
             send(pkt,out);
 
@@ -113,4 +134,8 @@ void ApplicationLayer::handleMessage(cMessage *msg)
         }
     }
 
+}
+void ApplicationLayer::finish(){
+    delayStats.recordAs("delay");
+    RTTStats.recordAs("RTT");
 }

@@ -29,8 +29,8 @@ O = $(PROJECT_OUTPUT_DIR)/$(CONFIGNAME)/$(PROJECTRELATIVE_PATH)
 
 # Object files for local .cc and .msg files
 OBJS = \
-    $O/applicationLayer.o \
     $O/pLayer.o \
+    $O/applicationLayer.o \
     $O/dataLayer.o \
     $O/P_PDU_m.o \
     $O/A_PDU_m.o \

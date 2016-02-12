@@ -31,6 +31,11 @@ class ApplicationLayer : public cSimpleModule
     int numSent;
     int numReceived;
     int seq;
+    cLongHistogram delayStats;
+    cOutVector delayVector;
+    cLongHistogram RTTStats;
+    cOutVector RTTVector;
+    simtime_t delayapp;
   protected:
     int id;
     cGate * in;
@@ -38,7 +43,7 @@ class ApplicationLayer : public cSimpleModule
     int sentCount;
     virtual void initialize();
     virtual void handleMessage(cMessage *msg);
-
+    virtual void finish();
 //  public:
 //      ApplicationLayer();
 //      virtual ~ApplicationLayer();
