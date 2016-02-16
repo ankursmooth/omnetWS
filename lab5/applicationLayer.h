@@ -13,27 +13,40 @@
 // along with this program.  If not, see http://www.gnu.org/licenses/.
 // 
 
-#ifndef __LAB3_PLAYER_H_
-#define __LAB3_PLAYER_H_
+#ifndef __LAB5_APPLICATIONLAYER_H_
+#define __LAB5_APPLICATIONLAYER_H_
 
 #include <omnetpp.h>
-#include "P_PDU_m.h"
+#include "A_PDU_m.h"
 
 /**
  * TODO - Generated class
  */
-class PLayer : public cSimpleModule
+class ApplicationLayer : public cSimpleModule
 {
-private:
+  private :
+//    simtime_t timeout;  // timeout
+//    cMessage *timeoutEvent;
+//    cMessage *message;
     int numSent;
     int numReceived;
-    char msgname[20];
-    float percentloss;
+    int seq;
+    cLongHistogram delayStats;
+    cOutVector delayVector;
+    cLongHistogram RTTStats;
+    cOutVector RTTVector;
+    simtime_t delayapp;
   protected:
-    cGate * toNode, *fromNode , * toDL, * fromDL;
+    int id;
+    cGate * in;
+    cGate * out;
+    int sentCount;
     virtual void initialize();
     virtual void handleMessage(cMessage *msg);
-    virtual void updateDisplay();
+    virtual void finish();
+//  public:
+//      ApplicationLayer();
+//      virtual ~ApplicationLayer();
 };
 
 #endif

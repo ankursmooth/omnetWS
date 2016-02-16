@@ -46,14 +46,7 @@ void ApplicationLayer::initialize()
     out=gate("out");
     sentCount=51;
     if(id==1){
-        char msgname[20];
-        sprintf(msgname, "APDU data-%d", seq++);
-        A_PDU *msg = new A_PDU(msgname);
-        msg->setID(seq-1);
-        msg->setType("Data");
-        msg->setSourceAdd(1);
-        msg->setDestiAdd(2);
-
+        cMessage * msg =new cMessage();
         //cMessage *msg2 = check_and_cast<cMessage*>(msg);
         scheduleAt(0,msg);
     }
@@ -66,6 +59,15 @@ void ApplicationLayer::handleMessage(cMessage *msg)
     // TODO - Generated method body
 
     if(msg->isSelfMessage()){
+        char msgname[20];
+        delete msg;
+        sprintf(msgname, "APDU data-%d", seq++);
+        A_PDU *msg = new A_PDU(msgname);
+        msg->setID(seq-1);
+        msg->setType("Data");
+        msg->setSourceAdd(1);
+        msg->setDestiAdd(2);
+
         msg->setTimestamp();
         send(msg,out);
 
@@ -91,18 +93,6 @@ void ApplicationLayer::handleMessage(cMessage *msg)
             delete dpkt;
             delete pkt;
 
-            A_PDU *pkt = new A_PDU(msgname);
-            pkt->setID(x);
-            pkt->setType("Ack");
-            pkt->setSourceAdd(2);
-            pkt->setDestiAdd(1);
-            pkt->setTimestamp(delayapp);
-            //cMessage *msg = check_and_cast<cMessage*>(pkt);
-            //send(msg,out);
-            numSent++;
-
-            EV<< "sending ack from app layer\n";
-            send(pkt,out);
 
         }
         else{
@@ -135,10 +125,3 @@ void ApplicationLayer::finish(){
     delayStats.recordAs("delay");
     RTTStats.recordAs("RTT");
 }
-void ApplicationLayer::updateDisplay()
-{
-    char buf[40];
-    sprintf(buf, "rcvd: %d sent: %d", numReceived, numSent);
-    getDisplayString().setTagArg("t",0,buf);
-}
-

@@ -38,6 +38,7 @@ private:
 
     virtual void initialize();
     virtual void handleMessage(cMessage *msg);
+    virtual void updateDisplay();
   public:
     DataLayer()
     {

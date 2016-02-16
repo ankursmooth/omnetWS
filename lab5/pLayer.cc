@@ -52,7 +52,7 @@ void PLayer::handleMessage(cMessage *msg)
 
        DL_PDU *dpkt = dynamic_cast<DL_PDU *> (msg);
         if(dpkt){
-
+            numSent++;
 
             if(dpkt->getID()==1){
                 percentloss=0.1;
@@ -67,9 +67,6 @@ void PLayer::handleMessage(cMessage *msg)
                return;
            }
             else{
-                numSent++;
-                            if (ev.isGUI())
-                                       updateDisplay();
                 sprintf(msgname, "p pdu of dpdu-%d, typ %c", (dpkt->getID()),dpkt->getType()[0]);
                 P_PDU *pkt = new P_PDU(msgname);
                 pkt->setID((dpkt->getID()));
@@ -79,9 +76,6 @@ void PLayer::handleMessage(cMessage *msg)
             }
         }
         else{
-            numSent++;
-            if (ev.isGUI())
-                       updateDisplay();
             send(msg,toNode);
         }
 
@@ -89,15 +83,6 @@ void PLayer::handleMessage(cMessage *msg)
        else if(msg->getArrivalGate()==fromNode){
 
                numReceived++;
-               if (ev.isGUI())
-                          updateDisplay();
                send(msg,toDL);
        }
 }
-void PLayer::updateDisplay()
-{
-    char buf[40];
-    sprintf(buf, "rcvd: %d sent: %d", numReceived, numSent);
-    getDisplayString().setTagArg("t",0,buf);
-}
-

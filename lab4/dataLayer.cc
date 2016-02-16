@@ -63,14 +63,7 @@ void DataLayer::handleMessage(cMessage *msg)
     if(msg!=event && msg!=timeoutEvent){
         if(id==1){
 
-            if(msg->getArrivalGate()==fromPhysical){
-                if (uniform(0,1) < 0.1)
-               {
-                   EV << "\"Losing\" message\n";
-                   delete msg;
-                   return;
-               }
-            }
+
 
             if(msg->getArrivalGate()==fromApp){
                 messageWaitcopy=msg;
@@ -85,14 +78,7 @@ void DataLayer::handleMessage(cMessage *msg)
             }
         }
         else if(id==2){
-            if(msg->getArrivalGate()==fromPhysical){
-                if (uniform(0,1) < 0.15)
-               {
-                   EV << "\"Losing\" message\n";
-                   delete msg;
-                   return;
-               }
-            }
+
             if(msg->getArrivalGate()==fromApp){
                 messageWaitcopy=msg;
                 if( uniform(0,1)<0.4){
@@ -149,6 +135,8 @@ void DataLayer::handleMessage(cMessage *msg)
        cancelEvent(event);
        numSent++;
         send(dpkt,toPhysical);
+        if (ev.isGUI())
+             updateDisplay();
 
 
     }
@@ -178,6 +166,8 @@ void DataLayer::handleMessage(cMessage *msg)
                 send(dpkt,toPhysical);
                 send(pkt,toApp);
             }
+            if (ev.isGUI())
+                         updateDisplay();
             //delete ppkt;
 
 
@@ -185,4 +175,12 @@ void DataLayer::handleMessage(cMessage *msg)
 
 
 
+
 }
+void DataLayer::updateDisplay()
+    {
+        char buf[40];
+        sprintf(buf, "rcvd: %d sent: %d", numReceived, numSent);
+        getDisplayString().setTagArg("t",0,buf);
+    }
+

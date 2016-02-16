@@ -13,27 +13,16 @@
 // along with this program.  If not, see http://www.gnu.org/licenses/.
 // 
 
-#ifndef __LAB3_PLAYER_H_
-#define __LAB3_PLAYER_H_
+package lab5;
 
-#include <omnetpp.h>
-#include "P_PDU_m.h"
-
-/**
- * TODO - Generated class
- */
-class PLayer : public cSimpleModule
+//
+// TODO auto-generated module
+//
+simple ApplicationLayer
 {
-private:
-    int numSent;
-    int numReceived;
-    char msgname[20];
-    float percentloss;
-  protected:
-    cGate * toNode, *fromNode , * toDL, * fromDL;
-    virtual void initialize();
-    virtual void handleMessage(cMessage *msg);
-    virtual void updateDisplay();
-};
-
-#endif
+    parameters:
+        int nodeId;
+    gates:
+        input in;
+        output out;
+}

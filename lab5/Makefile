@@ -1,12 +1,12 @@
 #
-# OMNeT++/OMNEST Makefile for lab4
+# OMNeT++/OMNEST Makefile for lab5
 #
 # This file was generated with the command:
 #  opp_makemake -f --deep -O out
 #
 
 # Name of target to be created (-o option)
-TARGET = lab4$(EXE_SUFFIX)
+TARGET = lab5$(EXE_SUFFIX)
 
 # User interface (uncomment one) (-u option)
 USERIF_LIBS = $(ALL_ENV_LIBS) # that is, $(TKENV_LIBS) $(CMDENV_LIBS)
@@ -14,7 +14,7 @@ USERIF_LIBS = $(ALL_ENV_LIBS) # that is, $(TKENV_LIBS) $(CMDENV_LIBS)
 #USERIF_LIBS = $(TKENV_LIBS)
 
 # C++ include paths (with -I)
-INCLUDE_PATH = -I. -Iresults
+INCLUDE_PATH = -I.
 
 # Additional object and library files to link with
 EXTRA_OBJS =
@@ -30,8 +30,8 @@ O = $(PROJECT_OUTPUT_DIR)/$(CONFIGNAME)/$(PROJECTRELATIVE_PATH)
 # Object files for local .cc and .msg files
 OBJS = \
     $O/applicationLayer.o \
+    $O/dl_layer_GBN.o \
     $O/pLayer.o \
-    $O/dataLayer.o \
     $O/P_PDU_m.o \
     $O/A_PDU_m.o \
     $O/DL_PDU_m.o
@@ -112,16 +112,15 @@ msgheaders: $(MSGFILES:.msg=_m.h)
 clean:
 	$(qecho) Cleaning...
 	$(Q)-rm -rf $O
-	$(Q)-rm -f lab4 lab4.exe liblab4.so liblab4.a liblab4.dll liblab4.dylib
+	$(Q)-rm -f lab5 lab5.exe liblab5.so liblab5.a liblab5.dll liblab5.dylib
 	$(Q)-rm -f ./*_m.cc ./*_m.h
-	$(Q)-rm -f results/*_m.cc results/*_m.h
 
 cleanall: clean
 	$(Q)-rm -rf $(PROJECT_OUTPUT_DIR)
 
 depend:
 	$(qecho) Creating dependencies...
-	$(Q)$(MAKEDEPEND) $(INCLUDE_PATH) -f Makefile -P\$$O/ -- $(MSG_CC_FILES)  ./*.cc results/*.cc
+	$(Q)$(MAKEDEPEND) $(INCLUDE_PATH) -f Makefile -P\$$O/ -- $(MSG_CC_FILES)  ./*.cc
 
 # DO NOT DELETE THIS LINE -- make depend depends on it.
 $O/A_PDU_m.o: A_PDU_m.cc \
@@ -134,11 +133,11 @@ $O/applicationLayer.o: applicationLayer.cc \
 	A_PDU_m.h \
 	DL_PDU_m.h \
 	applicationLayer.h
-$O/dataLayer.o: dataLayer.cc \
+$O/dl_layer_GBN.o: dl_layer_GBN.cc \
 	A_PDU_m.h \
 	DL_PDU_m.h \
 	P_PDU_m.h \
-	dataLayer.h
+	dl_layer_GBN.h
 $O/pLayer.o: pLayer.cc \
 	DL_PDU_m.h \
 	P_PDU_m.h \
