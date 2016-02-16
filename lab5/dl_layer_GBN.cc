@@ -25,9 +25,10 @@ Define_Module(Dl_layer_GBN);
 
 Dl_layer_GBN::~Dl_layer_GBN(){
 
-    cancelAndDelete(timersend);
-    messageWaitcopy= dynamic_cast<cMessage *>(messageWaitcopy);
+    cancelAndDelete(clockwake);
+    cancelAndDelete(timeoutEvent);
     message= dynamic_cast<cMessage *>(message);
+
     /*if(messageWaitcopy)
         delete messageWaitcopy;
     if(message)
@@ -45,15 +46,25 @@ void Dl_layer_GBN::initialize()
         WATCH(numReceived);
         id=par("nodeId");
         timeout = 5.0;
-        buf.resize(100);
+        //buf.resize(30);
         //message=NULL;
-        S=SL=R=SF=0;
-        wsize=5;
+        S=R=SF=0;
+       // if(wsize<=0){
+            wsize=5;
+        //}
+        //if(D_pr<=0){
+            D_pr=0.1;
+        //}
+
+        clockwake= new cMessage ("clockwake");
+        timeoutEvent = new cMessage("timeoutEvent");
         event = new cMessage("event");
         toApp=gate("toApp");
         fromApp=gate("fromApp");
         toPhysical=gate("toPhysical");
         fromPhysical=gate("fromPhysical");
+        if(id==1)
+        scheduleAt(simTime()+0.1,clockwake);
 
 
 }
@@ -61,14 +72,29 @@ void Dl_layer_GBN::initialize()
 void Dl_layer_GBN::handleMessage(cMessage *msg)
 {
     // TODO - Generated method body
-    if (msg==timersend)
+    if(msg->isSelfMessage())
     {
 
-       if(S<SL){
-           send(buf.at(S),toPhysical);
-           S++;
-           scheduleAt(simTime()+0.1,timersend);
-       }
+        if (msg==clockwake)
+        {
+
+            scheduleAt(simTime()+0.1,clockwake);
+           if(S<SL ){
+               if(buf.size()<S){
+                   cancelEvent(clockwake);
+               }
+               else{
+               sendDelayed(buf.at(S),D_pr,toPhysical);
+               S++;
+               }
+
+           }
+
+        }
+        else if (msg==timeoutEvent){
+            S=SF;
+            scheduleAt(simTime()+timeout,timeoutEvent);
+        }
     }
     if(msg->getArrivalGate()==fromApp){
 
@@ -87,7 +113,9 @@ void Dl_layer_GBN::handleMessage(cMessage *msg)
 
         //cMessage *msg = check_and_cast<cMessage*>(pkt);
         buf.push_back(dpkt);
-
+        if(SL<buf.size() && SL<(SF+wsize)){
+            SL++;
+        }
 
     }
     else if(msg->getArrivalGate()==fromPhysical){
@@ -100,7 +128,9 @@ void Dl_layer_GBN::handleMessage(cMessage *msg)
             if(strcmp(pkt->getType(),"Ack")==0){
                 S=SF=pkt->getID();
                 SL=SF +wsize;
-                scheduleAt(simTime()+0.1,timersend);
+                cancelEvent(timeoutEvent);
+                scheduleAt(simTime()+timeout,timeoutEvent);
+
                 delete pkt;
             }
             else{
@@ -112,11 +142,11 @@ void Dl_layer_GBN::handleMessage(cMessage *msg)
                 dpkt->setDestiAdd(pkt->getSourceAdd());
                 numSent++;
                 if(R== pkt->getID()){
-                    send(pkt,toApp);
+                    sendDelayed(pkt,D_pr,toApp);
                 }
                 else
                     delete pkt;
-                send(dpkt,toPhysical);
+                sendDelayed(dpkt,D_pr,toPhysical);
 
 
             }

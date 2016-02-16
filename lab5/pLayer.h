@@ -29,10 +29,12 @@ private:
     int numReceived;
     char msgname[20];
     float percentloss;
+
   protected:
     cGate * toNode, *fromNode , * toDL, * fromDL;
     virtual void initialize();
     virtual void handleMessage(cMessage *msg);
+    simtime_t D_p;
 };
 
 #endif

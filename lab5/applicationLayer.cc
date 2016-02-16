@@ -26,7 +26,9 @@ Define_Module(ApplicationLayer);
 //void ApplicationLayer::~ApplicationLayer(){
 //    cancelAndDelete(timeoutEvent);
 //}
-
+ApplicationLayer::~ApplicationLayer(){
+    cancelAndDelete(timer);
+}
 void ApplicationLayer::initialize()
 {
     // TODO - Generated method body
@@ -42,13 +44,14 @@ void ApplicationLayer::initialize()
     delayVector.setName("delay vector");
     RTTStats.setName("RTT stats");
     RTTVector.setName("RTT vector");
+    timer= new cMessage("timer");
     in=gate("in");
     out=gate("out");
     sentCount=51;
     if(id==1){
-        cMessage * msg =new cMessage();
+        //cMessage * msg =new cMessage();
         //cMessage *msg2 = check_and_cast<cMessage*>(msg);
-        scheduleAt(0,msg);
+        scheduleAt(0,timer);
     }
 
 
@@ -58,9 +61,12 @@ void ApplicationLayer::handleMessage(cMessage *msg)
 {
     // TODO - Generated method body
 
-    if(msg->isSelfMessage()){
+    if(sentCount<32){
+            delete msg;
+    }
+    else if(msg->isSelfMessage()){
         char msgname[20];
-        delete msg;
+        //delete msg;
         sprintf(msgname, "APDU data-%d", seq++);
         A_PDU *msg = new A_PDU(msgname);
         msg->setID(seq-1);
@@ -70,13 +76,13 @@ void ApplicationLayer::handleMessage(cMessage *msg)
 
         msg->setTimestamp();
         send(msg,out);
-
+        cancelEvent(timer);
+        scheduleAt(simTime()+0.05,timer);
         numSent++;
+        sentCount--;
 
     }
-    else if(sentCount<22){
-        delete msg;
-    }
+
     else {
         DL_PDU *dpkt = check_and_cast<DL_PDU *>(msg);
         numReceived++;
@@ -96,7 +102,7 @@ void ApplicationLayer::handleMessage(cMessage *msg)
 
         }
         else{
-            sentCount--;
+
             char msgname[20];
             sprintf(msgname, "APDU  data-%d", seq++);
             delayapp=simTime()-pkt->getSendingTime()+pkt->getTimestamp();

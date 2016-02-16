@@ -1,0 +1,857 @@
+E # 0 t 0 m 1 ce -1 msg -1
+SB v 1030 rid General-0-20160216-15:43:57-7527 b 1000
+KF p -1 c "" s ""
+MC id 1 c cModule t lab5.LayerNetwork n LayerNetwork cm 1
+MS id 1 d ""
+MC id 2 c cModule t lab5.Node pid 1 n node1 cm 1
+GC m 2 g 0 n in o 0
+GC m 2 g 3 n out o 1
+MS id 2 d ""
+MC id 3 c cModule t lab5.Node pid 1 n node2 cm 1
+GC m 3 g 0 n in o 0
+GC m 3 g 3 n out o 1
+MS id 3 d ""
+MC id 4 c cModule t lab5.Hub pid 1 n hub cm 1
+GC m 4 g 0 n in1 o 0
+GC m 4 g 2 n in2 o 0
+GC m 4 g 5 n out1 o 1
+GC m 4 g 7 n out2 o 1
+MS id 4 d ""
+CC sm 2 sg 3 dm 4 dg 0
+CC sm 3 sg 3 dm 4 dg 2
+CC sm 4 sg 5 dm 2 dg 0
+CC sm 4 sg 7 dm 3 dg 0
+MC id 5 c ApplicationLayer t lab5.ApplicationLayer pid 2 n aLayer
+GC m 5 g 0 n in o 0
+GC m 5 g 3 n out o 1
+MS id 5 d ""
+MC id 6 c Dl_layer_GBN t lab5.Dl_layer_GBN pid 2 n dLayer
+GC m 6 g 0 n fromApp o 0
+GC m 6 g 3 n toApp o 1
+GC m 6 g 4 n fromPhysical o 0
+GC m 6 g 7 n toPhysical o 1
+MS id 6 d ""
+MC id 7 c PLayer t lab5.PLayer pid 2 n phLayer
+GC m 7 g 0 n fromDL o 0
+GC m 7 g 3 n toDL o 1
+GC m 7 g 4 n fromNode o 0
+GC m 7 g 7 n toNode o 1
+MS id 7 d ""
+CC sm 5 sg 3 dm 6 dg 0
+CC sm 6 sg 3 dm 5 dg 0
+CC sm 6 sg 7 dm 7 dg 0
+CC sm 7 sg 3 dm 6 dg 4
+CC sm 2 sg 0 dm 7 dg 4
+CC sm 7 sg 7 dm 2 dg 3
+MC id 8 c ApplicationLayer t lab5.ApplicationLayer pid 3 n aLayer
+GC m 8 g 0 n in o 0
+GC m 8 g 3 n out o 1
+MS id 8 d ""
+MC id 9 c Dl_layer_GBN t lab5.Dl_layer_GBN pid 3 n dLayer
+GC m 9 g 0 n fromApp o 0
+GC m 9 g 3 n toApp o 1
+GC m 9 g 4 n fromPhysical o 0
+GC m 9 g 7 n toPhysical o 1
+MS id 9 d ""
+MC id 10 c PLayer t lab5.PLayer pid 3 n phLayer
+GC m 10 g 0 n fromDL o 0
+GC m 10 g 3 n toDL o 1
+GC m 10 g 4 n fromNode o 0
+GC m 10 g 7 n toNode o 1
+MS id 10 d ""
+CC sm 8 sg 3 dm 9 dg 0
+CC sm 9 sg 3 dm 8 dg 0
+CC sm 9 sg 7 dm 10 dg 0
+CC sm 10 sg 3 dm 9 dg 4
+CC sm 3 sg 0 dm 10 dg 4
+CC sm 10 sg 7 dm 3 dg 3
+MC id 11 c PLayer t lab5.PLayer pid 4 n phLayer1
+GC m 11 g 0 n fromDL o 0
+GC m 11 g 3 n toDL o 1
+GC m 11 g 4 n fromNode o 0
+GC m 11 g 7 n toNode o 1
+MS id 11 d ""
+MC id 12 c PLayer t lab5.PLayer pid 4 n phLayer2
+GC m 12 g 0 n fromDL o 0
+GC m 12 g 3 n toDL o 1
+GC m 12 g 4 n fromNode o 0
+GC m 12 g 7 n toNode o 1
+MS id 12 d ""
+CC sm 11 sg 3 dm 4 dg 5
+CC sm 4 sg 0 dm 11 dg 0
+CC sm 11 sg 7 dm 12 dg 4
+CC sm 12 sg 7 dm 11 dg 4
+CC sm 12 sg 3 dm 4 dg 7
+CC sm 4 sg 2 dm 12 dg 0
+MB sm 1 tm 2 m initialize(0)
+ME
+MB sm 1 tm 5 m initialize(0)
+CM id 0 tid 0 eid 0 etid 0 c cMessage n timer pe -1
+BS id 0 tid 0 eid 0 etid 0 c cMessage n timer pe 0
+ES t 0
+ME
+MB sm 1 tm 6 m initialize(0)
+CM id 1 tid 1 eid 1 etid 1 c cMessage n clockwake pe -1
+CM id 2 tid 2 eid 2 etid 2 c cMessage n timeoutEvent pe -1
+CM id 3 tid 3 eid 3 etid 3 c cMessage n event pe -1
+BS id 1 tid 1 eid 1 etid 1 c cMessage n clockwake pe 0
+ES t 0.1
+ME
+MB sm 1 tm 7 m initialize(0)
+ME
+MB sm 1 tm 3 m initialize(0)
+ME
+MB sm 1 tm 8 m initialize(0)
+CM id 4 tid 4 eid 4 etid 4 c cMessage n timer pe -1
+ME
+MB sm 1 tm 9 m initialize(0)
+CM id 5 tid 5 eid 5 etid 5 c cMessage n clockwake pe -1
+CM id 6 tid 6 eid 6 etid 6 c cMessage n timeoutEvent pe -1
+CM id 7 tid 7 eid 7 etid 7 c cMessage n event pe -1
+ME
+MB sm 1 tm 10 m initialize(0)
+ME
+MB sm 1 tm 4 m initialize(0)
+ME
+MB sm 1 tm 11 m initialize(0)
+ME
+MB sm 1 tm 12 m initialize(0)
+ME
+
+E # 1 t 0 m 5 ce 0 msg 0
+CM id 8 tid 8 eid 8 etid 8 c cMessage n "APDU data-0" pe -1
+BS id 8 tid 8 eid 8 etid 8 c A_PDU n "APDU data-0" pe 1
+CL id 8 tid 8 eid 8 etid 8 c A_PDU n "APDU data-0" pe 1 cid 9
+SH sm 5 sg 3
+ES t 0
+BS id 0 tid 0 eid 0 etid 0 c cMessage n timer pe 1
+ES t 0.05
+
+E # 2 t 0 m 6 ce 1 msg 8
+CM id 10 tid 10 eid 10 etid 10 c cMessage n "dpdu with apdu-0" pe -1
+
+E # 3 t 0.05 m 5 ce 1 msg 0
+CM id 11 tid 11 eid 11 etid 11 c cMessage n "APDU data-1" pe -1
+BS id 11 tid 11 eid 11 etid 11 c A_PDU n "APDU data-1" pe 3
+CL id 11 tid 11 eid 11 etid 11 c A_PDU n "APDU data-1" pe 3 cid 12
+SH sm 5 sg 3
+ES t 0.05
+BS id 0 tid 0 eid 0 etid 0 c cMessage n timer pe 3
+ES t 0.1
+
+E # 4 t 0.05 m 6 ce 3 msg 11
+CM id 13 tid 13 eid 13 etid 13 c cMessage n "dpdu with apdu-1" pe -1
+
+E # 5 t 0.1 m 6 ce 0 msg 1
+BS id 1 tid 1 eid 1 etid 1 c cMessage n clockwake pe 5
+ES t 0.2
+BS id 10 tid 10 eid 8 etid 8 c DL_PDU n "dpdu with apdu-0" pe 2
+CL id 10 tid 10 eid 8 etid 8 c DL_PDU n "dpdu with apdu-0" pe 2 cid 14
+SH sm 6 sg 7
+ES t 0.2
+
+E # 6 t 0.1 m 5 ce 3 msg 0
+CM id 15 tid 15 eid 15 etid 15 c cMessage n "APDU data-2" pe -1
+BS id 15 tid 15 eid 15 etid 15 c A_PDU n "APDU data-2" pe 6
+CL id 15 tid 15 eid 15 etid 15 c A_PDU n "APDU data-2" pe 6 cid 16
+SH sm 5 sg 3
+ES t 0.1
+BS id 0 tid 0 eid 0 etid 0 c cMessage n timer pe 6
+ES t 0.15
+
+E # 7 t 0.1 m 6 ce 6 msg 15
+CM id 17 tid 17 eid 17 etid 17 c cMessage n "dpdu with apdu-2" pe -1
+
+E # 8 t 0.15 m 5 ce 6 msg 0
+CM id 18 tid 18 eid 18 etid 18 c cMessage n "APDU data-3" pe -1
+BS id 18 tid 18 eid 18 etid 18 c A_PDU n "APDU data-3" pe 8
+CL id 18 tid 18 eid 18 etid 18 c A_PDU n "APDU data-3" pe 8 cid 19
+SH sm 5 sg 3
+ES t 0.15
+BS id 0 tid 0 eid 0 etid 0 c cMessage n timer pe 8
+ES t 0.2
+
+E # 9 t 0.15 m 6 ce 8 msg 18
+CM id 20 tid 20 eid 20 etid 20 c cMessage n "dpdu with apdu-3" pe -1
+
+E # 10 t 0.2 m 6 ce 5 msg 1
+BS id 1 tid 1 eid 1 etid 1 c cMessage n clockwake pe 10
+ES t 0.3
+BS id 13 tid 13 eid 11 etid 11 c DL_PDU n "dpdu with apdu-1" pe 4
+CL id 13 tid 13 eid 11 etid 11 c DL_PDU n "dpdu with apdu-1" pe 4 cid 21
+SH sm 6 sg 7
+ES t 0.3
+
+E # 11 t 0.2 m 7 ce 5 msg 10
+CM id 22 tid 22 eid 22 etid 22 c cMessage n "p pdu of dpdu-0, typ D" pe -1
+BS id 22 tid 22 eid 8 etid 8 c P_PDU n "p pdu of dpdu-0, typ D" pe 11
+CL id 22 tid 22 eid 8 etid 8 c P_PDU n "p pdu of dpdu-0, typ D" pe 11 cid 23
+SH sm 7 sg 7
+SH sm 2 sg 3
+SH sm 4 sg 0
+ES t 0.3
+
+E # 12 t 0.2 m 5 ce 8 msg 0
+CM id 24 tid 24 eid 24 etid 24 c cMessage n "APDU data-4" pe -1
+BS id 24 tid 24 eid 24 etid 24 c A_PDU n "APDU data-4" pe 12
+CL id 24 tid 24 eid 24 etid 24 c A_PDU n "APDU data-4" pe 12 cid 25
+SH sm 5 sg 3
+ES t 0.2
+BS id 0 tid 0 eid 0 etid 0 c cMessage n timer pe 12
+ES t 0.25
+
+E # 13 t 0.2 m 6 ce 12 msg 24
+CM id 26 tid 26 eid 26 etid 26 c cMessage n "dpdu with apdu-4" pe -1
+
+E # 14 t 0.25 m 5 ce 12 msg 0
+CM id 27 tid 27 eid 27 etid 27 c cMessage n "APDU data-5" pe -1
+BS id 27 tid 27 eid 27 etid 27 c A_PDU n "APDU data-5" pe 14
+CL id 27 tid 27 eid 27 etid 27 c A_PDU n "APDU data-5" pe 14 cid 28
+SH sm 5 sg 3
+ES t 0.25
+BS id 0 tid 0 eid 0 etid 0 c cMessage n timer pe 14
+ES t 0.3
+
+E # 15 t 0.25 m 6 ce 14 msg 27
+CM id 29 tid 29 eid 29 etid 29 c cMessage n "dpdu with apdu-5" pe -1
+
+E # 16 t 0.3 m 6 ce 10 msg 1
+BS id 1 tid 1 eid 1 etid 1 c cMessage n clockwake pe 16
+ES t 0.4
+BS id 17 tid 17 eid 15 etid 15 c DL_PDU n "dpdu with apdu-2" pe 7
+CL id 17 tid 17 eid 15 etid 15 c DL_PDU n "dpdu with apdu-2" pe 7 cid 30
+SH sm 6 sg 7
+ES t 0.4
+
+E # 17 t 0.3 m 7 ce 10 msg 13
+CM id 31 tid 31 eid 31 etid 31 c cMessage n "p pdu of dpdu-1, typ D" pe -1
+BS id 31 tid 31 eid 11 etid 11 c P_PDU n "p pdu of dpdu-1, typ D" pe 17
+CL id 31 tid 31 eid 11 etid 11 c P_PDU n "p pdu of dpdu-1, typ D" pe 17 cid 32
+SH sm 7 sg 7
+SH sm 2 sg 3
+SH sm 4 sg 0
+ES t 0.4
+
+E # 18 t 0.3 m 11 ce 11 msg 22
+BS id 22 tid 22 eid 8 etid 8 c P_PDU n "p pdu of dpdu-0, typ D" pe 18
+CL id 22 tid 22 eid 8 etid 8 c P_PDU n "p pdu of dpdu-0, typ D" pe 18 cid 33
+SH sm 11 sg 7
+ES t 0.4
+
+E # 19 t 0.3 m 5 ce 14 msg 0
+CM id 34 tid 34 eid 34 etid 34 c cMessage n "APDU data-6" pe -1
+BS id 34 tid 34 eid 34 etid 34 c A_PDU n "APDU data-6" pe 19
+CL id 34 tid 34 eid 34 etid 34 c A_PDU n "APDU data-6" pe 19 cid 35
+SH sm 5 sg 3
+ES t 0.3
+BS id 0 tid 0 eid 0 etid 0 c cMessage n timer pe 19
+ES t 0.35
+
+E # 20 t 0.3 m 6 ce 19 msg 34
+CM id 36 tid 36 eid 36 etid 36 c cMessage n "dpdu with apdu-6" pe -1
+
+E # 21 t 0.35 m 5 ce 19 msg 0
+CM id 37 tid 37 eid 37 etid 37 c cMessage n "APDU data-7" pe -1
+BS id 37 tid 37 eid 37 etid 37 c A_PDU n "APDU data-7" pe 21
+CL id 37 tid 37 eid 37 etid 37 c A_PDU n "APDU data-7" pe 21 cid 38
+SH sm 5 sg 3
+ES t 0.35
+BS id 0 tid 0 eid 0 etid 0 c cMessage n timer pe 21
+ES t 0.4
+
+E # 22 t 0.35 m 6 ce 21 msg 37
+CM id 39 tid 39 eid 39 etid 39 c cMessage n "dpdu with apdu-7" pe -1
+
+E # 23 t 0.4 m 6 ce 16 msg 1
+BS id 1 tid 1 eid 1 etid 1 c cMessage n clockwake pe 23
+ES t 0.5
+BS id 20 tid 20 eid 18 etid 18 c DL_PDU n "dpdu with apdu-3" pe 9
+CL id 20 tid 20 eid 18 etid 18 c DL_PDU n "dpdu with apdu-3" pe 9 cid 40
+SH sm 6 sg 7
+ES t 0.5
+
+E # 24 t 0.4 m 7 ce 16 msg 17
+CM id 41 tid 41 eid 41 etid 41 c cMessage n "p pdu of dpdu-2, typ D" pe -1
+BS id 41 tid 41 eid 15 etid 15 c P_PDU n "p pdu of dpdu-2, typ D" pe 24
+CL id 41 tid 41 eid 15 etid 15 c P_PDU n "p pdu of dpdu-2, typ D" pe 24 cid 42
+SH sm 7 sg 7
+SH sm 2 sg 3
+SH sm 4 sg 0
+ES t 0.5
+
+E # 25 t 0.4 m 11 ce 17 msg 31
+BS id 31 tid 31 eid 11 etid 11 c P_PDU n "p pdu of dpdu-1, typ D" pe 25
+CL id 31 tid 31 eid 11 etid 11 c P_PDU n "p pdu of dpdu-1, typ D" pe 25 cid 43
+SH sm 11 sg 7
+ES t 0.5
+
+E # 26 t 0.4 m 12 ce 18 msg 22
+BS id 22 tid 22 eid 8 etid 8 c P_PDU n "p pdu of dpdu-0, typ D" pe 26
+CL id 22 tid 22 eid 8 etid 8 c P_PDU n "p pdu of dpdu-0, typ D" pe 26 cid 44
+SH sm 12 sg 3
+SH sm 4 sg 7
+SH sm 3 sg 0
+ES t 0.5
+
+E # 27 t 0.4 m 5 ce 21 msg 0
+CM id 45 tid 45 eid 45 etid 45 c cMessage n "APDU data-8" pe -1
+BS id 45 tid 45 eid 45 etid 45 c A_PDU n "APDU data-8" pe 27
+CL id 45 tid 45 eid 45 etid 45 c A_PDU n "APDU data-8" pe 27 cid 46
+SH sm 5 sg 3
+ES t 0.4
+BS id 0 tid 0 eid 0 etid 0 c cMessage n timer pe 27
+ES t 0.45
+
+E # 28 t 0.4 m 6 ce 27 msg 45
+CM id 47 tid 47 eid 47 etid 47 c cMessage n "dpdu with apdu-8" pe -1
+
+E # 29 t 0.45 m 5 ce 27 msg 0
+CM id 48 tid 48 eid 48 etid 48 c cMessage n "APDU data-9" pe -1
+BS id 48 tid 48 eid 48 etid 48 c A_PDU n "APDU data-9" pe 29
+CL id 48 tid 48 eid 48 etid 48 c A_PDU n "APDU data-9" pe 29 cid 49
+SH sm 5 sg 3
+ES t 0.45
+BS id 0 tid 0 eid 0 etid 0 c cMessage n timer pe 29
+ES t 0.5
+
+E # 30 t 0.45 m 6 ce 29 msg 48
+CM id 50 tid 50 eid 50 etid 50 c cMessage n "dpdu with apdu-9" pe -1
+
+E # 31 t 0.5 m 6 ce 23 msg 1
+BS id 1 tid 1 eid 1 etid 1 c cMessage n clockwake pe 31
+ES t 0.6
+BS id 26 tid 26 eid 24 etid 24 c DL_PDU n "dpdu with apdu-4" pe 13
+CL id 26 tid 26 eid 24 etid 24 c DL_PDU n "dpdu with apdu-4" pe 13 cid 51
+SH sm 6 sg 7
+ES t 0.6
+
+E # 32 t 0.5 m 7 ce 23 msg 20
+CM id 52 tid 52 eid 52 etid 52 c cMessage n "p pdu of dpdu-3, typ D" pe -1
+BS id 52 tid 52 eid 18 etid 18 c P_PDU n "p pdu of dpdu-3, typ D" pe 32
+CL id 52 tid 52 eid 18 etid 18 c P_PDU n "p pdu of dpdu-3, typ D" pe 32 cid 53
+SH sm 7 sg 7
+SH sm 2 sg 3
+SH sm 4 sg 0
+ES t 0.6
+
+E # 33 t 0.5 m 11 ce 24 msg 41
+BS id 41 tid 41 eid 15 etid 15 c P_PDU n "p pdu of dpdu-2, typ D" pe 33
+CL id 41 tid 41 eid 15 etid 15 c P_PDU n "p pdu of dpdu-2, typ D" pe 33 cid 54
+SH sm 11 sg 7
+ES t 0.6
+
+E # 34 t 0.5 m 12 ce 25 msg 31
+BS id 31 tid 31 eid 11 etid 11 c P_PDU n "p pdu of dpdu-1, typ D" pe 34
+CL id 31 tid 31 eid 11 etid 11 c P_PDU n "p pdu of dpdu-1, typ D" pe 34 cid 55
+SH sm 12 sg 3
+SH sm 4 sg 7
+SH sm 3 sg 0
+ES t 0.6
+
+E # 35 t 0.5 m 10 ce 26 msg 22
+BS id 22 tid 22 eid 8 etid 8 c P_PDU n "p pdu of dpdu-0, typ D" pe 35
+CL id 22 tid 22 eid 8 etid 8 c P_PDU n "p pdu of dpdu-0, typ D" pe 35 cid 56
+SH sm 10 sg 3
+ES t 0.6
+
+E # 36 t 0.5 m 5 ce 29 msg 0
+CM id 57 tid 57 eid 57 etid 57 c cMessage n "APDU data-10" pe -1
+BS id 57 tid 57 eid 57 etid 57 c A_PDU n "APDU data-10" pe 36
+CL id 57 tid 57 eid 57 etid 57 c A_PDU n "APDU data-10" pe 36 cid 58
+SH sm 5 sg 3
+ES t 0.5
+BS id 0 tid 0 eid 0 etid 0 c cMessage n timer pe 36
+ES t 0.55
+
+E # 37 t 0.5 m 6 ce 36 msg 57
+CM id 59 tid 59 eid 59 etid 59 c cMessage n "dpdu with apdu-10" pe -1
+
+E # 38 t 0.55 m 5 ce 36 msg 0
+CM id 60 tid 60 eid 60 etid 60 c cMessage n "APDU data-11" pe -1
+BS id 60 tid 60 eid 60 etid 60 c A_PDU n "APDU data-11" pe 38
+CL id 60 tid 60 eid 60 etid 60 c A_PDU n "APDU data-11" pe 38 cid 61
+SH sm 5 sg 3
+ES t 0.55
+BS id 0 tid 0 eid 0 etid 0 c cMessage n timer pe 38
+ES t 0.6
+
+E # 39 t 0.55 m 6 ce 38 msg 60
+CM id 62 tid 62 eid 62 etid 62 c cMessage n "dpdu with apdu-11" pe -1
+
+E # 40 t 0.6 m 6 ce 31 msg 1
+BS id 1 tid 1 eid 1 etid 1 c cMessage n clockwake pe 40
+ES t 0.7
+BS id 29 tid 29 eid 27 etid 27 c DL_PDU n "dpdu with apdu-5" pe 15
+CL id 29 tid 29 eid 27 etid 27 c DL_PDU n "dpdu with apdu-5" pe 15 cid 63
+SH sm 6 sg 7
+ES t 0.7
+
+E # 41 t 0.6 m 7 ce 31 msg 26
+CM id 64 tid 64 eid 64 etid 64 c cMessage n "p pdu of dpdu-4, typ D" pe -1
+BS id 64 tid 64 eid 24 etid 24 c P_PDU n "p pdu of dpdu-4, typ D" pe 41
+CL id 64 tid 64 eid 24 etid 24 c P_PDU n "p pdu of dpdu-4, typ D" pe 41 cid 65
+SH sm 7 sg 7
+SH sm 2 sg 3
+SH sm 4 sg 0
+ES t 0.7
+
+E # 42 t 0.6 m 11 ce 32 msg 52
+BS id 52 tid 52 eid 18 etid 18 c P_PDU n "p pdu of dpdu-3, typ D" pe 42
+CL id 52 tid 52 eid 18 etid 18 c P_PDU n "p pdu of dpdu-3, typ D" pe 42 cid 66
+SH sm 11 sg 7
+ES t 0.7
+
+E # 43 t 0.6 m 12 ce 33 msg 41
+BS id 41 tid 41 eid 15 etid 15 c P_PDU n "p pdu of dpdu-2, typ D" pe 43
+CL id 41 tid 41 eid 15 etid 15 c P_PDU n "p pdu of dpdu-2, typ D" pe 43 cid 67
+SH sm 12 sg 3
+SH sm 4 sg 7
+SH sm 3 sg 0
+ES t 0.7
+
+E # 44 t 0.6 m 10 ce 34 msg 31
+BS id 31 tid 31 eid 11 etid 11 c P_PDU n "p pdu of dpdu-1, typ D" pe 44
+CL id 31 tid 31 eid 11 etid 11 c P_PDU n "p pdu of dpdu-1, typ D" pe 44 cid 68
+SH sm 10 sg 3
+ES t 0.7
+
+E # 45 t 0.6 m 9 ce 35 msg 22
+CL id 10 tid 10 eid 8 etid 8 c DL_PDU n "dpdu with apdu-0" pe 11 cid 69
+DM id 22 tid 22 eid 22 etid 22 c cMessage n "p pdu of dpdu-0, typ D" pe 45
+CM id 70 tid 70 eid 70 etid 70 c cMessage n "dpdu ack-1" pe -1
+BS id 69 tid 10 eid 8 etid 8 c DL_PDU n "dpdu with apdu-0" pe 45
+CL id 69 tid 10 eid 8 etid 8 c DL_PDU n "dpdu with apdu-0" pe 45 cid 71
+SH sm 9 sg 3
+ES t 0.7
+BS id 70 tid 70 eid 70 etid 70 c DL_PDU n "dpdu ack-1" pe 45
+CL id 70 tid 70 eid 70 etid 70 c DL_PDU n "dpdu ack-1" pe 45 cid 72
+SH sm 9 sg 7
+ES t 0.7
+
+E # 46 t 0.6 m 5 ce 38 msg 0
+CM id 73 tid 73 eid 73 etid 73 c cMessage n "APDU data-12" pe -1
+BS id 73 tid 73 eid 73 etid 73 c A_PDU n "APDU data-12" pe 46
+CL id 73 tid 73 eid 73 etid 73 c A_PDU n "APDU data-12" pe 46 cid 74
+SH sm 5 sg 3
+ES t 0.6
+BS id 0 tid 0 eid 0 etid 0 c cMessage n timer pe 46
+ES t 0.65
+
+E # 47 t 0.6 m 6 ce 46 msg 73
+CM id 75 tid 75 eid 75 etid 75 c cMessage n "dpdu with apdu-12" pe -1
+
+E # 48 t 0.65 m 5 ce 46 msg 0
+CM id 76 tid 76 eid 76 etid 76 c cMessage n "APDU data-13" pe -1
+BS id 76 tid 76 eid 76 etid 76 c A_PDU n "APDU data-13" pe 48
+CL id 76 tid 76 eid 76 etid 76 c A_PDU n "APDU data-13" pe 48 cid 77
+SH sm 5 sg 3
+ES t 0.65
+BS id 0 tid 0 eid 0 etid 0 c cMessage n timer pe 48
+ES t 0.7
+
+E # 49 t 0.65 m 6 ce 48 msg 76
+CM id 78 tid 78 eid 78 etid 78 c cMessage n "dpdu with apdu-13" pe -1
+
+E # 50 t 0.7 m 6 ce 40 msg 1
+BS id 1 tid 1 eid 1 etid 1 c cMessage n clockwake pe 50
+ES t 0.8
+BS id 36 tid 36 eid 34 etid 34 c DL_PDU n "dpdu with apdu-6" pe 20
+CL id 36 tid 36 eid 34 etid 34 c DL_PDU n "dpdu with apdu-6" pe 20 cid 79
+SH sm 6 sg 7
+ES t 0.8
+
+E # 51 t 0.7 m 7 ce 40 msg 29
+CM id 80 tid 80 eid 80 etid 80 c cMessage n "p pdu of dpdu-5, typ D" pe -1
+BS id 80 tid 80 eid 27 etid 27 c P_PDU n "p pdu of dpdu-5, typ D" pe 51
+CL id 80 tid 80 eid 27 etid 27 c P_PDU n "p pdu of dpdu-5, typ D" pe 51 cid 81
+SH sm 7 sg 7
+SH sm 2 sg 3
+SH sm 4 sg 0
+ES t 0.8
+
+E # 52 t 0.7 m 11 ce 41 msg 64
+BS id 64 tid 64 eid 24 etid 24 c P_PDU n "p pdu of dpdu-4, typ D" pe 52
+CL id 64 tid 64 eid 24 etid 24 c P_PDU n "p pdu of dpdu-4, typ D" pe 52 cid 82
+SH sm 11 sg 7
+ES t 0.8
+
+E # 53 t 0.7 m 12 ce 42 msg 52
+BS id 52 tid 52 eid 18 etid 18 c P_PDU n "p pdu of dpdu-3, typ D" pe 53
+CL id 52 tid 52 eid 18 etid 18 c P_PDU n "p pdu of dpdu-3, typ D" pe 53 cid 83
+SH sm 12 sg 3
+SH sm 4 sg 7
+SH sm 3 sg 0
+ES t 0.8
+
+E # 54 t 0.7 m 10 ce 43 msg 41
+BS id 41 tid 41 eid 15 etid 15 c P_PDU n "p pdu of dpdu-2, typ D" pe 54
+CL id 41 tid 41 eid 15 etid 15 c P_PDU n "p pdu of dpdu-2, typ D" pe 54 cid 84
+SH sm 10 sg 3
+ES t 0.8
+
+E # 55 t 0.7 m 9 ce 44 msg 31
+CL id 13 tid 13 eid 11 etid 11 c DL_PDU n "dpdu with apdu-1" pe 17 cid 85
+DM id 31 tid 31 eid 31 etid 31 c cMessage n "p pdu of dpdu-1, typ D" pe 55
+CM id 86 tid 86 eid 86 etid 86 c cMessage n "dpdu ack-1" pe -1
+DM id 85 tid 13 eid 85 etid 13 c cMessage n "dpdu with apdu-1" pe 55
+BS id 86 tid 86 eid 86 etid 86 c DL_PDU n "dpdu ack-1" pe 55
+CL id 86 tid 86 eid 86 etid 86 c DL_PDU n "dpdu ack-1" pe 55 cid 87
+SH sm 9 sg 7
+ES t 0.8
+
+E # 56 t 0.7 m 8 ce 45 msg 69
+CL id 8 tid 8 eid 8 etid 8 c A_PDU n "APDU data-0" pe 2 cid 88
+DM id 69 tid 10 eid 69 etid 10 c cMessage n "dpdu with apdu-0" pe 56
+DM id 88 tid 8 eid 88 etid 8 c cMessage n "APDU data-0" pe 56
+
+E # 57 t 0.7 m 10 ce 45 msg 70
+CM id 89 tid 89 eid 89 etid 89 c cMessage n "p pdu of dpdu-1, typ A" pe -1
+BS id 89 tid 89 eid 70 etid 70 c P_PDU n "p pdu of dpdu-1, typ A" pe 57
+CL id 89 tid 89 eid 70 etid 70 c P_PDU n "p pdu of dpdu-1, typ A" pe 57 cid 90
+SH sm 10 sg 7
+SH sm 3 sg 3
+SH sm 4 sg 2
+ES t 0.8
+
+E # 58 t 0.7 m 5 ce 48 msg 0
+CM id 91 tid 91 eid 91 etid 91 c cMessage n "APDU data-14" pe -1
+BS id 91 tid 91 eid 91 etid 91 c A_PDU n "APDU data-14" pe 58
+CL id 91 tid 91 eid 91 etid 91 c A_PDU n "APDU data-14" pe 58 cid 92
+SH sm 5 sg 3
+ES t 0.7
+BS id 0 tid 0 eid 0 etid 0 c cMessage n timer pe 58
+ES t 0.75
+
+E # 59 t 0.7 m 6 ce 58 msg 91
+CM id 93 tid 93 eid 93 etid 93 c cMessage n "dpdu with apdu-14" pe -1
+
+E # 60 t 0.75 m 5 ce 58 msg 0
+CM id 94 tid 94 eid 94 etid 94 c cMessage n "APDU data-15" pe -1
+BS id 94 tid 94 eid 94 etid 94 c A_PDU n "APDU data-15" pe 60
+CL id 94 tid 94 eid 94 etid 94 c A_PDU n "APDU data-15" pe 60 cid 95
+SH sm 5 sg 3
+ES t 0.75
+BS id 0 tid 0 eid 0 etid 0 c cMessage n timer pe 60
+ES t 0.8
+
+E # 61 t 0.75 m 6 ce 60 msg 94
+CM id 96 tid 96 eid 96 etid 96 c cMessage n "dpdu with apdu-15" pe -1
+
+E # 62 t 0.8 m 6 ce 50 msg 1
+BS id 1 tid 1 eid 1 etid 1 c cMessage n clockwake pe 62
+ES t 0.9
+BS id 39 tid 39 eid 37 etid 37 c DL_PDU n "dpdu with apdu-7" pe 22
+CL id 39 tid 39 eid 37 etid 37 c DL_PDU n "dpdu with apdu-7" pe 22 cid 97
+SH sm 6 sg 7
+ES t 0.9
+
+E # 63 t 0.8 m 7 ce 50 msg 36
+CM id 98 tid 98 eid 98 etid 98 c cMessage n "p pdu of dpdu-6, typ D" pe -1
+BS id 98 tid 98 eid 34 etid 34 c P_PDU n "p pdu of dpdu-6, typ D" pe 63
+CL id 98 tid 98 eid 34 etid 34 c P_PDU n "p pdu of dpdu-6, typ D" pe 63 cid 99
+SH sm 7 sg 7
+SH sm 2 sg 3
+SH sm 4 sg 0
+ES t 0.9
+
+E # 64 t 0.8 m 11 ce 51 msg 80
+BS id 80 tid 80 eid 27 etid 27 c P_PDU n "p pdu of dpdu-5, typ D" pe 64
+CL id 80 tid 80 eid 27 etid 27 c P_PDU n "p pdu of dpdu-5, typ D" pe 64 cid 100
+SH sm 11 sg 7
+ES t 0.9
+
+E # 65 t 0.8 m 12 ce 52 msg 64
+BS id 64 tid 64 eid 24 etid 24 c P_PDU n "p pdu of dpdu-4, typ D" pe 65
+CL id 64 tid 64 eid 24 etid 24 c P_PDU n "p pdu of dpdu-4, typ D" pe 65 cid 101
+SH sm 12 sg 3
+SH sm 4 sg 7
+SH sm 3 sg 0
+ES t 0.9
+
+E # 66 t 0.8 m 10 ce 53 msg 52
+BS id 52 tid 52 eid 18 etid 18 c P_PDU n "p pdu of dpdu-3, typ D" pe 66
+CL id 52 tid 52 eid 18 etid 18 c P_PDU n "p pdu of dpdu-3, typ D" pe 66 cid 102
+SH sm 10 sg 3
+ES t 0.9
+
+E # 67 t 0.8 m 9 ce 54 msg 41
+CL id 17 tid 17 eid 15 etid 15 c DL_PDU n "dpdu with apdu-2" pe 24 cid 103
+DM id 41 tid 41 eid 41 etid 41 c cMessage n "p pdu of dpdu-2, typ D" pe 67
+CM id 104 tid 104 eid 104 etid 104 c cMessage n "dpdu ack-1" pe -1
+DM id 103 tid 17 eid 103 etid 17 c cMessage n "dpdu with apdu-2" pe 67
+BS id 104 tid 104 eid 104 etid 104 c DL_PDU n "dpdu ack-1" pe 67
+CL id 104 tid 104 eid 104 etid 104 c DL_PDU n "dpdu ack-1" pe 67 cid 105
+SH sm 9 sg 7
+ES t 0.9
+
+E # 68 t 0.8 m 10 ce 55 msg 86
+CM id 106 tid 106 eid 106 etid 106 c cMessage n "p pdu of dpdu-1, typ A" pe -1
+BS id 106 tid 106 eid 86 etid 86 c P_PDU n "p pdu of dpdu-1, typ A" pe 68
+CL id 106 tid 106 eid 86 etid 86 c P_PDU n "p pdu of dpdu-1, typ A" pe 68 cid 107
+SH sm 10 sg 7
+SH sm 3 sg 3
+SH sm 4 sg 2
+ES t 0.9
+
+E # 69 t 0.8 m 12 ce 57 msg 89
+BS id 89 tid 89 eid 70 etid 70 c P_PDU n "p pdu of dpdu-1, typ A" pe 69
+CL id 89 tid 89 eid 70 etid 70 c P_PDU n "p pdu of dpdu-1, typ A" pe 69 cid 108
+SH sm 12 sg 7
+ES t 0.9
+
+E # 70 t 0.8 m 5 ce 60 msg 0
+CM id 109 tid 109 eid 109 etid 109 c cMessage n "APDU data-16" pe -1
+BS id 109 tid 109 eid 109 etid 109 c A_PDU n "APDU data-16" pe 70
+CL id 109 tid 109 eid 109 etid 109 c A_PDU n "APDU data-16" pe 70 cid 110
+SH sm 5 sg 3
+ES t 0.8
+BS id 0 tid 0 eid 0 etid 0 c cMessage n timer pe 70
+ES t 0.85
+
+E # 71 t 0.8 m 6 ce 70 msg 109
+CM id 111 tid 111 eid 111 etid 111 c cMessage n "dpdu with apdu-16" pe -1
+
+E # 72 t 0.85 m 5 ce 70 msg 0
+CM id 112 tid 112 eid 112 etid 112 c cMessage n "APDU data-17" pe -1
+BS id 112 tid 112 eid 112 etid 112 c A_PDU n "APDU data-17" pe 72
+CL id 112 tid 112 eid 112 etid 112 c A_PDU n "APDU data-17" pe 72 cid 113
+SH sm 5 sg 3
+ES t 0.85
+BS id 0 tid 0 eid 0 etid 0 c cMessage n timer pe 72
+ES t 0.9
+
+E # 73 t 0.85 m 6 ce 72 msg 112
+CM id 114 tid 114 eid 114 etid 114 c cMessage n "dpdu with apdu-17" pe -1
+
+E # 74 t 0.9 m 6 ce 62 msg 1
+BS id 1 tid 1 eid 1 etid 1 c cMessage n clockwake pe 74
+ES t 1
+BS id 47 tid 47 eid 45 etid 45 c DL_PDU n "dpdu with apdu-8" pe 28
+CL id 47 tid 47 eid 45 etid 45 c DL_PDU n "dpdu with apdu-8" pe 28 cid 115
+SH sm 6 sg 7
+ES t 1
+
+E # 75 t 0.9 m 7 ce 62 msg 39
+CM id 116 tid 116 eid 116 etid 116 c cMessage n "p pdu of dpdu-7, typ D" pe -1
+BS id 116 tid 116 eid 37 etid 37 c P_PDU n "p pdu of dpdu-7, typ D" pe 75
+CL id 116 tid 116 eid 37 etid 37 c P_PDU n "p pdu of dpdu-7, typ D" pe 75 cid 117
+SH sm 7 sg 7
+SH sm 2 sg 3
+SH sm 4 sg 0
+ES t 1
+
+E # 76 t 0.9 m 11 ce 63 msg 98
+BS id 98 tid 98 eid 34 etid 34 c P_PDU n "p pdu of dpdu-6, typ D" pe 76
+CL id 98 tid 98 eid 34 etid 34 c P_PDU n "p pdu of dpdu-6, typ D" pe 76 cid 118
+SH sm 11 sg 7
+ES t 1
+
+E # 77 t 0.9 m 12 ce 64 msg 80
+BS id 80 tid 80 eid 27 etid 27 c P_PDU n "p pdu of dpdu-5, typ D" pe 77
+CL id 80 tid 80 eid 27 etid 27 c P_PDU n "p pdu of dpdu-5, typ D" pe 77 cid 119
+SH sm 12 sg 3
+SH sm 4 sg 7
+SH sm 3 sg 0
+ES t 1
+
+E # 78 t 0.9 m 10 ce 65 msg 64
+BS id 64 tid 64 eid 24 etid 24 c P_PDU n "p pdu of dpdu-4, typ D" pe 78
+CL id 64 tid 64 eid 24 etid 24 c P_PDU n "p pdu of dpdu-4, typ D" pe 78 cid 120
+SH sm 10 sg 3
+ES t 1
+
+E # 79 t 0.9 m 9 ce 66 msg 52
+CL id 20 tid 20 eid 18 etid 18 c DL_PDU n "dpdu with apdu-3" pe 32 cid 121
+DM id 52 tid 52 eid 52 etid 52 c cMessage n "p pdu of dpdu-3, typ D" pe 79
+CM id 122 tid 122 eid 122 etid 122 c cMessage n "dpdu ack-1" pe -1
+DM id 121 tid 20 eid 121 etid 20 c cMessage n "dpdu with apdu-3" pe 79
+BS id 122 tid 122 eid 122 etid 122 c DL_PDU n "dpdu ack-1" pe 79
+CL id 122 tid 122 eid 122 etid 122 c DL_PDU n "dpdu ack-1" pe 79 cid 123
+SH sm 9 sg 7
+ES t 1
+
+E # 80 t 0.9 m 10 ce 67 msg 104
+CM id 124 tid 124 eid 124 etid 124 c cMessage n "p pdu of dpdu-1, typ A" pe -1
+BS id 124 tid 124 eid 104 etid 104 c P_PDU n "p pdu of dpdu-1, typ A" pe 80
+CL id 124 tid 124 eid 104 etid 104 c P_PDU n "p pdu of dpdu-1, typ A" pe 80 cid 125
+SH sm 10 sg 7
+SH sm 3 sg 3
+SH sm 4 sg 2
+ES t 1
+
+E # 81 t 0.9 m 12 ce 68 msg 106
+BS id 106 tid 106 eid 86 etid 86 c P_PDU n "p pdu of dpdu-1, typ A" pe 81
+CL id 106 tid 106 eid 86 etid 86 c P_PDU n "p pdu of dpdu-1, typ A" pe 81 cid 126
+SH sm 12 sg 7
+ES t 1
+
+E # 82 t 0.9 m 11 ce 69 msg 89
+BS id 89 tid 89 eid 70 etid 70 c P_PDU n "p pdu of dpdu-1, typ A" pe 82
+CL id 89 tid 89 eid 70 etid 70 c P_PDU n "p pdu of dpdu-1, typ A" pe 82 cid 127
+SH sm 11 sg 3
+SH sm 4 sg 5
+SH sm 2 sg 0
+ES t 1
+
+E # 83 t 0.9 m 5 ce 72 msg 0
+CM id 128 tid 128 eid 128 etid 128 c cMessage n "APDU data-18" pe -1
+BS id 128 tid 128 eid 128 etid 128 c A_PDU n "APDU data-18" pe 83
+CL id 128 tid 128 eid 128 etid 128 c A_PDU n "APDU data-18" pe 83 cid 129
+SH sm 5 sg 3
+ES t 0.9
+BS id 0 tid 0 eid 0 etid 0 c cMessage n timer pe 83
+ES t 0.95
+
+E # 84 t 0.9 m 6 ce 83 msg 128
+CM id 130 tid 130 eid 130 etid 130 c cMessage n "dpdu with apdu-18" pe -1
+
+E # 85 t 0.95 m 5 ce 83 msg 0
+CM id 131 tid 131 eid 131 etid 131 c cMessage n "APDU data-19" pe -1
+BS id 131 tid 131 eid 131 etid 131 c A_PDU n "APDU data-19" pe 85
+CL id 131 tid 131 eid 131 etid 131 c A_PDU n "APDU data-19" pe 85 cid 132
+SH sm 5 sg 3
+ES t 0.95
+BS id 0 tid 0 eid 0 etid 0 c cMessage n timer pe 85
+ES t 1
+
+E # 86 t 0.95 m 6 ce 85 msg 131
+CM id 133 tid 133 eid 133 etid 133 c cMessage n "dpdu with apdu-19" pe -1
+
+E # 87 t 1 m 6 ce 74 msg 1
+BS id 1 tid 1 eid 1 etid 1 c cMessage n clockwake pe 87
+ES t 1.1
+BS id 50 tid 50 eid 48 etid 48 c DL_PDU n "dpdu with apdu-9" pe 30
+CL id 50 tid 50 eid 48 etid 48 c DL_PDU n "dpdu with apdu-9" pe 30 cid 134
+SH sm 6 sg 7
+ES t 1.1
+
+E # 88 t 1 m 7 ce 74 msg 47
+CM id 135 tid 135 eid 135 etid 135 c cMessage n "p pdu of dpdu-8, typ D" pe -1
+BS id 135 tid 135 eid 45 etid 45 c P_PDU n "p pdu of dpdu-8, typ D" pe 88
+CL id 135 tid 135 eid 45 etid 45 c P_PDU n "p pdu of dpdu-8, typ D" pe 88 cid 136
+SH sm 7 sg 7
+SH sm 2 sg 3
+SH sm 4 sg 0
+ES t 1.1
+
+E # 89 t 1 m 11 ce 75 msg 116
+BS id 116 tid 116 eid 37 etid 37 c P_PDU n "p pdu of dpdu-7, typ D" pe 89
+CL id 116 tid 116 eid 37 etid 37 c P_PDU n "p pdu of dpdu-7, typ D" pe 89 cid 137
+SH sm 11 sg 7
+ES t 1.1
+
+E # 90 t 1 m 12 ce 76 msg 98
+BS id 98 tid 98 eid 34 etid 34 c P_PDU n "p pdu of dpdu-6, typ D" pe 90
+CL id 98 tid 98 eid 34 etid 34 c P_PDU n "p pdu of dpdu-6, typ D" pe 90 cid 138
+SH sm 12 sg 3
+SH sm 4 sg 7
+SH sm 3 sg 0
+ES t 1.1
+
+E # 91 t 1 m 10 ce 77 msg 80
+BS id 80 tid 80 eid 27 etid 27 c P_PDU n "p pdu of dpdu-5, typ D" pe 91
+CL id 80 tid 80 eid 27 etid 27 c P_PDU n "p pdu of dpdu-5, typ D" pe 91 cid 139
+SH sm 10 sg 3
+ES t 1.1
+
+E # 92 t 1 m 9 ce 78 msg 64
+CL id 26 tid 26 eid 24 etid 24 c DL_PDU n "dpdu with apdu-4" pe 41 cid 140
+DM id 64 tid 64 eid 64 etid 64 c cMessage n "p pdu of dpdu-4, typ D" pe 92
+CM id 141 tid 141 eid 141 etid 141 c cMessage n "dpdu ack-1" pe -1
+DM id 140 tid 26 eid 140 etid 26 c cMessage n "dpdu with apdu-4" pe 92
+BS id 141 tid 141 eid 141 etid 141 c DL_PDU n "dpdu ack-1" pe 92
+CL id 141 tid 141 eid 141 etid 141 c DL_PDU n "dpdu ack-1" pe 92 cid 142
+SH sm 9 sg 7
+ES t 1.1
+
+E # 93 t 1 m 10 ce 79 msg 122
+CM id 143 tid 143 eid 143 etid 143 c cMessage n "p pdu of dpdu-1, typ A" pe -1
+BS id 143 tid 143 eid 122 etid 122 c P_PDU n "p pdu of dpdu-1, typ A" pe 93
+CL id 143 tid 143 eid 122 etid 122 c P_PDU n "p pdu of dpdu-1, typ A" pe 93 cid 144
+SH sm 10 sg 7
+SH sm 3 sg 3
+SH sm 4 sg 2
+ES t 1.1
+
+E # 94 t 1 m 12 ce 80 msg 124
+BS id 124 tid 124 eid 104 etid 104 c P_PDU n "p pdu of dpdu-1, typ A" pe 94
+CL id 124 tid 124 eid 104 etid 104 c P_PDU n "p pdu of dpdu-1, typ A" pe 94 cid 145
+SH sm 12 sg 7
+ES t 1.1
+
+E # 95 t 1 m 11 ce 81 msg 106
+BS id 106 tid 106 eid 86 etid 86 c P_PDU n "p pdu of dpdu-1, typ A" pe 95
+CL id 106 tid 106 eid 86 etid 86 c P_PDU n "p pdu of dpdu-1, typ A" pe 95 cid 146
+SH sm 11 sg 3
+SH sm 4 sg 5
+SH sm 2 sg 0
+ES t 1.1
+
+E # 96 t 1 m 7 ce 82 msg 89
+BS id 89 tid 89 eid 70 etid 70 c P_PDU n "p pdu of dpdu-1, typ A" pe 96
+CL id 89 tid 89 eid 70 etid 70 c P_PDU n "p pdu of dpdu-1, typ A" pe 96 cid 147
+SH sm 7 sg 3
+ES t 1.1
+
+E # 97 t 1 m 5 ce 85 msg 0
+DM id 0 tid 0 eid 0 etid 0 c cMessage n timer pe 97
+
+E # 98 t 1.1 m 6 ce 87 msg 1
+BS id 1 tid 1 eid 1 etid 1 c cMessage n clockwake pe 98
+ES t 1.2
+BS id 59 tid 59 eid 57 etid 57 c DL_PDU n "dpdu with apdu-10" pe 37
+CL id 59 tid 59 eid 57 etid 57 c DL_PDU n "dpdu with apdu-10" pe 37 cid 148
+SH sm 6 sg 7
+ES t 1.2
+
+E # 99 t 1.1 m 7 ce 87 msg 50
+CM id 149 tid 149 eid 149 etid 149 c cMessage n "p pdu of dpdu-9, typ D" pe -1
+BS id 149 tid 149 eid 48 etid 48 c P_PDU n "p pdu of dpdu-9, typ D" pe 99
+CL id 149 tid 149 eid 48 etid 48 c P_PDU n "p pdu of dpdu-9, typ D" pe 99 cid 150
+SH sm 7 sg 7
+SH sm 2 sg 3
+SH sm 4 sg 0
+ES t 1.2
+
+E # 100 t 1.1 m 11 ce 88 msg 135
+BS id 135 tid 135 eid 45 etid 45 c P_PDU n "p pdu of dpdu-8, typ D" pe 100
+CL id 135 tid 135 eid 45 etid 45 c P_PDU n "p pdu of dpdu-8, typ D" pe 100 cid 151
+SH sm 11 sg 7
+ES t 1.2
+
+E # 101 t 1.1 m 12 ce 89 msg 116
+BS id 116 tid 116 eid 37 etid 37 c P_PDU n "p pdu of dpdu-7, typ D" pe 101
+CL id 116 tid 116 eid 37 etid 37 c P_PDU n "p pdu of dpdu-7, typ D" pe 101 cid 152
+SH sm 12 sg 3
+SH sm 4 sg 7
+SH sm 3 sg 0
+ES t 1.2
+
+E # 102 t 1.1 m 10 ce 90 msg 98
+BS id 98 tid 98 eid 34 etid 34 c P_PDU n "p pdu of dpdu-6, typ D" pe 102
+CL id 98 tid 98 eid 34 etid 34 c P_PDU n "p pdu of dpdu-6, typ D" pe 102 cid 153
+SH sm 10 sg 3
+ES t 1.2
+
+E # 103 t 1.1 m 9 ce 91 msg 80
+CL id 29 tid 29 eid 27 etid 27 c DL_PDU n "dpdu with apdu-5" pe 51 cid 154
+DM id 80 tid 80 eid 80 etid 80 c cMessage n "p pdu of dpdu-5, typ D" pe 103
+CM id 155 tid 155 eid 155 etid 155 c cMessage n "dpdu ack-1" pe -1
+DM id 154 tid 29 eid 154 etid 29 c cMessage n "dpdu with apdu-5" pe 103
+BS id 155 tid 155 eid 155 etid 155 c DL_PDU n "dpdu ack-1" pe 103
+CL id 155 tid 155 eid 155 etid 155 c DL_PDU n "dpdu ack-1" pe 103 cid 156
+SH sm 9 sg 7
+ES t 1.2
+
+E # 104 t 1.1 m 10 ce 92 msg 141
+CM id 157 tid 157 eid 157 etid 157 c cMessage n "p pdu of dpdu-1, typ A" pe -1
+BS id 157 tid 157 eid 141 etid 141 c P_PDU n "p pdu of dpdu-1, typ A" pe 104
+CL id 157 tid 157 eid 141 etid 141 c P_PDU n "p pdu of dpdu-1, typ A" pe 104 cid 158
+SH sm 10 sg 7
+SH sm 3 sg 3
+SH sm 4 sg 2
+ES t 1.2
+
+E # 105 t 1.1 m 12 ce 93 msg 143
+BS id 143 tid 143 eid 122 etid 122 c P_PDU n "p pdu of dpdu-1, typ A" pe 105
+CL id 143 tid 143 eid 122 etid 122 c P_PDU n "p pdu of dpdu-1, typ A" pe

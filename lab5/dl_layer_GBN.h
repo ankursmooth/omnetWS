@@ -26,17 +26,20 @@ class Dl_layer_GBN : public cSimpleModule
 {
 private:
    simtime_t timeout;  // timeout
-   cMessage *timersend;
+
+   cMessage *clockwake;
    cMessage *message;
    cMessage *event; // pointer to the event object which we'll use for timing
-   cMessage *messageWaitcopy;
+   cMessage *timeoutEvent;
    int numSent;
    int numReceived;
-   vector<DL_PDU *> buf;
+   vector<cMessage *> buf;
    int R,S, SL, SF,wsize;
+
   protected:
    char msgname[20];
-    int id;
+   simtime_t D_pr;
+   int id;
     cGate * fromApp, *toApp, * toPhysical, *fromPhysical;
 
     virtual void initialize();

@@ -23,6 +23,9 @@ void PLayer::initialize()
 
     numSent = 0;
     numReceived = 0;
+    if(D_p<=0){
+        D_p=0.1;
+    }
     WATCH(numSent);
     WATCH(numReceived);
     toNode=gate("toNode");
@@ -72,17 +75,17 @@ void PLayer::handleMessage(cMessage *msg)
                 pkt->setID((dpkt->getID()));
                 pkt->setType(dpkt->getType());
                 pkt->encapsulate(dpkt);
-                send(pkt,toNode);
+                sendDelayed(pkt,D_p,toNode);
             }
         }
         else{
-            send(msg,toNode);
+            sendDelayed(msg,D_p,toNode);
         }
 
        }
        else if(msg->getArrivalGate()==fromNode){
 
                numReceived++;
-               send(msg,toDL);
+               sendDelayed(msg,D_p,toDL);
        }
 }
