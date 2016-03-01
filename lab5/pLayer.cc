@@ -23,9 +23,10 @@ void PLayer::initialize()
 
     numSent = 0;
     numReceived = 0;
-    if(D_p<=0){
-        D_p=0.1;
-    }
+//    if(D_pr<=0){
+//        D_pr=0.1;
+//    }
+    D_p=0;
     WATCH(numSent);
     WATCH(numReceived);
     toNode=gate("toNode");

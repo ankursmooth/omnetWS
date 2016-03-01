@@ -22,6 +22,9 @@ simple Dl_layer_GBN
 {
   parameters:
         int nodeId;
+        int D_p;
+        int D_pr;
+        int k;
   gates:
         input fromApp;
         output toApp;

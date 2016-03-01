@@ -18,10 +18,16 @@ package lab5;
 network LayerNetwork
 {
     submodules:
-        node1 : Node{nodeID =1;}
-        node2 : Node{nodeID =2;}
-        hub : Hub;
-    connections :
+        node1: Node {
+            nodeID = 1;
+            @display("p=34,44");
+        }
+        node2: Node {
+            nodeID = 2;
+            @display("p=189,83");
+        }
+        hub: Hub;
+    connections:
         node1.out --> hub.in1;
         node2.out --> hub.in2;
         hub.out1 --> node1.in;

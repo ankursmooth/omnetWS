@@ -27,7 +27,7 @@ Define_Module(ApplicationLayer);
 //    cancelAndDelete(timeoutEvent);
 //}
 ApplicationLayer::~ApplicationLayer(){
-    cancelAndDelete(timer);
+    //cancelAndDelete(timer);
 }
 void ApplicationLayer::initialize()
 {
@@ -47,7 +47,7 @@ void ApplicationLayer::initialize()
     timer= new cMessage("timer");
     in=gate("in");
     out=gate("out");
-    sentCount=51;
+    sentCount=0;
     if(id==1){
         //cMessage * msg =new cMessage();
         //cMessage *msg2 = check_and_cast<cMessage*>(msg);
@@ -61,13 +61,14 @@ void ApplicationLayer::handleMessage(cMessage *msg)
 {
     // TODO - Generated method body
 
-    if(sentCount<32){
+    if(sentCount>25){
             delete msg;
     }
     else if(msg->isSelfMessage()){
         char msgname[20];
         //delete msg;
-        sprintf(msgname, "APDU data-%d", seq++);
+        sprintf(msgname, "APDU data-%c", 'A' +seq);
+        seq++;
         A_PDU *msg = new A_PDU(msgname);
         msg->setID(seq-1);
         msg->setType("Data");
@@ -77,9 +78,9 @@ void ApplicationLayer::handleMessage(cMessage *msg)
         msg->setTimestamp();
         send(msg,out);
         cancelEvent(timer);
-        scheduleAt(simTime()+0.05,timer);
+        scheduleAt(simTime()+0.0005,timer);
         numSent++;
-        sentCount--;
+        sentCount++;
 
     }
 

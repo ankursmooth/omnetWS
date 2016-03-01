@@ -35,11 +35,12 @@ private:
    int numReceived;
    vector<cMessage *> buf;
    int R,S, SL, SF,wsize;
-
+   int counterofemptyclocks;
   protected:
    char msgname[20];
-   simtime_t D_pr;
+   simtime_t D_p;
    int id;
+   int bufsize;
     cGate * fromApp, *toApp, * toPhysical, *fromPhysical;
 
     virtual void initialize();

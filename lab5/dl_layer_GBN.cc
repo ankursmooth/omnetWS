@@ -26,7 +26,7 @@ Define_Module(Dl_layer_GBN);
 Dl_layer_GBN::~Dl_layer_GBN(){
 
     cancelAndDelete(clockwake);
-    cancelAndDelete(timeoutEvent);
+  //  cancelAndDelete(timeoutEvent);
     message= dynamic_cast<cMessage *>(message);
 
     /*if(messageWaitcopy)
@@ -44,18 +44,23 @@ void Dl_layer_GBN::initialize()
         numReceived = 0;
         WATCH(numSent);
         WATCH(numReceived);
+        S=R=SF=SL=0;
+        WATCH(S);
+        WATCH(SF);
+        WATCH(SL);
+        WATCH(R);
         id=par("nodeId");
-        timeout = 5.0;
+        timeout = 1.0;
         //buf.resize(30);
         //message=NULL;
-        S=R=SF=0;
+
        // if(wsize<=0){
-            wsize=5;
+            wsize=par("k");
         //}
         //if(D_pr<=0){
-            D_pr=0.1;
+            D_p=par("D_p");
         //}
-
+            counterofemptyclocks=0;
         clockwake= new cMessage ("clockwake");
         timeoutEvent = new cMessage("timeoutEvent");
         event = new cMessage("event");
@@ -74,27 +79,42 @@ void Dl_layer_GBN::handleMessage(cMessage *msg)
     // TODO - Generated method body
     if(msg->isSelfMessage())
     {
-
-        if (msg==clockwake)
+        if (msg==timeoutEvent){
+                    S=0;
+                   // scheduleAt(simTime()+timeout,timeoutEvent);
+                    cancelEvent(clockwake);
+                    cancelEvent(timeoutEvent);
+                    scheduleAt(simTime()+0.1,clockwake);
+                    S=0;
+                    EV<< "S set to 0"<<S;
+                }
+        else if (msg==clockwake)
         {
 
             scheduleAt(simTime()+0.1,clockwake);
-           if(S<SL ){
-               if(buf.size()<S){
-                   cancelEvent(clockwake);
+           if((SF+S)<SL ){
+               if(buf.size()<SL){
+                   //cancelEvent(clockwake);
+                   //do nothing till buffer fills more
+                   //check for each clock if buffer filled
+                   counterofemptyclocks++;
+                   if(counterofemptyclocks>10)
+                       cancelEvent(clockwake);
                }
                else{
-               sendDelayed(buf.at(S),D_pr,toPhysical);
-               S++;
+                   counterofemptyclocks=0;
+                   sendDelayed(buf.at(SF + S)->dup(),D_p,toPhysical);
+                   if(S==0){
+                       scheduleAt(simTime()+timeout,timeoutEvent);
+                   }
+                   S++;
+
                }
 
            }
 
         }
-        else if (msg==timeoutEvent){
-            S=SF;
-            scheduleAt(simTime()+timeout,timeoutEvent);
-        }
+
     }
     if(msg->getArrivalGate()==fromApp){
 
@@ -102,10 +122,10 @@ void Dl_layer_GBN::handleMessage(cMessage *msg)
         int seq= apkt->getID();
 
 
-        sprintf(msgname, "dpdu with apdu-%d", (seq));
+        sprintf(msgname, "dpdu -%d", (seq));
 
         DL_PDU *dpkt = new DL_PDU(msgname);
-        dpkt->setID((seq));
+        dpkt->setID((seq)%(wsize+1));
         dpkt->setType("Data");
         dpkt->setSourceAdd(apkt->getSourceAdd());
         dpkt->setDestiAdd(apkt->getDestiAdd());
@@ -113,6 +133,7 @@ void Dl_layer_GBN::handleMessage(cMessage *msg)
 
         //cMessage *msg = check_and_cast<cMessage*>(pkt);
         buf.push_back(dpkt);
+        // to make sure SL is not more than messages in buffer
         if(SL<buf.size() && SL<(SF+wsize)){
             SL++;
         }
@@ -126,27 +147,50 @@ void Dl_layer_GBN::handleMessage(cMessage *msg)
 
             numReceived++;
             if(strcmp(pkt->getType(),"Ack")==0){
-                S=SF=pkt->getID();
-                SL=SF +wsize;
+
+               S=(SF%(wsize+1));
+               if(pkt->getID()>(S)){
+               /*if(S<R){
+                   SF= SF + R-S;
+               }
+               else{
+                   SF= SF+ S-R;
+               }
+                SF=SF+(pkt->getID()+1) - ;
+                */
+            }
+               else{
+                   while(S!=pkt->getID()){
+                       SF++;
+                       S=(SF%(wsize+1));
+                   }
+                    S=0;
+                    S=0;
+               }
+                // to make sure SL is not more than messages in buffer
+                bufsize=(buf.size());
+                SL=(SF+wsize)<bufsize?(SF+wsize):bufsize;
                 cancelEvent(timeoutEvent);
-                scheduleAt(simTime()+timeout,timeoutEvent);
+
 
                 delete pkt;
             }
             else{
-                sprintf(msgname, "dpdu ack-%d", ((R+1)%wsize ));
+                sprintf(msgname, "dpdu ack-%d", ((R+1)%(wsize+1) ));
                 DL_PDU *dpkt = new DL_PDU(msgname);
-                dpkt->setID((R+1)%wsize);
+                dpkt->setID((R+1)%(wsize+1));
                 dpkt->setType("Ack");
                 dpkt->setSourceAdd(pkt->getDestiAdd());
                 dpkt->setDestiAdd(pkt->getSourceAdd());
                 numSent++;
                 if(R== pkt->getID()){
-                    sendDelayed(pkt,D_pr,toApp);
+                    sendDelayed(pkt,D_p,toApp);
+                    R=R+1;
+                    R= R%(wsize+1);
                 }
                 else
                     delete pkt;
-                sendDelayed(dpkt,D_pr,toPhysical);
+                sendDelayed(dpkt,D_p,toPhysical);
 
 
             }
