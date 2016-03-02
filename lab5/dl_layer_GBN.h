@@ -33,12 +33,18 @@ private:
    cMessage *timeoutEvent;
    int numSent;
    int numReceived;
+
+   cLongHistogram delayStats, RTTStats;
+   cOutVector delayVector,RTTVector;
+
    vector<cMessage *> buf;
    int R,S, SL, SF,wsize;
    int flag;
    int counterofemptyclocks;
   protected:
    char msgname[20];
+   simtime_t sendingTime;
+   simtime_t tempTime;
    simtime_t D_p;
    int id;
    int bufsize;
@@ -51,7 +57,7 @@ private:
     {
 
     }
-
+    virtual void finish();
     virtual ~Dl_layer_GBN();
 
 

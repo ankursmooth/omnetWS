@@ -51,6 +51,10 @@ void Dl_layer_GBN::initialize()
         WATCH(R);
         id=par("nodeId");
         timeout = 1.0;
+        delayStats.setName("delay stats");
+        delayVector.setName("delay vector");
+        RTTStats.setName("RTT stats");
+        RTTVector.setName("RTT vector");
         //buf.resize(30);
         //message=NULL;
 
@@ -98,14 +102,26 @@ void Dl_layer_GBN::handleMessage(cMessage *msg)
                    //do nothing till buffer fills more
                    //check for each clock if buffer filled
                    counterofemptyclocks++;
-                   if(counterofemptyclocks>20)
+                   if(counterofemptyclocks>20){
                        cancelEvent(clockwake);
+                       bufsize=buf.size();
+                       cMessage *msg;
+                       for(int i=0;i<bufsize;i++){
+                           msg=NULL;
+                           msg = dynamic_cast<cMessage *>(buf.at(i));
+                           if(msg){
+                              delete msg;
+                           }
+                       }
+                   }
                }
                else{
                    counterofemptyclocks=0;
                    if(buf.size()>(SF+S)){
                        EV<<"sending delayed paket "<<(SF +S);
-                   sendDelayed(buf.at(SF + S)->dup(),D_p,toPhysical);
+                       cMessage *msgg = buf.at(SF + S)->dup();
+                       numSent++;
+                   sendDelayed(msgg,D_p,toPhysical);
                    if(S==0){
                        scheduleAt(simTime()+timeout,timeoutEvent);
                    }
@@ -146,11 +162,16 @@ void Dl_layer_GBN::handleMessage(cMessage *msg)
     else if(msg->getArrivalGate()==fromPhysical){
         P_PDU *ppkt = check_and_cast<P_PDU *>(msg);
            DL_PDU *pkt =check_and_cast<DL_PDU *>(ppkt->decapsulate());
+           sendingTime=pkt->getSendingTime();
 
             delete ppkt;
             //EV<<"heres";
             numReceived++;
             if(strcmp(pkt->getType(),"Ack")==0){
+                delayVector.record((simTime()-sendingTime).dbl());
+                delayStats.collect((simTime()-sendingTime).dbl());
+                RTTVector.record((simTime()-pkt->getTimestamp()).dbl());
+                RTTStats.collect((simTime()-pkt->getTimestamp()).dbl());
                 flag=0;
                 bufsize=buf.size();
                // EV<<"here"<<bufsize;
@@ -190,6 +211,8 @@ void Dl_layer_GBN::handleMessage(cMessage *msg)
                 delete pkt;
             }
             else{
+                delayVector.record((simTime()-sendingTime).dbl());
+                delayStats.collect((simTime()-sendingTime).dbl());
                 flag=0;
                 if(R== pkt->getID()){
                     sendDelayed(pkt,D_p,toApp);
@@ -206,6 +229,7 @@ void Dl_layer_GBN::handleMessage(cMessage *msg)
                 dpkt->setSourceAdd(pkt->getDestiAdd());
                 dpkt->setDestiAdd(pkt->getSourceAdd());
                 numSent++;
+                dpkt->setTimestamp(sendingTime);
                 sendDelayed(dpkt,D_p,toPhysical);
                 if(flag)
                     delete pkt;
@@ -219,5 +243,16 @@ void Dl_layer_GBN::handleMessage(cMessage *msg)
     }
 
 
+
+}
+void Dl_layer_GBN::finish(){
+        EV << "Sent:     " << numSent << endl;
+      EV << "Received: " << numReceived << endl;
+
+      recordScalar("#sent", numSent);
+      recordScalar("#received", numReceived);
+
+      delayStats.recordAs("delay vectot");
+      RTTStats.recordAs("RTT vector");
 
 }

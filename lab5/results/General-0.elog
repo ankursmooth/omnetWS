@@ -1,5 +1,5 @@
 E # 0 t 0 m 1 ce -1 msg -1
-SB v 1030 rid General-0-20160302-13:34:59-5316 b 1000
+SB v 1030 rid General-0-20160302-23:14:35-9387 b 1000
 KF p -1 c "" s ""
 MC id 1 c cModule t lab5.LayerNetwork n LayerNetwork cm 1
 MS id 1 d ""
@@ -8596,9 +8596,10 @@ SH sm 6 sg 7
 ES t 12.6
 BS id 2 tid 2 eid 2 etid 2 c cMessage n timeoutEvent pe 1023
 ES t 13.5
+- sending delayed paket 23
 
 E # 1025 t 12.5 m 7 ce 1015 msg 1455
-- sending delayed paket 23"Losing" message
+- "Losing" message
 DM id 1455 tid 79 eid 1455 etid 79 c cMessage n "dpdu -23" pe 1025
 
 E # 1026 t 12.5 m 11 ce 1016 msg 1457
@@ -8656,6 +8657,7 @@ BS id 1478 tid 82 eid 80 etid 80 c DL_PDU n "dpdu -24" pe 1032
 CL id 1478 tid 82 eid 80 etid 80 c DL_PDU n "dpdu -24" pe 1032 cid 1479
 SH sm 6 sg 7
 ES t 12.7
+- sending delayed paket 24
 
 E # 1033 t 12.6 m 7 ce 1024 msg 1469
 CM id 1480 tid 1480 eid 1480 etid 1480 c cMessage n "p pdu of dpdu-3, typ D" pe -1
@@ -8725,6 +8727,7 @@ SH sm 6 sg 7
 ES t 12.8
 BS id 2 tid 2 eid 2 etid 2 c cMessage n timeoutEvent pe 1039
 ES t 13.7
+- sending delayed paket 23
 
 E # 1041 t 12.7 m 7 ce 1032 msg 1478
 CM id 1492 tid 1492 eid 1492 etid 1492 c cMessage n "p pdu of dpdu-0, typ D" pe -1
@@ -8792,6 +8795,7 @@ SH sm 6 sg 7
 ES t 12.9
 BS id 2 tid 2 eid 2 etid 2 c cMessage n timeoutEvent pe 1047
 ES t 13.8
+- sending delayed paket 23
 
 E # 1049 t 12.8 m 7 ce 1040 msg 1490
 CM id 1503 tid 1503 eid 1503 etid 1503 c cMessage n "p pdu of dpdu-3, typ D" pe -1
@@ -8859,6 +8863,7 @@ SH sm 6 sg 7
 ES t 13
 BS id 2 tid 2 eid 2 etid 2 c cMessage n timeoutEvent pe 1055
 ES t 13.9
+- sending delayed paket 24
 
 E # 1057 t 12.9 m 7 ce 1048 msg 1501
 CM id 1515 tid 1515 eid 1515 etid 1515 c cMessage n "p pdu of dpdu-3, typ D" pe -1
@@ -8928,6 +8933,7 @@ SH sm 6 sg 7
 ES t 13.1
 BS id 2 tid 2 eid 2 etid 2 c cMessage n timeoutEvent pe 1063
 ES t 14
+- sending delayed paket 24
 
 E # 1065 t 13 m 7 ce 1056 msg 1513
 CM id 1526 tid 1526 eid 1526 etid 1526 c cMessage n "p pdu of dpdu-0, typ D" pe -1
@@ -8994,6 +9000,7 @@ BS id 1536 tid 85 eid 83 etid 83 c DL_PDU n "dpdu -25" pe 1072
 CL id 1536 tid 85 eid 83 etid 83 c DL_PDU n "dpdu -25" pe 1072 cid 1537
 SH sm 6 sg 7
 ES t 13.2
+- sending delayed paket 25
 
 E # 1073 t 13.1 m 7 ce 1064 msg 1524
 CM id 1538 tid 1538 eid 1538 etid 1538 c cMessage n "p pdu of dpdu-0, typ D" pe -1
@@ -9076,6 +9083,7 @@ SH sm 6 sg 7
 ES t 13.3
 BS id 2 tid 2 eid 2 etid 2 c cMessage n timeoutEvent pe 1080
 ES t 14.2
+- sending delayed paket 24
 
 E # 1082 t 13.2 m 7 ce 1072 msg 1536
 CM id 1553 tid 1553 eid 1553 etid 1553 c cMessage n "p pdu of dpdu-1, typ D" pe -1
@@ -9124,6 +9132,7 @@ E # 1087 t 13.2 m 8 ce 1077 msg 1543
 CL id 80 tid 80 eid 80 etid 80 c A_PDU n "APDU data-Y" pe 50 cid 1561
 DM id 1543 tid 82 eid 1543 etid 82 c cMessage n "dpdu -24" pe 1087
 DM id 1561 tid 80 eid 1561 etid 80 c cMessage n "APDU data-Y" pe 1087
+-  received APDU data-Y
 
 E # 1088 t 13.2 m 10 ce 1077 msg 1545
 CM id 1562 tid 1562 eid 1562 etid 1562 c cMessage n "p pdu of dpdu-1, typ A" pe -1
@@ -9157,9 +9166,10 @@ BS id 1566 tid 85 eid 83 etid 83 c DL_PDU n "dpdu -25" pe 1091
 CL id 1566 tid 85 eid 83 etid 83 c DL_PDU n "dpdu -25" pe 1091 cid 1567
 SH sm 6 sg 7
 ES t 13.4
+- sending delayed paket 25
 
 E # 1092 t 13.3 m 7 ce 1081 msg 1551
-- sending delayed paket 24sending delayed paket 23sending delayed paket 23sending delayed paket 24sending delayed paket 24sending delayed paket 25sending delayed paket 24 received APDU data-Ysending delayed paket 25"Losing" message
+- "Losing" message
 DM id 1551 tid 82 eid 1551 etid 82 c cMessage n "dpdu -24" pe 1092
 
 E # 1093 t 13.3 m 11 ce 1082 msg 1553
@@ -9237,6 +9247,7 @@ SH sm 6 sg 7
 ES t 13.5
 BS id 2 tid 2 eid 2 etid 2 c cMessage n timeoutEvent pe 1100
 ES t 14.4
+- sending delayed paket 24
 
 E # 1102 t 13.4 m 7 ce 1091 msg 1566
 CM id 1581 tid 1581 eid 1581 etid 1581 c cMessage n "p pdu of dpdu-1, typ D" pe -1
@@ -9315,9 +9326,10 @@ BS id 1593 tid 85 eid 83 etid 83 c DL_PDU n "dpdu -25" pe 1110
 CL id 1593 tid 85 eid 83 etid 83 c DL_PDU n "dpdu -25" pe 1110 cid 1594
 SH sm 6 sg 7
 ES t 13.6
+- sending delayed paket 25
 
 E # 1111 t 13.5 m 7 ce 1101 msg 1579
-- sending delayed paket 24sending delayed paket 25"Losing" message
+- "Losing" message
 DM id 1579 tid 82 eid 1579 etid 82 c cMessage n "dpdu -24" pe 1111
 
 E # 1112 t 13.5 m 11 ce 1102 msg 1581
@@ -9867,4 +9879,34 @@ E # 1191 t 15.7 m 6 ce 1190 msg 1
 BS id 1 tid 1 eid 1 etid 1 c cMessage n clockwake pe 1191
 ES t 15.8
 CE id 1 tid 1 eid 1 etid 1 c cMessage n clockwake pe 1191
+DM id 10 tid 10 eid 10 etid 10 c cMessage n "dpdu -0" pe 54
+DM id 13 tid 13 eid 13 etid 13 c cMessage n "dpdu -1" pe 95
+DM id 16 tid 16 eid 16 etid 16 c cMessage n "dpdu -2" pe 98
+DM id 19 tid 19 eid 19 etid 19 c cMessage n "dpdu -3" pe 156
+DM id 22 tid 22 eid 22 etid 22 c cMessage n "dpdu -4" pe 160
+DM id 25 tid 25 eid 25 etid 25 c cMessage n "dpdu -5" pe 164
+DM id 28 tid 28 eid 28 etid 28 c cMessage n "dpdu -6" pe 233
+DM id 31 tid 31 eid 31 etid 31 c cMessage n "dpdu -7" pe 238
+DM id 34 tid 34 eid 34 etid 34 c cMessage n "dpdu -8" pe 293
+DM id 37 tid 37 eid 37 etid 37 c cMessage n "dpdu -9" pe 306
+DM id 40 tid 40 eid 40 etid 40 c cMessage n "dpdu -10" pe 313
+DM id 43 tid 43 eid 43 etid 43 c cMessage n "dpdu -11" pe 412
+DM id 46 tid 46 eid 46 etid 46 c cMessage n "dpdu -12" pe 421
+DM id 49 tid 49 eid 49 etid 49 c cMessage n "dpdu -13" pe 430
+DM id 52 tid 52 eid 52 etid 52 c cMessage n "dpdu -14" pe 530
+DM id 55 tid 55 eid 55 etid 55 c cMessage n "dpdu -15" pe 549
+DM id 58 tid 58 eid 58 etid 58 c cMessage n "dpdu -16" pe 558
+DM id 61 tid 61 eid 61 etid 61 c cMessage n "dpdu -17" pe 668
+DM id 64 tid 64 eid 64 etid 64 c cMessage n "dpdu -18" pe 679
+DM id 67 tid 67 eid 67 etid 67 c cMessage n "dpdu -19" pe 800
+DM id 70 tid 70 eid 70 etid 70 c cMessage n "dpdu -20" pe 885
+DM id 73 tid 73 eid 73 etid 73 c cMessage n "dpdu -21" pe 909
+DM id 76 tid 76 eid 76 etid 76 c cMessage n "dpdu -22" pe 997
+DM id 79 tid 79 eid 79 etid 79 c cMessage n "dpdu -23" pe 1048
+DM id 82 tid 82 eid 82 etid 82 c cMessage n "dpdu -24" pe 1120
+DM id 85 tid 85 eid 85 etid 85 c cMessage n "dpdu -25" pe 1110
 SE e 0 c 13 m "No more events -- simulation ended at event #1192, t=15.7."
+- Sent:     111
+- Received: 91
+- Sent:     96
+- Received: 96

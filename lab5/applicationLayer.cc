@@ -96,9 +96,9 @@ void ApplicationLayer::handleMessage(cMessage *msg)
             int x=pkt->getID();
             sprintf(msgname, "APDU ack-%d", x);
 
-            delayapp=simTime()-pkt->getSendingTime();
+           /* delayapp=simTime()-pkt->getSendingTime();
             delayVector.record(delayapp);
-            delayStats.collect(delayapp);
+            delayStats.collect(delayapp);*/
             delete dpkt;
             delete pkt;
 
@@ -116,8 +116,8 @@ void ApplicationLayer::handleMessage(cMessage *msg)
             pkt->setType("Data");
             pkt->setSourceAdd(1);
             pkt->setDestiAdd(2);
-            RTTVector.record(delayapp);
-            RTTStats.collect(delayapp);
+            /*RTTVector.record(delayapp);
+            RTTStats.collect(delayapp);*/
             //cMessage *msg = check_and_cast<cMessage*>(pkt);
             //send(msg,out);
             numSent++;
@@ -131,6 +131,6 @@ void ApplicationLayer::handleMessage(cMessage *msg)
 
 }
 void ApplicationLayer::finish(){
-    delayStats.recordAs("delay");
-    RTTStats.recordAs("RTT");
+   // delayStats.recordAs("delay");
+  //  RTTStats.recordAs("RTT");
 }

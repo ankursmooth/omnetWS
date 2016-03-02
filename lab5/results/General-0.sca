@@ -1,85 +1,64 @@
 version 2
-run General-0-20160302-13:34:59-5316
+run General-0-20160302-23:14:35-9387
 attr configname General
-attr datetime 20160302-13:34:59
+attr datetime 20160302-23:14:35
 attr experiment General
 attr inifile omnetpp.ini
 attr iterationvars ""
 attr iterationvars2 $repetition=0
 attr measurement ""
 attr network LayerNetwork
-attr processid 5316
+attr processid 9387
 attr repetition 0
 attr replication #0
 attr resultdir results
 attr runnumber 0
 attr seedset 0
 
-statistic LayerNetwork.node1.aLayer 	delay
-field count 0
-field mean -nan
-field stddev -nan
+scalar LayerNetwork.node1.dLayer 	#sent 	111
+scalar LayerNetwork.node1.dLayer 	#received 	91
+statistic LayerNetwork.node1.dLayer 	"delay vectot"
+field count 91
+field mean 0
+field stddev 0
 field sum 0
 field sqrsum 0
-field min -nan
-field max -nan
-attr type  int
-bin	-INF	0
-bin	-1	0
-bin	0	0
-bin	1	0
-statistic LayerNetwork.node1.aLayer 	RTT
-field count 0
-field mean -nan
-field stddev -nan
-field sum 0
-field sqrsum 0
-field min -nan
-field max -nan
-attr type  int
-bin	-INF	0
-bin	-1	0
-bin	0	0
-bin	1	0
-statistic LayerNetwork.node2.aLayer 	delay
-field count 26
-field mean 5.8846153846154
-field stddev 4.0430377003132
-field sum 153
-field sqrsum 1309
 field min 0
-field max 13
+field max 0
 attr type  int
 bin	-INF	0
-bin	-7	0
-bin	-6	0
-bin	-5	0
-bin	-4	0
-bin	-3	0
-bin	-2	0
 bin	-1	0
-bin	0	3
-bin	1	1
-bin	2	2
-bin	3	2
-bin	4	3
-bin	5	3
-bin	6	0
-bin	7	3
-bin	8	2
-bin	9	1
-bin	10	2
-bin	11	1
-bin	12	1
-bin	13	2
-bin	14	0
-bin	15	0
-bin	16	0
-bin	17	0
-bin	18	0
-bin	19	0
-bin	20	0
-statistic LayerNetwork.node2.aLayer 	RTT
+bin	0	91
+bin	1	0
+statistic LayerNetwork.node1.dLayer 	"RTT vector"
+field count 91
+field mean 0
+field stddev 0
+field sum 0
+field sqrsum 0
+field min 0
+field max 0
+attr type  int
+bin	-INF	0
+bin	-1	0
+bin	0	91
+bin	1	0
+scalar LayerNetwork.node2.dLayer 	#sent 	96
+scalar LayerNetwork.node2.dLayer 	#received 	96
+statistic LayerNetwork.node2.dLayer 	"delay vectot"
+field count 96
+field mean 0
+field stddev 0
+field sum 0
+field sqrsum 0
+field min 0
+field max 0
+attr type  int
+bin	-INF	0
+bin	-1	0
+bin	0	96
+bin	1	0
+statistic LayerNetwork.node2.dLayer 	"RTT vector"
 field count 0
 field mean -nan
 field stddev -nan
