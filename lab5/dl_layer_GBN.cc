@@ -86,28 +86,31 @@ void Dl_layer_GBN::handleMessage(cMessage *msg)
                     cancelEvent(timeoutEvent);
                     scheduleAt(simTime()+0.1,clockwake);
                     S=0;
-                    EV<< "S set to 0"<<S;
+                    EV<< "\n timeout event, S set to 0"<<S;
                 }
         else if (msg==clockwake)
         {
-
+            //EV<<"here";
             scheduleAt(simTime()+0.1,clockwake);
            if((SF+S)<SL ){
-               if(buf.size()<SL){
+               if(buf.size()<=SL && !(SF<(SL-1))){
                    //cancelEvent(clockwake);
                    //do nothing till buffer fills more
                    //check for each clock if buffer filled
                    counterofemptyclocks++;
-                   if(counterofemptyclocks>10)
+                   if(counterofemptyclocks>20)
                        cancelEvent(clockwake);
                }
                else{
                    counterofemptyclocks=0;
+                   if(buf.size()>(SF+S)){
+                       EV<<"sending delayed paket "<<(SF +S);
                    sendDelayed(buf.at(SF + S)->dup(),D_p,toPhysical);
                    if(S==0){
                        scheduleAt(simTime()+timeout,timeoutEvent);
                    }
                    S++;
+                   }
 
                }
 
@@ -134,7 +137,8 @@ void Dl_layer_GBN::handleMessage(cMessage *msg)
         //cMessage *msg = check_and_cast<cMessage*>(pkt);
         buf.push_back(dpkt);
         // to make sure SL is not more than messages in buffer
-        if(SL<buf.size() && SL<(SF+wsize)){
+        bufsize=buf.size();
+        if(SL<bufsize && SL<(SF+wsize)){
             SL++;
         }
 
@@ -144,12 +148,21 @@ void Dl_layer_GBN::handleMessage(cMessage *msg)
            DL_PDU *pkt =check_and_cast<DL_PDU *>(ppkt->decapsulate());
 
             delete ppkt;
-
+            //EV<<"heres";
             numReceived++;
             if(strcmp(pkt->getType(),"Ack")==0){
+                flag=0;
+                bufsize=buf.size();
+               // EV<<"here"<<bufsize;
+               for(S=0;S<SL-SF;S++){
+                   if(bufsize>(SF+S+1)){
 
-               S=(SF%(wsize+1));
-               if(pkt->getID()>(S)){
+                   DL_PDU *tmppkt = check_and_cast<DL_PDU *>(buf.at(SF+S+1));
+                   if(pkt->getID()==tmppkt->getID()){
+                       flag=1;
+                   }
+                   }
+               }
                /*if(S<R){
                    SF= SF + R-S;
                }
@@ -158,15 +171,16 @@ void Dl_layer_GBN::handleMessage(cMessage *msg)
                }
                 SF=SF+(pkt->getID()+1) - ;
                 */
-            }
-               else{
+            if(flag){
+                   S=(SF%(wsize+1));
                    while(S!=pkt->getID()){
                        SF++;
                        S=(SF%(wsize+1));
                    }
                     S=0;
+            }
                     S=0;
-               }
+
                 // to make sure SL is not more than messages in buffer
                 bufsize=(buf.size());
                 SL=(SF+wsize)<bufsize?(SF+wsize):bufsize;
@@ -176,21 +190,25 @@ void Dl_layer_GBN::handleMessage(cMessage *msg)
                 delete pkt;
             }
             else{
-                sprintf(msgname, "dpdu ack-%d", ((R+1)%(wsize+1) ));
-                DL_PDU *dpkt = new DL_PDU(msgname);
-                dpkt->setID((R+1)%(wsize+1));
-                dpkt->setType("Ack");
-                dpkt->setSourceAdd(pkt->getDestiAdd());
-                dpkt->setDestiAdd(pkt->getSourceAdd());
-                numSent++;
+                flag=0;
                 if(R== pkt->getID()){
                     sendDelayed(pkt,D_p,toApp);
                     R=R+1;
                     R= R%(wsize+1);
+
                 }
                 else
-                    delete pkt;
+                    flag=1;
+                sprintf(msgname, "dpdu ack-%d", ((R) ));
+                DL_PDU *dpkt = new DL_PDU(msgname);
+                dpkt->setID(R);
+                dpkt->setType("Ack");
+                dpkt->setSourceAdd(pkt->getDestiAdd());
+                dpkt->setDestiAdd(pkt->getSourceAdd());
+                numSent++;
                 sendDelayed(dpkt,D_p,toPhysical);
+                if(flag)
+                    delete pkt;
 
 
             }

@@ -88,7 +88,9 @@ void ApplicationLayer::handleMessage(cMessage *msg)
         DL_PDU *dpkt = check_and_cast<DL_PDU *>(msg);
         numReceived++;
 
+
         A_PDU *pkt = check_and_cast<A_PDU *>(dpkt->decapsulate());
+        EV<<" received "<<pkt->getName();
         if(strcmp(pkt->getType(),"Data")==0){
             char msgname[20];
             int x=pkt->getID();

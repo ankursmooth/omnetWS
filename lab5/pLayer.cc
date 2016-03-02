@@ -26,7 +26,7 @@ void PLayer::initialize()
 //    if(D_pr<=0){
 //        D_pr=0.1;
 //    }
-    D_p=0;
+    D_pr=par("D_pr");
     WATCH(numSent);
     WATCH(numReceived);
     toNode=gate("toNode");
@@ -62,7 +62,7 @@ void PLayer::handleMessage(cMessage *msg)
                 percentloss=0.1;
             }
             else{
-                percentloss=0.15;
+                percentloss=0.1;
             }
             if (uniform(0,1) < percentloss)
            {
@@ -76,17 +76,20 @@ void PLayer::handleMessage(cMessage *msg)
                 pkt->setID((dpkt->getID()));
                 pkt->setType(dpkt->getType());
                 pkt->encapsulate(dpkt);
-                sendDelayed(pkt,D_p,toNode);
+                sendDirect(pkt,D_pr,0,toNode);
+                //sendDelayed(pkt,D_p,toNode);
             }
         }
         else{
-            sendDelayed(msg,D_p,toNode);
+            sendDirect(msg,D_pr,0,toNode);
+            //sendDelayed(msg,D_p,toNode);
         }
 
        }
        else if(msg->getArrivalGate()==fromNode){
 
                numReceived++;
-               sendDelayed(msg,D_p,toDL);
+               sendDirect(msg,D_pr,0,toDL);
+               //sendDelayed(msg,D_p,toDL);
        }
 }

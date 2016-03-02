@@ -22,7 +22,7 @@ simple PLayer
 {
     parameters:
         int nodeId;
-        //int D_pr;
+        double D_pr;
     gates:
         input fromDL;
         output toDL;

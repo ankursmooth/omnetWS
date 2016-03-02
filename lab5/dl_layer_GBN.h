@@ -35,6 +35,7 @@ private:
    int numReceived;
    vector<cMessage *> buf;
    int R,S, SL, SF,wsize;
+   int flag;
    int counterofemptyclocks;
   protected:
    char msgname[20];

@@ -34,7 +34,7 @@ private:
     cGate * toNode, *fromNode , * toDL, * fromDL;
     virtual void initialize();
     virtual void handleMessage(cMessage *msg);
-    simtime_t D_p;
+    simtime_t D_pr;
 };
 
 #endif

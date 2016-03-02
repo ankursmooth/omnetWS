@@ -1,14 +1,14 @@
 version 2
-run General-0-20160302-04:59:19-9869
+run General-0-20160302-13:34:59-5316
 attr configname General
-attr datetime 20160302-04:59:19
+attr datetime 20160302-13:34:59
 attr experiment General
 attr inifile omnetpp.ini
 attr iterationvars ""
 attr iterationvars2 $repetition=0
 attr measurement ""
 attr network LayerNetwork
-attr processid 9869
+attr processid 5316
 attr repetition 0
 attr replication #0
 attr resultdir results
@@ -16,7 +16,29 @@ attr runnumber 0
 attr seedset 0
 
 vector 2  LayerNetwork.node2.aLayer  "delay vector"  ETV
-2	60	0.1	0.1
-2	72	0.2	0.1995
-2	84	0.3	0.299
-2	96	0.4	0.3985
+2	75	0.7	0.7
+2	79	0.8	0.7995
+2	83	0.9	0.899
+2	134	2	1.9985
+2	140	2.1	2.098
+2	146	2.2	2.1975
+2	209	3.3	3.297
+2	216	3.4	3.3965
+2	276	4.5	4.496
+2	282	4.6	4.5955
+2	288	4.7	4.695
+2	377	5.8	5.7945
+2	387	5.9	5.894
+2	397	6	5.9935
+2	503	7.1	7.093
+2	514	7.2	7.1925
+2	525	7.3	7.292
+2	631	8.4	8.3915
+2	642	8.5	8.491
+2	762	9.6	9.5905
+2	866	10.7	10.69
+2	881	10.9	10.8895
+2	961	11.8	11.789
+2	1019	12.4	12.3885
+2	1087	13.2	13.188
+2	1133	13.7	13.6875
