@@ -51,7 +51,10 @@ void ApplicationLayer::initialize()
         //cMessage *msg2 = check_and_cast<cMessage*>(msg);
         scheduleAt(0,msg);
     }
-
+    if(id==destiadd){
+        delayStats.setName("delay stats");
+        delayVector.setName("delay vector");
+    }
 
 }
 
@@ -60,6 +63,7 @@ void ApplicationLayer::handleMessage(cMessage *msg)
     // TODO - Generated method body
 
     if(msg->isSelfMessage()){
+        msg->setTimestamp(simTime());
         send(msg,out);
 
 
@@ -75,7 +79,8 @@ void ApplicationLayer::handleMessage(cMessage *msg)
             char msgname[20];
             int x=rpkt->getID();
             sprintf(msgname, "APDU ack-%d", x);
-
+            delayVector.record(simTime()-rpkt->getTimestamp());
+            delayStats.collect(simTime()-rpkt->getTimestamp());
             A_PDU *pkt = new A_PDU(msgname);
             pkt->setID(x);
             pkt->setType("Ack");
@@ -105,4 +110,8 @@ void ApplicationLayer::handleMessage(cMessage *msg)
         }
     }
 
+}
+void ApplicationLayer::finish(){
+    if(id==destiadd)
+        delayStats.recordAs("delay");
 }

@@ -33,13 +33,16 @@ class ApplicationLayer : public cSimpleModule
     int id,sourceadd,destiadd;
     cGate * in;
     cGate * out;
+    cLongHistogram delayStats;
+    cOutVector delayVector;
     int sentCount;
     virtual void initialize();
     virtual void handleMessage(cMessage *msg);
 
-//  public:
+  public:
 //      ApplicationLayer();
 //      virtual ~ApplicationLayer();
+    virtual void finish();
 };
 
 #endif

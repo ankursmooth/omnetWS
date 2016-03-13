@@ -1,0 +1,39 @@
+version 2
+run General-0-20160313-22:53:50-12167
+attr configname General
+attr datetime 20160313-22:53:50
+attr experiment General
+attr inifile omnetpp.ini
+attr iterationvars ""
+attr iterationvars2 $repetition=0
+attr measurement ""
+attr network ForwardingNetwork
+attr processid 12167
+attr repetition 0
+attr replication #0
+attr resultdir results
+attr runnumber 0
+attr seedset 0
+
+statistic ForwardingNetwork.n5E.aLayer 	delay
+field count 6
+field mean 2.5
+field stddev 2.7386127875258
+field sum 15
+field sqrsum 75
+field min 0
+field max 5
+attr type  int
+bin	-INF	0
+bin	-3	0
+bin	-2	0
+bin	-1	0
+bin	0	3
+bin	1	0
+bin	2	0
+bin	3	0
+bin	4	0
+bin	5	3
+bin	6	0
+bin	7	0
+bin	8	0

@@ -1,7 +1,7 @@
 # Partial OMNeT++/Tkenv config file -- see $HOME/.tkenvrc as well
 config default-configname	{}
 config default-runnumber	{}
-inspector ForwardingNetwork.n3C Node 4 2 411x298+540+47:normal
-inspector ForwardingNetwork.n1A Node 2 2 411x298+12+234:normal
-inspector ForwardingNetwork.n5E Node 6 2 411x298+822+362:normal
+inspector ForwardingNetwork.n3C Node 4 2 411x298+530+37:normal
+inspector ForwardingNetwork.n5E Node 6 2 411x298+812+352:normal
+inspector ForwardingNetwork.n1A Node 2 2 411x298+114+149:normal
 
