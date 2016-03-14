@@ -75,14 +75,14 @@ void DataLayer::handleMessage(cMessage *msg)
                 }
             }
         }
-        else {
+        else if(id==2){
             if(msg->getArrivalGate()==fromPhysical){
-//                if (uniform(0,1) < 0.15)
-//               {
-//                   EV << "\"Losing\" message\n";
-//                   delete msg;
-//                   return;
-//               }
+                if (uniform(0,1) < 0.15)
+               {
+                   EV << "\"Losing\" message\n";
+                   delete msg;
+                   return;
+               }
             }
             if(msg->getArrivalGate()==fromApp){
                 messageWaitcopy=msg;

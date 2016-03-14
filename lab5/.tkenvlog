@@ -12,3 +12,3277 @@ Tcl error: moduleinspector.cc#631: ptr0x29c6eb0 not found
 "ModuleInspector:drawNextEventMarker .inspector1.c ptr0x29c6eb0 2"
 
 
+----------------------------------------------------------------------
+
+
+Tcl error: moduleinspector.cc#631: ptr0x1ed8350 not found
+    while executing
+"error "$tag not found""
+    (procedure "ModuleInspector:getSubmodCoords" line 4)
+    invoked from within
+"ModuleInspector:getSubmodCoords $c $modptr"
+    (procedure "ModuleInspector:drawNextEventMarker" line 2)
+    invoked from within
+"ModuleInspector:drawNextEventMarker .network.c ptr0x1ed8350 2"
+
+
+----------------------------------------------------------------------
+
+
+Tcl error: moduleinspector.cc#631: ptr0x312dec0 not found
+    while executing
+"error "$tag not found""
+    (procedure "ModuleInspector:getSubmodCoords" line 4)
+    invoked from within
+"ModuleInspector:getSubmodCoords $c $modptr"
+    (procedure "ModuleInspector:drawNextEventMarker" line 2)
+    invoked from within
+"ModuleInspector:drawNextEventMarker .inspector4.c ptr0x312dec0 1"
+
+
+Tcl error: moduleinspector.cc#631: ptr0x312dec0 not found
+    while executing
+"error "$tag not found""
+    (procedure "ModuleInspector:getSubmodCoords" line 4)
+    invoked from within
+"ModuleInspector:getSubmodCoords $c $modptr"
+    (procedure "ModuleInspector:drawNextEventMarker" line 2)
+    invoked from within
+"ModuleInspector:drawNextEventMarker .network.c ptr0x312dec0 1"
+
+
+----------------------------------------------------------------------
+
+
+Tcl error: watchinspector.cc#62: can't read "insp": no such variable
+    while executing
+"inspector:bindSideButtons $insp"
+    (procedure "createWatchViewer" line 7)
+    invoked from within
+"createWatchViewer $insp.main"
+    (procedure "createWatchInspector" line 7)
+    invoked from within
+"createWatchInspector .inspector3 {}"
+
+
+Tcl error: watchinspector.cc#62: can't read "insp": no such variable
+    while executing
+"inspector:bindSideButtons $insp"
+    (procedure "createWatchViewer" line 7)
+    invoked from within
+"createWatchViewer $insp.main"
+    (procedure "createWatchInspector" line 7)
+    invoked from within
+"createWatchInspector .inspector4 {}"
+
+
+Tcl error: watchinspector.cc#62: can't read "insp": no such variable
+    while executing
+"inspector:bindSideButtons $insp"
+    (procedure "createWatchViewer" line 7)
+    invoked from within
+"createWatchViewer $insp.main"
+    (procedure "createWatchInspector" line 7)
+    invoked from within
+"createWatchInspector .inspector5 {}"
+
+
+Tcl error: watchinspector.cc#62: can't read "insp": no such variable
+    while executing
+"inspector:bindSideButtons $insp"
+    (procedure "createWatchViewer" line 7)
+    invoked from within
+"createWatchViewer $insp.main"
+    (procedure "createWatchInspector" line 7)
+    invoked from within
+"createWatchInspector .inspector6 {}"
+
+
+----------------------------------------------------------------------
+
+
+Tcl error: moduleinspector.cc#631: ptr0x28c33a0 not found
+    while executing
+"error "$tag not found""
+    (procedure "ModuleInspector:getSubmodCoords" line 4)
+    invoked from within
+"ModuleInspector:getSubmodCoords $c $modptr"
+    (procedure "ModuleInspector:drawNextEventMarker" line 2)
+    invoked from within
+"ModuleInspector:drawNextEventMarker .inspector0.c ptr0x28c33a0 1"
+
+
+Tcl error: moduleinspector.cc#631: ptr0x28fae00 not found
+    while executing
+"error "$tag not found""
+    (procedure "ModuleInspector:getSubmodCoords" line 4)
+    invoked from within
+"ModuleInspector:getSubmodCoords $c $modptr"
+    (procedure "ModuleInspector:drawNextEventMarker" line 2)
+    invoked from within
+"ModuleInspector:drawNextEventMarker .inspector2.c ptr0x28fae00 2"
+
+
+Tcl error: watchinspector.cc#62: can't read "insp": no such variable
+    while executing
+"inspector:bindSideButtons $insp"
+    (procedure "createWatchViewer" line 7)
+    invoked from within
+"createWatchViewer $insp.main"
+    (procedure "createWatchInspector" line 7)
+    invoked from within
+"createWatchInspector .inspector6 {}"
+
+
+Tcl error: watchinspector.cc#62: can't read "insp": no such variable
+    while executing
+"inspector:bindSideButtons $insp"
+    (procedure "createWatchViewer" line 7)
+    invoked from within
+"createWatchViewer $insp.main"
+    (procedure "createWatchInspector" line 7)
+    invoked from within
+"createWatchInspector .inspector7 {}"
+
+
+Tcl error: watchinspector.cc#62: can't read "insp": no such variable
+    while executing
+"inspector:bindSideButtons $insp"
+    (procedure "createWatchViewer" line 7)
+    invoked from within
+"createWatchViewer $insp.main"
+    (procedure "createWatchInspector" line 7)
+    invoked from within
+"createWatchInspector .inspector8 {}"
+
+
+Tcl error: watchinspector.cc#62: can't read "insp": no such variable
+    while executing
+"inspector:bindSideButtons $insp"
+    (procedure "createWatchViewer" line 7)
+    invoked from within
+"createWatchViewer $insp.main"
+    (procedure "createWatchInspector" line 7)
+    invoked from within
+"createWatchInspector .inspector9 {}"
+
+
+----------------------------------------------------------------------
+
+
+Tcl error: moduleinspector.cc#631: ptr0x307e200 not found
+    while executing
+"error "$tag not found""
+    (procedure "ModuleInspector:getSubmodCoords" line 4)
+    invoked from within
+"ModuleInspector:getSubmodCoords $c $modptr"
+    (procedure "ModuleInspector:drawNextEventMarker" line 2)
+    invoked from within
+"ModuleInspector:drawNextEventMarker .inspector1.c ptr0x307e200 2"
+
+
+Tcl error: watchinspector.cc#62: can't read "insp": no such variable
+    while executing
+"inspector:bindSideButtons $insp"
+    (procedure "createWatchViewer" line 7)
+    invoked from within
+"createWatchViewer $insp.main"
+    (procedure "createWatchInspector" line 7)
+    invoked from within
+"createWatchInspector .inspector2 {}"
+
+
+Tcl error: watchinspector.cc#62: can't read "insp": no such variable
+    while executing
+"inspector:bindSideButtons $insp"
+    (procedure "createWatchViewer" line 7)
+    invoked from within
+"createWatchViewer $insp.main"
+    (procedure "createWatchInspector" line 7)
+    invoked from within
+"createWatchInspector .inspector3 {}"
+
+
+Tcl error: watchinspector.cc#62: can't read "insp": no such variable
+    while executing
+"inspector:bindSideButtons $insp"
+    (procedure "createWatchViewer" line 7)
+    invoked from within
+"createWatchViewer $insp.main"
+    (procedure "createWatchInspector" line 7)
+    invoked from within
+"createWatchInspector .inspector4 {}"
+
+
+Tcl error: watchinspector.cc#62: can't read "insp": no such variable
+    while executing
+"inspector:bindSideButtons $insp"
+    (procedure "createWatchViewer" line 7)
+    invoked from within
+"createWatchViewer $insp.main"
+    (procedure "createWatchInspector" line 7)
+    invoked from within
+"createWatchInspector .inspector5 {}"
+
+
+----------------------------------------------------------------------
+
+
+Tcl error: watchinspector.cc#62: can't read "insp": no such variable
+    while executing
+"inspector:bindSideButtons $insp"
+    (procedure "createWatchViewer" line 7)
+    invoked from within
+"createWatchViewer $insp.main"
+    (procedure "createWatchInspector" line 7)
+    invoked from within
+"createWatchInspector .inspector3 {}"
+
+
+Tcl error: watchinspector.cc#62: can't read "insp": no such variable
+    while executing
+"inspector:bindSideButtons $insp"
+    (procedure "createWatchViewer" line 7)
+    invoked from within
+"createWatchViewer $insp.main"
+    (procedure "createWatchInspector" line 7)
+    invoked from within
+"createWatchInspector .inspector4 {}"
+
+
+Tcl error: watchinspector.cc#62: can't read "insp": no such variable
+    while executing
+"inspector:bindSideButtons $insp"
+    (procedure "createWatchViewer" line 7)
+    invoked from within
+"createWatchViewer $insp.main"
+    (procedure "createWatchInspector" line 7)
+    invoked from within
+"createWatchInspector .inspector5 {}"
+
+
+Tcl error: watchinspector.cc#62: can't read "insp": no such variable
+    while executing
+"inspector:bindSideButtons $insp"
+    (procedure "createWatchViewer" line 7)
+    invoked from within
+"createWatchViewer $insp.main"
+    (procedure "createWatchInspector" line 7)
+    invoked from within
+"createWatchInspector .inspector6 {}"
+
+
+Tcl error: watchinspector.cc#62: can't read "insp": no such variable
+    while executing
+"inspector:bindSideButtons $insp"
+    (procedure "createWatchViewer" line 7)
+    invoked from within
+"createWatchViewer $insp.main"
+    (procedure "createWatchInspector" line 7)
+    invoked from within
+"createWatchInspector .inspector7 318x54+1002+214:normal"
+
+
+Tcl error: watchinspector.cc#62: can't read "insp": no such variable
+    while executing
+"inspector:bindSideButtons $insp"
+    (procedure "createWatchViewer" line 7)
+    invoked from within
+"createWatchViewer $insp.main"
+    (procedure "createWatchInspector" line 7)
+    invoked from within
+"createWatchInspector .inspector9 318x54+413+70:normal"
+
+
+Tcl error: watchinspector.cc#62: can't read "insp": no such variable
+    while executing
+"inspector:bindSideButtons $insp"
+    (procedure "createWatchViewer" line 7)
+    invoked from within
+"createWatchViewer $insp.main"
+    (procedure "createWatchInspector" line 7)
+    invoked from within
+"createWatchInspector .inspector10 318x54+1014+128:normal"
+
+
+Tcl error: watchinspector.cc#62: can't read "insp": no such variable
+    while executing
+"inspector:bindSideButtons $insp"
+    (procedure "createWatchViewer" line 7)
+    invoked from within
+"createWatchViewer $insp.main"
+    (procedure "createWatchInspector" line 7)
+    invoked from within
+"createWatchInspector .inspector11 318x54+741+31:normal"
+
+
+----------------------------------------------------------------------
+
+
+Tcl error: watchinspector.cc#62: can't read "insp": no such variable
+    while executing
+"inspector:bindSideButtons $insp"
+    (procedure "createWatchViewer" line 7)
+    invoked from within
+"createWatchViewer $insp.main"
+    (procedure "createWatchInspector" line 7)
+    invoked from within
+"createWatchInspector .inspector1 318x54+992+204:normal"
+
+
+Tcl error: watchinspector.cc#62: can't read "insp": no such variable
+    while executing
+"inspector:bindSideButtons $insp"
+    (procedure "createWatchViewer" line 7)
+    invoked from within
+"createWatchViewer $insp.main"
+    (procedure "createWatchInspector" line 7)
+    invoked from within
+"createWatchInspector .inspector3 318x54+731+21:normal"
+
+
+Tcl error: watchinspector.cc#62: can't read "insp": no such variable
+    while executing
+"inspector:bindSideButtons $insp"
+    (procedure "createWatchViewer" line 7)
+    invoked from within
+"createWatchViewer $insp.main"
+    (procedure "createWatchInspector" line 7)
+    invoked from within
+"createWatchInspector .inspector4 318x54+1004+118:normal"
+
+
+Tcl error: watchinspector.cc#62: can't read "insp": no such variable
+    while executing
+"inspector:bindSideButtons $insp"
+    (procedure "createWatchViewer" line 7)
+    invoked from within
+"createWatchViewer $insp.main"
+    (procedure "createWatchInspector" line 7)
+    invoked from within
+"createWatchInspector .inspector5 318x54+403+60:normal"
+
+
+----------------------------------------------------------------------
+
+
+Tcl error: watchinspector.cc#62: can't read "insp": no such variable
+    while executing
+"inspector:bindSideButtons $insp"
+    (procedure "createWatchViewer" line 7)
+    invoked from within
+"createWatchViewer $insp.main"
+    (procedure "createWatchInspector" line 7)
+    invoked from within
+"createWatchInspector .inspector1 318x54+992+204:normal"
+
+
+Tcl error: watchinspector.cc#62: can't read "insp": no such variable
+    while executing
+"inspector:bindSideButtons $insp"
+    (procedure "createWatchViewer" line 7)
+    invoked from within
+"createWatchViewer $insp.main"
+    (procedure "createWatchInspector" line 7)
+    invoked from within
+"createWatchInspector .inspector3 318x54+731+21:normal"
+
+
+Tcl error: watchinspector.cc#62: can't read "insp": no such variable
+    while executing
+"inspector:bindSideButtons $insp"
+    (procedure "createWatchViewer" line 7)
+    invoked from within
+"createWatchViewer $insp.main"
+    (procedure "createWatchInspector" line 7)
+    invoked from within
+"createWatchInspector .inspector4 318x54+1004+118:normal"
+
+
+Tcl error: watchinspector.cc#62: can't read "insp": no such variable
+    while executing
+"inspector:bindSideButtons $insp"
+    (procedure "createWatchViewer" line 7)
+    invoked from within
+"createWatchViewer $insp.main"
+    (procedure "createWatchInspector" line 7)
+    invoked from within
+"createWatchInspector .inspector5 318x54+403+60:normal"
+
+
+----------------------------------------------------------------------
+
+
+Tcl error: watchinspector.cc#62: can't read "insp": no such variable
+    while executing
+"inspector:bindSideButtons $insp"
+    (procedure "createWatchViewer" line 7)
+    invoked from within
+"createWatchViewer $insp.main"
+    (procedure "createWatchInspector" line 7)
+    invoked from within
+"createWatchInspector .inspector1 318x54+992+204:normal"
+
+
+Tcl error: watchinspector.cc#62: can't read "insp": no such variable
+    while executing
+"inspector:bindSideButtons $insp"
+    (procedure "createWatchViewer" line 7)
+    invoked from within
+"createWatchViewer $insp.main"
+    (procedure "createWatchInspector" line 7)
+    invoked from within
+"createWatchInspector .inspector3 318x54+731+21:normal"
+
+
+Tcl error: watchinspector.cc#62: can't read "insp": no such variable
+    while executing
+"inspector:bindSideButtons $insp"
+    (procedure "createWatchViewer" line 7)
+    invoked from within
+"createWatchViewer $insp.main"
+    (procedure "createWatchInspector" line 7)
+    invoked from within
+"createWatchInspector .inspector4 318x54+1004+118:normal"
+
+
+Tcl error: watchinspector.cc#62: can't read "insp": no such variable
+    while executing
+"inspector:bindSideButtons $insp"
+    (procedure "createWatchViewer" line 7)
+    invoked from within
+"createWatchViewer $insp.main"
+    (procedure "createWatchInspector" line 7)
+    invoked from within
+"createWatchInspector .inspector5 318x54+403+60:normal"
+
+
+----------------------------------------------------------------------
+
+
+Tcl error: watchinspector.cc#62: can't read "insp": no such variable
+    while executing
+"inspector:bindSideButtons $insp"
+    (procedure "createWatchViewer" line 7)
+    invoked from within
+"createWatchViewer $insp.main"
+    (procedure "createWatchInspector" line 7)
+    invoked from within
+"createWatchInspector .inspector1 318x54+992+204:normal"
+
+
+Tcl error: watchinspector.cc#62: can't read "insp": no such variable
+    while executing
+"inspector:bindSideButtons $insp"
+    (procedure "createWatchViewer" line 7)
+    invoked from within
+"createWatchViewer $insp.main"
+    (procedure "createWatchInspector" line 7)
+    invoked from within
+"createWatchInspector .inspector3 318x54+731+21:normal"
+
+
+Tcl error: watchinspector.cc#62: can't read "insp": no such variable
+    while executing
+"inspector:bindSideButtons $insp"
+    (procedure "createWatchViewer" line 7)
+    invoked from within
+"createWatchViewer $insp.main"
+    (procedure "createWatchInspector" line 7)
+    invoked from within
+"createWatchInspector .inspector4 318x54+1004+118:normal"
+
+
+Tcl error: watchinspector.cc#62: can't read "insp": no such variable
+    while executing
+"inspector:bindSideButtons $insp"
+    (procedure "createWatchViewer" line 7)
+    invoked from within
+"createWatchViewer $insp.main"
+    (procedure "createWatchInspector" line 7)
+    invoked from within
+"createWatchInspector .inspector5 318x54+403+60:normal"
+
+
+----------------------------------------------------------------------
+
+
+Tcl error: watchinspector.cc#62: can't read "insp": no such variable
+    while executing
+"inspector:bindSideButtons $insp"
+    (procedure "createWatchViewer" line 7)
+    invoked from within
+"createWatchViewer $insp.main"
+    (procedure "createWatchInspector" line 7)
+    invoked from within
+"createWatchInspector .inspector1 318x54+992+204:normal"
+
+
+Tcl error: watchinspector.cc#62: can't read "insp": no such variable
+    while executing
+"inspector:bindSideButtons $insp"
+    (procedure "createWatchViewer" line 7)
+    invoked from within
+"createWatchViewer $insp.main"
+    (procedure "createWatchInspector" line 7)
+    invoked from within
+"createWatchInspector .inspector3 318x54+731+21:normal"
+
+
+Tcl error: watchinspector.cc#62: can't read "insp": no such variable
+    while executing
+"inspector:bindSideButtons $insp"
+    (procedure "createWatchViewer" line 7)
+    invoked from within
+"createWatchViewer $insp.main"
+    (procedure "createWatchInspector" line 7)
+    invoked from within
+"createWatchInspector .inspector4 318x54+1004+118:normal"
+
+
+Tcl error: watchinspector.cc#62: can't read "insp": no such variable
+    while executing
+"inspector:bindSideButtons $insp"
+    (procedure "createWatchViewer" line 7)
+    invoked from within
+"createWatchViewer $insp.main"
+    (procedure "createWatchInspector" line 7)
+    invoked from within
+"createWatchInspector .inspector5 318x54+403+60:normal"
+
+
+----------------------------------------------------------------------
+
+
+Tcl error: watchinspector.cc#62: can't read "insp": no such variable
+    while executing
+"inspector:bindSideButtons $insp"
+    (procedure "createWatchViewer" line 7)
+    invoked from within
+"createWatchViewer $insp.main"
+    (procedure "createWatchInspector" line 7)
+    invoked from within
+"createWatchInspector .inspector1 318x54+992+204:normal"
+
+
+Tcl error: watchinspector.cc#62: can't read "insp": no such variable
+    while executing
+"inspector:bindSideButtons $insp"
+    (procedure "createWatchViewer" line 7)
+    invoked from within
+"createWatchViewer $insp.main"
+    (procedure "createWatchInspector" line 7)
+    invoked from within
+"createWatchInspector .inspector3 318x54+731+21:normal"
+
+
+Tcl error: watchinspector.cc#62: can't read "insp": no such variable
+    while executing
+"inspector:bindSideButtons $insp"
+    (procedure "createWatchViewer" line 7)
+    invoked from within
+"createWatchViewer $insp.main"
+    (procedure "createWatchInspector" line 7)
+    invoked from within
+"createWatchInspector .inspector4 318x54+1004+118:normal"
+
+
+Tcl error: watchinspector.cc#62: can't read "insp": no such variable
+    while executing
+"inspector:bindSideButtons $insp"
+    (procedure "createWatchViewer" line 7)
+    invoked from within
+"createWatchViewer $insp.main"
+    (procedure "createWatchInspector" line 7)
+    invoked from within
+"createWatchInspector .inspector5 318x54+403+60:normal"
+
+
+----------------------------------------------------------------------
+
+
+Tcl error: watchinspector.cc#62: can't read "insp": no such variable
+    while executing
+"inspector:bindSideButtons $insp"
+    (procedure "createWatchViewer" line 7)
+    invoked from within
+"createWatchViewer $insp.main"
+    (procedure "createWatchInspector" line 7)
+    invoked from within
+"createWatchInspector .inspector1 318x54+992+204:normal"
+
+
+Tcl error: watchinspector.cc#62: can't read "insp": no such variable
+    while executing
+"inspector:bindSideButtons $insp"
+    (procedure "createWatchViewer" line 7)
+    invoked from within
+"createWatchViewer $insp.main"
+    (procedure "createWatchInspector" line 7)
+    invoked from within
+"createWatchInspector .inspector3 318x54+731+21:normal"
+
+
+Tcl error: watchinspector.cc#62: can't read "insp": no such variable
+    while executing
+"inspector:bindSideButtons $insp"
+    (procedure "createWatchViewer" line 7)
+    invoked from within
+"createWatchViewer $insp.main"
+    (procedure "createWatchInspector" line 7)
+    invoked from within
+"createWatchInspector .inspector4 318x54+1004+118:normal"
+
+
+Tcl error: watchinspector.cc#62: can't read "insp": no such variable
+    while executing
+"inspector:bindSideButtons $insp"
+    (procedure "createWatchViewer" line 7)
+    invoked from within
+"createWatchViewer $insp.main"
+    (procedure "createWatchInspector" line 7)
+    invoked from within
+"createWatchInspector .inspector5 318x54+403+60:normal"
+
+
+----------------------------------------------------------------------
+
+
+Tcl error: watchinspector.cc#62: can't read "insp": no such variable
+    while executing
+"inspector:bindSideButtons $insp"
+    (procedure "createWatchViewer" line 7)
+    invoked from within
+"createWatchViewer $insp.main"
+    (procedure "createWatchInspector" line 7)
+    invoked from within
+"createWatchInspector .inspector1 318x54+992+204:normal"
+
+
+Tcl error: watchinspector.cc#62: can't read "insp": no such variable
+    while executing
+"inspector:bindSideButtons $insp"
+    (procedure "createWatchViewer" line 7)
+    invoked from within
+"createWatchViewer $insp.main"
+    (procedure "createWatchInspector" line 7)
+    invoked from within
+"createWatchInspector .inspector3 318x54+731+21:normal"
+
+
+Tcl error: watchinspector.cc#62: can't read "insp": no such variable
+    while executing
+"inspector:bindSideButtons $insp"
+    (procedure "createWatchViewer" line 7)
+    invoked from within
+"createWatchViewer $insp.main"
+    (procedure "createWatchInspector" line 7)
+    invoked from within
+"createWatchInspector .inspector4 318x54+1004+118:normal"
+
+
+Tcl error: watchinspector.cc#62: can't read "insp": no such variable
+    while executing
+"inspector:bindSideButtons $insp"
+    (procedure "createWatchViewer" line 7)
+    invoked from within
+"createWatchViewer $insp.main"
+    (procedure "createWatchInspector" line 7)
+    invoked from within
+"createWatchInspector .inspector5 318x54+403+60:normal"
+
+
+----------------------------------------------------------------------
+
+
+Tcl error: watchinspector.cc#62: can't read "insp": no such variable
+    while executing
+"inspector:bindSideButtons $insp"
+    (procedure "createWatchViewer" line 7)
+    invoked from within
+"createWatchViewer $insp.main"
+    (procedure "createWatchInspector" line 7)
+    invoked from within
+"createWatchInspector .inspector0 318x54+982+194:normal"
+
+
+Tcl error: watchinspector.cc#62: can't read "insp": no such variable
+    while executing
+"inspector:bindSideButtons $insp"
+    (procedure "createWatchViewer" line 7)
+    invoked from within
+"createWatchViewer $insp.main"
+    (procedure "createWatchInspector" line 7)
+    invoked from within
+"createWatchInspector .inspector2 318x54+393+50:normal"
+
+
+Tcl error: watchinspector.cc#62: can't read "insp": no such variable
+    while executing
+"inspector:bindSideButtons $insp"
+    (procedure "createWatchViewer" line 7)
+    invoked from within
+"createWatchViewer $insp.main"
+    (procedure "createWatchInspector" line 7)
+    invoked from within
+"createWatchInspector .inspector3 318x54+994+108:normal"
+
+
+Tcl error: watchinspector.cc#62: can't read "insp": no such variable
+    while executing
+"inspector:bindSideButtons $insp"
+    (procedure "createWatchViewer" line 7)
+    invoked from within
+"createWatchViewer $insp.main"
+    (procedure "createWatchInspector" line 7)
+    invoked from within
+"createWatchInspector .inspector4 318x54+721+14:normal"
+
+
+Tcl error: watchinspector.cc#62: can't read "insp": no such variable
+    while executing
+"inspector:bindSideButtons $insp"
+    (procedure "createWatchViewer" line 7)
+    invoked from within
+"createWatchViewer $insp.main"
+    (procedure "createWatchInspector" line 7)
+    invoked from within
+"createWatchInspector .inspector8 318x54+972+184:normal"
+
+
+Tcl error: watchinspector.cc#62: can't read "insp": no such variable
+    while executing
+"inspector:bindSideButtons $insp"
+    (procedure "createWatchViewer" line 7)
+    invoked from within
+"createWatchViewer $insp.main"
+    (procedure "createWatchInspector" line 7)
+    invoked from within
+"createWatchInspector .inspector10 318x54+711+14:normal"
+
+
+Tcl error: watchinspector.cc#62: can't read "insp": no such variable
+    while executing
+"inspector:bindSideButtons $insp"
+    (procedure "createWatchViewer" line 7)
+    invoked from within
+"createWatchViewer $insp.main"
+    (procedure "createWatchInspector" line 7)
+    invoked from within
+"createWatchInspector .inspector11 318x54+984+98:normal"
+
+
+Tcl error: watchinspector.cc#62: can't read "insp": no such variable
+    while executing
+"inspector:bindSideButtons $insp"
+    (procedure "createWatchViewer" line 7)
+    invoked from within
+"createWatchViewer $insp.main"
+    (procedure "createWatchInspector" line 7)
+    invoked from within
+"createWatchInspector .inspector12 318x54+383+40:normal"
+
+
+----------------------------------------------------------------------
+
+
+Tcl error: watchinspector.cc#62: can't read "insp": no such variable
+    while executing
+"inspector:bindSideButtons $insp"
+    (procedure "createWatchViewer" line 7)
+    invoked from within
+"createWatchViewer $insp.main"
+    (procedure "createWatchInspector" line 7)
+    invoked from within
+"createWatchInspector .inspector0 318x54+962+174:normal"
+
+
+Tcl error: watchinspector.cc#62: can't read "insp": no such variable
+    while executing
+"inspector:bindSideButtons $insp"
+    (procedure "createWatchViewer" line 7)
+    invoked from within
+"createWatchViewer $insp.main"
+    (procedure "createWatchInspector" line 7)
+    invoked from within
+"createWatchInspector .inspector2 318x54+373+30:normal"
+
+
+Tcl error: watchinspector.cc#62: can't read "insp": no such variable
+    while executing
+"inspector:bindSideButtons $insp"
+    (procedure "createWatchViewer" line 7)
+    invoked from within
+"createWatchViewer $insp.main"
+    (procedure "createWatchInspector" line 7)
+    invoked from within
+"createWatchInspector .inspector3 318x54+974+88:normal"
+
+
+Tcl error: watchinspector.cc#62: can't read "insp": no such variable
+    while executing
+"inspector:bindSideButtons $insp"
+    (procedure "createWatchViewer" line 7)
+    invoked from within
+"createWatchViewer $insp.main"
+    (procedure "createWatchInspector" line 7)
+    invoked from within
+"createWatchInspector .inspector4 318x54+701+14:normal"
+
+
+----------------------------------------------------------------------
+
+
+Tcl error: watchinspector.cc#62: can't read "insp": no such variable
+    while executing
+"inspector:bindSideButtons $insp"
+    (procedure "createWatchViewer" line 7)
+    invoked from within
+"createWatchViewer $insp.main"
+    (procedure "createWatchInspector" line 7)
+    invoked from within
+"createWatchInspector .inspector0 318x54+962+174:normal"
+
+
+Tcl error: watchinspector.cc#62: can't read "insp": no such variable
+    while executing
+"inspector:bindSideButtons $insp"
+    (procedure "createWatchViewer" line 7)
+    invoked from within
+"createWatchViewer $insp.main"
+    (procedure "createWatchInspector" line 7)
+    invoked from within
+"createWatchInspector .inspector2 318x54+373+30:normal"
+
+
+Tcl error: watchinspector.cc#62: can't read "insp": no such variable
+    while executing
+"inspector:bindSideButtons $insp"
+    (procedure "createWatchViewer" line 7)
+    invoked from within
+"createWatchViewer $insp.main"
+    (procedure "createWatchInspector" line 7)
+    invoked from within
+"createWatchInspector .inspector3 318x54+974+88:normal"
+
+
+Tcl error: watchinspector.cc#62: can't read "insp": no such variable
+    while executing
+"inspector:bindSideButtons $insp"
+    (procedure "createWatchViewer" line 7)
+    invoked from within
+"createWatchViewer $insp.main"
+    (procedure "createWatchInspector" line 7)
+    invoked from within
+"createWatchInspector .inspector4 318x54+701+14:normal"
+
+
+----------------------------------------------------------------------
+
+
+Tcl error: watchinspector.cc#62: can't read "insp": no such variable
+    while executing
+"inspector:bindSideButtons $insp"
+    (procedure "createWatchViewer" line 7)
+    invoked from within
+"createWatchViewer $insp.main"
+    (procedure "createWatchInspector" line 7)
+    invoked from within
+"createWatchInspector .inspector0 318x54+962+174:normal"
+
+
+Tcl error: watchinspector.cc#62: can't read "insp": no such variable
+    while executing
+"inspector:bindSideButtons $insp"
+    (procedure "createWatchViewer" line 7)
+    invoked from within
+"createWatchViewer $insp.main"
+    (procedure "createWatchInspector" line 7)
+    invoked from within
+"createWatchInspector .inspector2 318x54+373+30:normal"
+
+
+Tcl error: watchinspector.cc#62: can't read "insp": no such variable
+    while executing
+"inspector:bindSideButtons $insp"
+    (procedure "createWatchViewer" line 7)
+    invoked from within
+"createWatchViewer $insp.main"
+    (procedure "createWatchInspector" line 7)
+    invoked from within
+"createWatchInspector .inspector3 318x54+974+88:normal"
+
+
+Tcl error: watchinspector.cc#62: can't read "insp": no such variable
+    while executing
+"inspector:bindSideButtons $insp"
+    (procedure "createWatchViewer" line 7)
+    invoked from within
+"createWatchViewer $insp.main"
+    (procedure "createWatchInspector" line 7)
+    invoked from within
+"createWatchInspector .inspector4 318x54+701+14:normal"
+
+
+----------------------------------------------------------------------
+
+
+Tcl error: watchinspector.cc#62: can't read "insp": no such variable
+    while executing
+"inspector:bindSideButtons $insp"
+    (procedure "createWatchViewer" line 7)
+    invoked from within
+"createWatchViewer $insp.main"
+    (procedure "createWatchInspector" line 7)
+    invoked from within
+"createWatchInspector .inspector0 318x54+962+174:normal"
+
+
+Tcl error: watchinspector.cc#62: can't read "insp": no such variable
+    while executing
+"inspector:bindSideButtons $insp"
+    (procedure "createWatchViewer" line 7)
+    invoked from within
+"createWatchViewer $insp.main"
+    (procedure "createWatchInspector" line 7)
+    invoked from within
+"createWatchInspector .inspector2 318x54+373+30:normal"
+
+
+Tcl error: watchinspector.cc#62: can't read "insp": no such variable
+    while executing
+"inspector:bindSideButtons $insp"
+    (procedure "createWatchViewer" line 7)
+    invoked from within
+"createWatchViewer $insp.main"
+    (procedure "createWatchInspector" line 7)
+    invoked from within
+"createWatchInspector .inspector3 318x54+974+88:normal"
+
+
+Tcl error: watchinspector.cc#62: can't read "insp": no such variable
+    while executing
+"inspector:bindSideButtons $insp"
+    (procedure "createWatchViewer" line 7)
+    invoked from within
+"createWatchViewer $insp.main"
+    (procedure "createWatchInspector" line 7)
+    invoked from within
+"createWatchInspector .inspector4 318x54+701+14:normal"
+
+
+----------------------------------------------------------------------
+
+
+Tcl error: watchinspector.cc#62: can't read "insp": no such variable
+    while executing
+"inspector:bindSideButtons $insp"
+    (procedure "createWatchViewer" line 7)
+    invoked from within
+"createWatchViewer $insp.main"
+    (procedure "createWatchInspector" line 7)
+    invoked from within
+"createWatchInspector .inspector0 318x54+962+174:normal"
+
+
+Tcl error: watchinspector.cc#62: can't read "insp": no such variable
+    while executing
+"inspector:bindSideButtons $insp"
+    (procedure "createWatchViewer" line 7)
+    invoked from within
+"createWatchViewer $insp.main"
+    (procedure "createWatchInspector" line 7)
+    invoked from within
+"createWatchInspector .inspector2 318x54+373+30:normal"
+
+
+Tcl error: watchinspector.cc#62: can't read "insp": no such variable
+    while executing
+"inspector:bindSideButtons $insp"
+    (procedure "createWatchViewer" line 7)
+    invoked from within
+"createWatchViewer $insp.main"
+    (procedure "createWatchInspector" line 7)
+    invoked from within
+"createWatchInspector .inspector3 318x54+974+88:normal"
+
+
+Tcl error: watchinspector.cc#62: can't read "insp": no such variable
+    while executing
+"inspector:bindSideButtons $insp"
+    (procedure "createWatchViewer" line 7)
+    invoked from within
+"createWatchViewer $insp.main"
+    (procedure "createWatchInspector" line 7)
+    invoked from within
+"createWatchInspector .inspector4 318x54+701+14:normal"
+
+
+----------------------------------------------------------------------
+
+
+Tcl error: watchinspector.cc#62: can't read "insp": no such variable
+    while executing
+"inspector:bindSideButtons $insp"
+    (procedure "createWatchViewer" line 7)
+    invoked from within
+"createWatchViewer $insp.main"
+    (procedure "createWatchInspector" line 7)
+    invoked from within
+"createWatchInspector .inspector0 318x54+962+174:normal"
+
+
+Tcl error: watchinspector.cc#62: can't read "insp": no such variable
+    while executing
+"inspector:bindSideButtons $insp"
+    (procedure "createWatchViewer" line 7)
+    invoked from within
+"createWatchViewer $insp.main"
+    (procedure "createWatchInspector" line 7)
+    invoked from within
+"createWatchInspector .inspector2 318x54+373+30:normal"
+
+
+Tcl error: watchinspector.cc#62: can't read "insp": no such variable
+    while executing
+"inspector:bindSideButtons $insp"
+    (procedure "createWatchViewer" line 7)
+    invoked from within
+"createWatchViewer $insp.main"
+    (procedure "createWatchInspector" line 7)
+    invoked from within
+"createWatchInspector .inspector3 318x54+974+88:normal"
+
+
+Tcl error: watchinspector.cc#62: can't read "insp": no such variable
+    while executing
+"inspector:bindSideButtons $insp"
+    (procedure "createWatchViewer" line 7)
+    invoked from within
+"createWatchViewer $insp.main"
+    (procedure "createWatchInspector" line 7)
+    invoked from within
+"createWatchInspector .inspector4 318x54+701+14:normal"
+
+
+----------------------------------------------------------------------
+
+
+Tcl error: watchinspector.cc#62: can't read "insp": no such variable
+    while executing
+"inspector:bindSideButtons $insp"
+    (procedure "createWatchViewer" line 7)
+    invoked from within
+"createWatchViewer $insp.main"
+    (procedure "createWatchInspector" line 7)
+    invoked from within
+"createWatchInspector .inspector0 318x54+962+174:normal"
+
+
+Tcl error: watchinspector.cc#62: can't read "insp": no such variable
+    while executing
+"inspector:bindSideButtons $insp"
+    (procedure "createWatchViewer" line 7)
+    invoked from within
+"createWatchViewer $insp.main"
+    (procedure "createWatchInspector" line 7)
+    invoked from within
+"createWatchInspector .inspector2 318x54+373+30:normal"
+
+
+Tcl error: watchinspector.cc#62: can't read "insp": no such variable
+    while executing
+"inspector:bindSideButtons $insp"
+    (procedure "createWatchViewer" line 7)
+    invoked from within
+"createWatchViewer $insp.main"
+    (procedure "createWatchInspector" line 7)
+    invoked from within
+"createWatchInspector .inspector3 318x54+974+88:normal"
+
+
+Tcl error: watchinspector.cc#62: can't read "insp": no such variable
+    while executing
+"inspector:bindSideButtons $insp"
+    (procedure "createWatchViewer" line 7)
+    invoked from within
+"createWatchViewer $insp.main"
+    (procedure "createWatchInspector" line 7)
+    invoked from within
+"createWatchInspector .inspector4 318x54+701+14:normal"
+
+
+----------------------------------------------------------------------
+
+
+Tcl error: watchinspector.cc#62: can't read "insp": no such variable
+    while executing
+"inspector:bindSideButtons $insp"
+    (procedure "createWatchViewer" line 7)
+    invoked from within
+"createWatchViewer $insp.main"
+    (procedure "createWatchInspector" line 7)
+    invoked from within
+"createWatchInspector .inspector0 318x54+962+174:normal"
+
+
+Tcl error: watchinspector.cc#62: can't read "insp": no such variable
+    while executing
+"inspector:bindSideButtons $insp"
+    (procedure "createWatchViewer" line 7)
+    invoked from within
+"createWatchViewer $insp.main"
+    (procedure "createWatchInspector" line 7)
+    invoked from within
+"createWatchInspector .inspector2 318x54+373+30:normal"
+
+
+Tcl error: watchinspector.cc#62: can't read "insp": no such variable
+    while executing
+"inspector:bindSideButtons $insp"
+    (procedure "createWatchViewer" line 7)
+    invoked from within
+"createWatchViewer $insp.main"
+    (procedure "createWatchInspector" line 7)
+    invoked from within
+"createWatchInspector .inspector3 318x54+974+88:normal"
+
+
+Tcl error: watchinspector.cc#62: can't read "insp": no such variable
+    while executing
+"inspector:bindSideButtons $insp"
+    (procedure "createWatchViewer" line 7)
+    invoked from within
+"createWatchViewer $insp.main"
+    (procedure "createWatchInspector" line 7)
+    invoked from within
+"createWatchInspector .inspector4 318x54+701+14:normal"
+
+
+----------------------------------------------------------------------
+
+
+Tcl error: watchinspector.cc#62: can't read "insp": no such variable
+    while executing
+"inspector:bindSideButtons $insp"
+    (procedure "createWatchViewer" line 7)
+    invoked from within
+"createWatchViewer $insp.main"
+    (procedure "createWatchInspector" line 7)
+    invoked from within
+"createWatchInspector .inspector1 318x54+952+164:normal"
+
+
+Tcl error: watchinspector.cc#62: can't read "insp": no such variable
+    while executing
+"inspector:bindSideButtons $insp"
+    (procedure "createWatchViewer" line 7)
+    invoked from within
+"createWatchViewer $insp.main"
+    (procedure "createWatchInspector" line 7)
+    invoked from within
+"createWatchInspector .inspector3 318x54+691+14:normal"
+
+
+Tcl error: watchinspector.cc#62: can't read "insp": no such variable
+    while executing
+"inspector:bindSideButtons $insp"
+    (procedure "createWatchViewer" line 7)
+    invoked from within
+"createWatchViewer $insp.main"
+    (procedure "createWatchInspector" line 7)
+    invoked from within
+"createWatchInspector .inspector4 318x54+964+78:normal"
+
+
+Tcl error: watchinspector.cc#62: can't read "insp": no such variable
+    while executing
+"inspector:bindSideButtons $insp"
+    (procedure "createWatchViewer" line 7)
+    invoked from within
+"createWatchViewer $insp.main"
+    (procedure "createWatchInspector" line 7)
+    invoked from within
+"createWatchInspector .inspector5 318x54+363+20:normal"
+
+
+----------------------------------------------------------------------
+
+
+Tcl error: watchinspector.cc#62: can't read "insp": no such variable
+    while executing
+"inspector:bindSideButtons $insp"
+    (procedure "createWatchViewer" line 7)
+    invoked from within
+"createWatchViewer $insp.main"
+    (procedure "createWatchInspector" line 7)
+    invoked from within
+"createWatchInspector .inspector1 318x54+952+164:normal"
+
+
+Tcl error: watchinspector.cc#62: can't read "insp": no such variable
+    while executing
+"inspector:bindSideButtons $insp"
+    (procedure "createWatchViewer" line 7)
+    invoked from within
+"createWatchViewer $insp.main"
+    (procedure "createWatchInspector" line 7)
+    invoked from within
+"createWatchInspector .inspector3 318x54+691+14:normal"
+
+
+Tcl error: watchinspector.cc#62: can't read "insp": no such variable
+    while executing
+"inspector:bindSideButtons $insp"
+    (procedure "createWatchViewer" line 7)
+    invoked from within
+"createWatchViewer $insp.main"
+    (procedure "createWatchInspector" line 7)
+    invoked from within
+"createWatchInspector .inspector4 318x54+964+78:normal"
+
+
+Tcl error: watchinspector.cc#62: can't read "insp": no such variable
+    while executing
+"inspector:bindSideButtons $insp"
+    (procedure "createWatchViewer" line 7)
+    invoked from within
+"createWatchViewer $insp.main"
+    (procedure "createWatchInspector" line 7)
+    invoked from within
+"createWatchInspector .inspector5 318x54+363+20:normal"
+
+
+Tcl error: watchinspector.cc#62: can't read "insp": no such variable
+    while executing
+"inspector:bindSideButtons $insp"
+    (procedure "createWatchViewer" line 7)
+    invoked from within
+"createWatchViewer $insp.main"
+    (procedure "createWatchInspector" line 7)
+    invoked from within
+"createWatchInspector .inspector7 318x54+942+154:normal"
+
+
+Tcl error: watchinspector.cc#62: can't read "insp": no such variable
+    while executing
+"inspector:bindSideButtons $insp"
+    (procedure "createWatchViewer" line 7)
+    invoked from within
+"createWatchViewer $insp.main"
+    (procedure "createWatchInspector" line 7)
+    invoked from within
+"createWatchInspector .inspector9 318x54+353+14:normal"
+
+
+Tcl error: watchinspector.cc#62: can't read "insp": no such variable
+    while executing
+"inspector:bindSideButtons $insp"
+    (procedure "createWatchViewer" line 7)
+    invoked from within
+"createWatchViewer $insp.main"
+    (procedure "createWatchInspector" line 7)
+    invoked from within
+"createWatchInspector .inspector10 318x54+954+68:normal"
+
+
+Tcl error: watchinspector.cc#62: can't read "insp": no such variable
+    while executing
+"inspector:bindSideButtons $insp"
+    (procedure "createWatchViewer" line 7)
+    invoked from within
+"createWatchViewer $insp.main"
+    (procedure "createWatchInspector" line 7)
+    invoked from within
+"createWatchInspector .inspector11 318x54+681+14:normal"
+
+
+----------------------------------------------------------------------
+
+
+Tcl error: watchinspector.cc#62: can't read "insp": no such variable
+    while executing
+"inspector:bindSideButtons $insp"
+    (procedure "createWatchViewer" line 7)
+    invoked from within
+"createWatchViewer $insp.main"
+    (procedure "createWatchInspector" line 7)
+    invoked from within
+"createWatchInspector .inspector1 318x54+932+144:normal"
+
+
+Tcl error: watchinspector.cc#62: can't read "insp": no such variable
+    while executing
+"inspector:bindSideButtons $insp"
+    (procedure "createWatchViewer" line 7)
+    invoked from within
+"createWatchViewer $insp.main"
+    (procedure "createWatchInspector" line 7)
+    invoked from within
+"createWatchInspector .inspector3 318x54+671+14:normal"
+
+
+Tcl error: watchinspector.cc#62: can't read "insp": no such variable
+    while executing
+"inspector:bindSideButtons $insp"
+    (procedure "createWatchViewer" line 7)
+    invoked from within
+"createWatchViewer $insp.main"
+    (procedure "createWatchInspector" line 7)
+    invoked from within
+"createWatchInspector .inspector4 318x54+944+58:normal"
+
+
+Tcl error: watchinspector.cc#62: can't read "insp": no such variable
+    while executing
+"inspector:bindSideButtons $insp"
+    (procedure "createWatchViewer" line 7)
+    invoked from within
+"createWatchViewer $insp.main"
+    (procedure "createWatchInspector" line 7)
+    invoked from within
+"createWatchInspector .inspector5 318x54+343+14:normal"
+
+
+----------------------------------------------------------------------
+
+
+Tcl error: watchinspector.cc#62: can't read "insp": no such variable
+    while executing
+"inspector:bindSideButtons $insp"
+    (procedure "createWatchViewer" line 7)
+    invoked from within
+"createWatchViewer $insp.main"
+    (procedure "createWatchInspector" line 7)
+    invoked from within
+"createWatchInspector .inspector0 318x54+922+134:normal"
+
+
+Tcl error: watchinspector.cc#62: can't read "insp": no such variable
+    while executing
+"inspector:bindSideButtons $insp"
+    (procedure "createWatchViewer" line 7)
+    invoked from within
+"createWatchViewer $insp.main"
+    (procedure "createWatchInspector" line 7)
+    invoked from within
+"createWatchInspector .inspector2 318x54+333+14:normal"
+
+
+Tcl error: watchinspector.cc#62: can't read "insp": no such variable
+    while executing
+"inspector:bindSideButtons $insp"
+    (procedure "createWatchViewer" line 7)
+    invoked from within
+"createWatchViewer $insp.main"
+    (procedure "createWatchInspector" line 7)
+    invoked from within
+"createWatchInspector .inspector3 318x54+934+48:normal"
+
+
+Tcl error: watchinspector.cc#62: can't read "insp": no such variable
+    while executing
+"inspector:bindSideButtons $insp"
+    (procedure "createWatchViewer" line 7)
+    invoked from within
+"createWatchViewer $insp.main"
+    (procedure "createWatchInspector" line 7)
+    invoked from within
+"createWatchInspector .inspector4 318x54+661+14:normal"
+
+
+Tcl error: watchinspector.cc#62: can't read "insp": no such variable
+    while executing
+"inspector:bindSideButtons $insp"
+    (procedure "createWatchViewer" line 7)
+    invoked from within
+"createWatchViewer $insp.main"
+    (procedure "createWatchInspector" line 7)
+    invoked from within
+"createWatchInspector .inspector9 318x54+912+124:normal"
+
+
+Tcl error: watchinspector.cc#62: can't read "insp": no such variable
+    while executing
+"inspector:bindSideButtons $insp"
+    (procedure "createWatchViewer" line 7)
+    invoked from within
+"createWatchViewer $insp.main"
+    (procedure "createWatchInspector" line 7)
+    invoked from within
+"createWatchInspector .inspector11 318x54+651+14:normal"
+
+
+Tcl error: watchinspector.cc#62: can't read "insp": no such variable
+    while executing
+"inspector:bindSideButtons $insp"
+    (procedure "createWatchViewer" line 7)
+    invoked from within
+"createWatchViewer $insp.main"
+    (procedure "createWatchInspector" line 7)
+    invoked from within
+"createWatchInspector .inspector12 318x54+924+38:normal"
+
+
+Tcl error: watchinspector.cc#62: can't read "insp": no such variable
+    while executing
+"inspector:bindSideButtons $insp"
+    (procedure "createWatchViewer" line 7)
+    invoked from within
+"createWatchViewer $insp.main"
+    (procedure "createWatchInspector" line 7)
+    invoked from within
+"createWatchInspector .inspector13 318x54+323+14:normal"
+
+
+----------------------------------------------------------------------
+
+
+Tcl error: watchinspector.cc#62: can't read "insp": no such variable
+    while executing
+"inspector:bindSideButtons $insp"
+    (procedure "createWatchViewer" line 7)
+    invoked from within
+"createWatchViewer $insp.main"
+    (procedure "createWatchInspector" line 7)
+    invoked from within
+"createWatchInspector .inspector0 318x54+902+114:normal"
+
+
+Tcl error: watchinspector.cc#62: can't read "insp": no such variable
+    while executing
+"inspector:bindSideButtons $insp"
+    (procedure "createWatchViewer" line 7)
+    invoked from within
+"createWatchViewer $insp.main"
+    (procedure "createWatchInspector" line 7)
+    invoked from within
+"createWatchInspector .inspector2 318x54+313+14:normal"
+
+
+Tcl error: watchinspector.cc#62: can't read "insp": no such variable
+    while executing
+"inspector:bindSideButtons $insp"
+    (procedure "createWatchViewer" line 7)
+    invoked from within
+"createWatchViewer $insp.main"
+    (procedure "createWatchInspector" line 7)
+    invoked from within
+"createWatchInspector .inspector3 318x54+914+28:normal"
+
+
+Tcl error: watchinspector.cc#62: can't read "insp": no such variable
+    while executing
+"inspector:bindSideButtons $insp"
+    (procedure "createWatchViewer" line 7)
+    invoked from within
+"createWatchViewer $insp.main"
+    (procedure "createWatchInspector" line 7)
+    invoked from within
+"createWatchInspector .inspector4 318x54+641+14:normal"
+
+
+----------------------------------------------------------------------
+
+
+Tcl error: watchinspector.cc#62: can't read "insp": no such variable
+    while executing
+"inspector:bindSideButtons $insp"
+    (procedure "createWatchViewer" line 7)
+    invoked from within
+"createWatchViewer $insp.main"
+    (procedure "createWatchInspector" line 7)
+    invoked from within
+"createWatchInspector .inspector1 318x54+892+104:normal"
+
+
+Tcl error: watchinspector.cc#62: can't read "insp": no such variable
+    while executing
+"inspector:bindSideButtons $insp"
+    (procedure "createWatchViewer" line 7)
+    invoked from within
+"createWatchViewer $insp.main"
+    (procedure "createWatchInspector" line 7)
+    invoked from within
+"createWatchInspector .inspector3 318x54+631+14:normal"
+
+
+Tcl error: watchinspector.cc#62: can't read "insp": no such variable
+    while executing
+"inspector:bindSideButtons $insp"
+    (procedure "createWatchViewer" line 7)
+    invoked from within
+"createWatchViewer $insp.main"
+    (procedure "createWatchInspector" line 7)
+    invoked from within
+"createWatchInspector .inspector4 318x54+904+18:normal"
+
+
+Tcl error: watchinspector.cc#62: can't read "insp": no such variable
+    while executing
+"inspector:bindSideButtons $insp"
+    (procedure "createWatchViewer" line 7)
+    invoked from within
+"createWatchViewer $insp.main"
+    (procedure "createWatchInspector" line 7)
+    invoked from within
+"createWatchInspector .inspector5 318x54+303+14:normal"
+
+
+Tcl error: watchinspector.cc#62: can't read "insp": no such variable
+    while executing
+"inspector:bindSideButtons $insp"
+    (procedure "createWatchViewer" line 7)
+    invoked from within
+"createWatchViewer $insp.main"
+    (procedure "createWatchInspector" line 7)
+    invoked from within
+"createWatchInspector .inspector7 318x54+882+94:normal"
+
+
+Tcl error: watchinspector.cc#62: can't read "insp": no such variable
+    while executing
+"inspector:bindSideButtons $insp"
+    (procedure "createWatchViewer" line 7)
+    invoked from within
+"createWatchViewer $insp.main"
+    (procedure "createWatchInspector" line 7)
+    invoked from within
+"createWatchInspector .inspector9 318x54+293+14:normal"
+
+
+Tcl error: watchinspector.cc#62: can't read "insp": no such variable
+    while executing
+"inspector:bindSideButtons $insp"
+    (procedure "createWatchViewer" line 7)
+    invoked from within
+"createWatchViewer $insp.main"
+    (procedure "createWatchInspector" line 7)
+    invoked from within
+"createWatchInspector .inspector10 318x54+894+14:normal"
+
+
+Tcl error: watchinspector.cc#62: can't read "insp": no such variable
+    while executing
+"inspector:bindSideButtons $insp"
+    (procedure "createWatchViewer" line 7)
+    invoked from within
+"createWatchViewer $insp.main"
+    (procedure "createWatchInspector" line 7)
+    invoked from within
+"createWatchInspector .inspector11 318x54+621+14:normal"
+
+
+----------------------------------------------------------------------
+
+
+Tcl error: watchinspector.cc#62: can't read "insp": no such variable
+    while executing
+"inspector:bindSideButtons $insp"
+    (procedure "createWatchViewer" line 7)
+    invoked from within
+"createWatchViewer $insp.main"
+    (procedure "createWatchInspector" line 7)
+    invoked from within
+"createWatchInspector .inspector1 318x54+872+84:normal"
+
+
+Tcl error: watchinspector.cc#62: can't read "insp": no such variable
+    while executing
+"inspector:bindSideButtons $insp"
+    (procedure "createWatchViewer" line 7)
+    invoked from within
+"createWatchViewer $insp.main"
+    (procedure "createWatchInspector" line 7)
+    invoked from within
+"createWatchInspector .inspector3 318x54+611+14:normal"
+
+
+Tcl error: watchinspector.cc#62: can't read "insp": no such variable
+    while executing
+"inspector:bindSideButtons $insp"
+    (procedure "createWatchViewer" line 7)
+    invoked from within
+"createWatchViewer $insp.main"
+    (procedure "createWatchInspector" line 7)
+    invoked from within
+"createWatchInspector .inspector4 318x54+884+14:normal"
+
+
+Tcl error: watchinspector.cc#62: can't read "insp": no such variable
+    while executing
+"inspector:bindSideButtons $insp"
+    (procedure "createWatchViewer" line 7)
+    invoked from within
+"createWatchViewer $insp.main"
+    (procedure "createWatchInspector" line 7)
+    invoked from within
+"createWatchInspector .inspector5 318x54+283+14:normal"
+
+
+----------------------------------------------------------------------
+
+
+Tcl error: watchinspector.cc#62: can't read "insp": no such variable
+    while executing
+"inspector:bindSideButtons $insp"
+    (procedure "createWatchViewer" line 7)
+    invoked from within
+"createWatchViewer $insp.main"
+    (procedure "createWatchInspector" line 7)
+    invoked from within
+"createWatchInspector .inspector0 318x54+862+74:normal"
+
+
+Tcl error: watchinspector.cc#62: can't read "insp": no such variable
+    while executing
+"inspector:bindSideButtons $insp"
+    (procedure "createWatchViewer" line 7)
+    invoked from within
+"createWatchViewer $insp.main"
+    (procedure "createWatchInspector" line 7)
+    invoked from within
+"createWatchInspector .inspector2 318x54+288+111:normal"
+
+
+Tcl error: watchinspector.cc#62: can't read "insp": no such variable
+    while executing
+"inspector:bindSideButtons $insp"
+    (procedure "createWatchViewer" line 7)
+    invoked from within
+"createWatchViewer $insp.main"
+    (procedure "createWatchInspector" line 7)
+    invoked from within
+"createWatchInspector .inspector3 318x54+874+14:normal"
+
+
+Tcl error: watchinspector.cc#62: can't read "insp": no such variable
+    while executing
+"inspector:bindSideButtons $insp"
+    (procedure "createWatchViewer" line 7)
+    invoked from within
+"createWatchViewer $insp.main"
+    (procedure "createWatchInspector" line 7)
+    invoked from within
+"createWatchInspector .inspector4 318x54+601+14:normal"
+
+
+Tcl error: watchinspector.cc#62: can't read "insp": no such variable
+    while executing
+"inspector:bindSideButtons $insp"
+    (procedure "createWatchViewer" line 7)
+    invoked from within
+"createWatchViewer $insp.main"
+    (procedure "createWatchInspector" line 7)
+    invoked from within
+"createWatchInspector .inspector8 318x54+852+64:normal"
+
+
+Tcl error: watchinspector.cc#62: can't read "insp": no such variable
+    while executing
+"inspector:bindSideButtons $insp"
+    (procedure "createWatchViewer" line 7)
+    invoked from within
+"createWatchViewer $insp.main"
+    (procedure "createWatchInspector" line 7)
+    invoked from within
+"createWatchInspector .inspector10 318x54+591+14:normal"
+
+
+Tcl error: watchinspector.cc#62: can't read "insp": no such variable
+    while executing
+"inspector:bindSideButtons $insp"
+    (procedure "createWatchViewer" line 7)
+    invoked from within
+"createWatchViewer $insp.main"
+    (procedure "createWatchInspector" line 7)
+    invoked from within
+"createWatchInspector .inspector11 318x54+975+210:normal"
+
+
+Tcl error: watchinspector.cc#62: can't read "insp": no such variable
+    while executing
+"inspector:bindSideButtons $insp"
+    (procedure "createWatchViewer" line 7)
+    invoked from within
+"createWatchViewer $insp.main"
+    (procedure "createWatchInspector" line 7)
+    invoked from within
+"createWatchInspector .inspector12 318x54+241+51:normal"
+
+
+Tcl error: watchinspector.cc#62: can't read "insp": no such variable
+    while executing
+"inspector:bindSideButtons $insp"
+    (procedure "createWatchViewer" line 7)
+    invoked from within
+"createWatchViewer $insp.main"
+    (procedure "createWatchInspector" line 7)
+    invoked from within
+"createWatchInspector .inspector14 318x54+842+54:normal"
+
+
+Tcl error: watchinspector.cc#62: can't read "insp": no such variable
+    while executing
+"inspector:bindSideButtons $insp"
+    (procedure "createWatchViewer" line 7)
+    invoked from within
+"createWatchViewer $insp.main"
+    (procedure "createWatchInspector" line 7)
+    invoked from within
+"createWatchInspector .inspector16 318x54+262+48:normal"
+
+
+Tcl error: watchinspector.cc#62: can't read "insp": no such variable
+    while executing
+"inspector:bindSideButtons $insp"
+    (procedure "createWatchViewer" line 7)
+    invoked from within
+"createWatchViewer $insp.main"
+    (procedure "createWatchInspector" line 7)
+    invoked from within
+"createWatchInspector .inspector17 318x54+965+200:normal"
+
+
+Tcl error: watchinspector.cc#62: can't read "insp": no such variable
+    while executing
+"inspector:bindSideButtons $insp"
+    (procedure "createWatchViewer" line 7)
+    invoked from within
+"createWatchViewer $insp.main"
+    (procedure "createWatchInspector" line 7)
+    invoked from within
+"createWatchInspector .inspector18 318x54+581+14:normal"
+
+
+----------------------------------------------------------------------
+
+
+Tcl error: watchinspector.cc#62: can't read "insp": no such variable
+    while executing
+"inspector:bindSideButtons $insp"
+    (procedure "createWatchViewer" line 7)
+    invoked from within
+"createWatchViewer $insp.main"
+    (procedure "createWatchInspector" line 7)
+    invoked from within
+"createWatchInspector .inspector1 318x54+832+44:normal"
+
+
+Tcl error: watchinspector.cc#62: can't read "insp": no such variable
+    while executing
+"inspector:bindSideButtons $insp"
+    (procedure "createWatchViewer" line 7)
+    invoked from within
+"createWatchViewer $insp.main"
+    (procedure "createWatchInspector" line 7)
+    invoked from within
+"createWatchInspector .inspector3 318x54+571+14:normal"
+
+
+Tcl error: watchinspector.cc#62: can't read "insp": no such variable
+    while executing
+"inspector:bindSideButtons $insp"
+    (procedure "createWatchViewer" line 7)
+    invoked from within
+"createWatchViewer $insp.main"
+    (procedure "createWatchInspector" line 7)
+    invoked from within
+"createWatchInspector .inspector4 318x54+955+190:normal"
+
+
+Tcl error: watchinspector.cc#62: can't read "insp": no such variable
+    while executing
+"inspector:bindSideButtons $insp"
+    (procedure "createWatchViewer" line 7)
+    invoked from within
+"createWatchViewer $insp.main"
+    (procedure "createWatchInspector" line 7)
+    invoked from within
+"createWatchInspector .inspector5 318x54+252+38:normal"
+
+
+----------------------------------------------------------------------
+
+
+Tcl error: watchinspector.cc#62: can't read "insp": no such variable
+    while executing
+"inspector:bindSideButtons $insp"
+    (procedure "createWatchViewer" line 7)
+    invoked from within
+"createWatchViewer $insp.main"
+    (procedure "createWatchInspector" line 7)
+    invoked from within
+"createWatchInspector .inspector0 318x54+948+97:normal"
+
+
+Tcl error: watchinspector.cc#62: can't read "insp": no such variable
+    while executing
+"inspector:bindSideButtons $insp"
+    (procedure "createWatchViewer" line 7)
+    invoked from within
+"createWatchViewer $insp.main"
+    (procedure "createWatchInspector" line 7)
+    invoked from within
+"createWatchInspector .inspector2 318x54+311+32:normal"
+
+
+Tcl error: watchinspector.cc#62: can't read "insp": no such variable
+    while executing
+"inspector:bindSideButtons $insp"
+    (procedure "createWatchViewer" line 7)
+    invoked from within
+"createWatchViewer $insp.main"
+    (procedure "createWatchInspector" line 7)
+    invoked from within
+"createWatchInspector .inspector3 318x54+945+180:normal"
+
+
+Tcl error: watchinspector.cc#62: can't read "insp": no such variable
+    while executing
+"inspector:bindSideButtons $insp"
+    (procedure "createWatchViewer" line 7)
+    invoked from within
+"createWatchViewer $insp.main"
+    (procedure "createWatchInspector" line 7)
+    invoked from within
+"createWatchInspector .inspector4 318x54+644+36:normal"
+
+
+----------------------------------------------------------------------
+
+
+Tcl error: watchinspector.cc#62: can't read "insp": no such variable
+    while executing
+"inspector:bindSideButtons $insp"
+    (procedure "createWatchViewer" line 7)
+    invoked from within
+"createWatchViewer $insp.main"
+    (procedure "createWatchInspector" line 7)
+    invoked from within
+"createWatchInspector .inspector1 318x54+938+87:normal"
+
+
+Tcl error: watchinspector.cc#62: can't read "insp": no such variable
+    while executing
+"inspector:bindSideButtons $insp"
+    (procedure "createWatchViewer" line 7)
+    invoked from within
+"createWatchViewer $insp.main"
+    (procedure "createWatchInspector" line 7)
+    invoked from within
+"createWatchInspector .inspector3 318x54+634+26:normal"
+
+
+Tcl error: watchinspector.cc#62: can't read "insp": no such variable
+    while executing
+"inspector:bindSideButtons $insp"
+    (procedure "createWatchViewer" line 7)
+    invoked from within
+"createWatchViewer $insp.main"
+    (procedure "createWatchInspector" line 7)
+    invoked from within
+"createWatchInspector .inspector4 318x54+935+170:normal"
+
+
+Tcl error: watchinspector.cc#62: can't read "insp": no such variable
+    while executing
+"inspector:bindSideButtons $insp"
+    (procedure "createWatchViewer" line 7)
+    invoked from within
+"createWatchViewer $insp.main"
+    (procedure "createWatchInspector" line 7)
+    invoked from within
+"createWatchInspector .inspector5 318x54+301+22:normal"
+
+
+----------------------------------------------------------------------
+
+
+Tcl error: watchinspector.cc#62: can't read "insp": no such variable
+    while executing
+"inspector:bindSideButtons $insp"
+    (procedure "createWatchViewer" line 7)
+    invoked from within
+"createWatchViewer $insp.main"
+    (procedure "createWatchInspector" line 7)
+    invoked from within
+"createWatchInspector .inspector1 318x54+938+87:normal"
+
+
+Tcl error: watchinspector.cc#62: can't read "insp": no such variable
+    while executing
+"inspector:bindSideButtons $insp"
+    (procedure "createWatchViewer" line 7)
+    invoked from within
+"createWatchViewer $insp.main"
+    (procedure "createWatchInspector" line 7)
+    invoked from within
+"createWatchInspector .inspector3 318x54+634+26:normal"
+
+
+Tcl error: watchinspector.cc#62: can't read "insp": no such variable
+    while executing
+"inspector:bindSideButtons $insp"
+    (procedure "createWatchViewer" line 7)
+    invoked from within
+"createWatchViewer $insp.main"
+    (procedure "createWatchInspector" line 7)
+    invoked from within
+"createWatchInspector .inspector4 318x54+935+170:normal"
+
+
+Tcl error: watchinspector.cc#62: can't read "insp": no such variable
+    while executing
+"inspector:bindSideButtons $insp"
+    (procedure "createWatchViewer" line 7)
+    invoked from within
+"createWatchViewer $insp.main"
+    (procedure "createWatchInspector" line 7)
+    invoked from within
+"createWatchInspector .inspector5 318x54+301+22:normal"
+
+
+----------------------------------------------------------------------
+
+
+Tcl error: watchinspector.cc#62: can't read "insp": no such variable
+    while executing
+"inspector:bindSideButtons $insp"
+    (procedure "createWatchViewer" line 7)
+    invoked from within
+"createWatchViewer $insp.main"
+    (procedure "createWatchInspector" line 7)
+    invoked from within
+"createWatchInspector .inspector0 318x54+928+77:normal"
+
+
+Tcl error: watchinspector.cc#62: can't read "insp": no such variable
+    while executing
+"inspector:bindSideButtons $insp"
+    (procedure "createWatchViewer" line 7)
+    invoked from within
+"createWatchViewer $insp.main"
+    (procedure "createWatchInspector" line 7)
+    invoked from within
+"createWatchInspector .inspector2 318x54+291+14:normal"
+
+
+Tcl error: watchinspector.cc#62: can't read "insp": no such variable
+    while executing
+"inspector:bindSideButtons $insp"
+    (procedure "createWatchViewer" line 7)
+    invoked from within
+"createWatchViewer $insp.main"
+    (procedure "createWatchInspector" line 7)
+    invoked from within
+"createWatchInspector .inspector3 318x54+925+160:normal"
+
+
+Tcl error: watchinspector.cc#62: can't read "insp": no such variable
+    while executing
+"inspector:bindSideButtons $insp"
+    (procedure "createWatchViewer" line 7)
+    invoked from within
+"createWatchViewer $insp.main"
+    (procedure "createWatchInspector" line 7)
+    invoked from within
+"createWatchInspector .inspector4 318x54+624+16:normal"
+
+
+----------------------------------------------------------------------
+
+
+Tcl error: watchinspector.cc#62: can't read "insp": no such variable
+    while executing
+"inspector:bindSideButtons $insp"
+    (procedure "createWatchViewer" line 7)
+    invoked from within
+"createWatchViewer $insp.main"
+    (procedure "createWatchInspector" line 7)
+    invoked from within
+"createWatchInspector .inspector1 318x54+918+67:normal"
+
+
+Tcl error: watchinspector.cc#62: can't read "insp": no such variable
+    while executing
+"inspector:bindSideButtons $insp"
+    (procedure "createWatchViewer" line 7)
+    invoked from within
+"createWatchViewer $insp.main"
+    (procedure "createWatchInspector" line 7)
+    invoked from within
+"createWatchInspector .inspector3 318x54+614+14:normal"
+
+
+Tcl error: watchinspector.cc#62: can't read "insp": no such variable
+    while executing
+"inspector:bindSideButtons $insp"
+    (procedure "createWatchViewer" line 7)
+    invoked from within
+"createWatchViewer $insp.main"
+    (procedure "createWatchInspector" line 7)
+    invoked from within
+"createWatchInspector .inspector4 318x54+915+150:normal"
+
+
+Tcl error: watchinspector.cc#62: can't read "insp": no such variable
+    while executing
+"inspector:bindSideButtons $insp"
+    (procedure "createWatchViewer" line 7)
+    invoked from within
+"createWatchViewer $insp.main"
+    (procedure "createWatchInspector" line 7)
+    invoked from within
+"createWatchInspector .inspector5 318x54+281+14:normal"
+
+
+----------------------------------------------------------------------
+
+
+Tcl error: watchinspector.cc#62: can't read "insp": no such variable
+    while executing
+"inspector:bindSideButtons $insp"
+    (procedure "createWatchViewer" line 7)
+    invoked from within
+"createWatchViewer $insp.main"
+    (procedure "createWatchInspector" line 7)
+    invoked from within
+"createWatchInspector .inspector1 318x54+918+67:normal"
+
+
+Tcl error: watchinspector.cc#62: can't read "insp": no such variable
+    while executing
+"inspector:bindSideButtons $insp"
+    (procedure "createWatchViewer" line 7)
+    invoked from within
+"createWatchViewer $insp.main"
+    (procedure "createWatchInspector" line 7)
+    invoked from within
+"createWatchInspector .inspector3 318x54+614+14:normal"
+
+
+Tcl error: watchinspector.cc#62: can't read "insp": no such variable
+    while executing
+"inspector:bindSideButtons $insp"
+    (procedure "createWatchViewer" line 7)
+    invoked from within
+"createWatchViewer $insp.main"
+    (procedure "createWatchInspector" line 7)
+    invoked from within
+"createWatchInspector .inspector4 318x54+915+150:normal"
+
+
+Tcl error: watchinspector.cc#62: can't read "insp": no such variable
+    while executing
+"inspector:bindSideButtons $insp"
+    (procedure "createWatchViewer" line 7)
+    invoked from within
+"createWatchViewer $insp.main"
+    (procedure "createWatchInspector" line 7)
+    invoked from within
+"createWatchInspector .inspector5 318x54+281+14:normal"
+
+
+----------------------------------------------------------------------
+
+
+Tcl error: watchinspector.cc#62: can't read "insp": no such variable
+    while executing
+"inspector:bindSideButtons $insp"
+    (procedure "createWatchViewer" line 7)
+    invoked from within
+"createWatchViewer $insp.main"
+    (procedure "createWatchInspector" line 7)
+    invoked from within
+"createWatchInspector .inspector0 318x54+908+57:normal"
+
+
+Tcl error: watchinspector.cc#62: can't read "insp": no such variable
+    while executing
+"inspector:bindSideButtons $insp"
+    (procedure "createWatchViewer" line 7)
+    invoked from within
+"createWatchViewer $insp.main"
+    (procedure "createWatchInspector" line 7)
+    invoked from within
+"createWatchInspector .inspector2 318x54+271+14:normal"
+
+
+Tcl error: watchinspector.cc#62: can't read "insp": no such variable
+    while executing
+"inspector:bindSideButtons $insp"
+    (procedure "createWatchViewer" line 7)
+    invoked from within
+"createWatchViewer $insp.main"
+    (procedure "createWatchInspector" line 7)
+    invoked from within
+"createWatchInspector .inspector3 318x54+905+140:normal"
+
+
+Tcl error: watchinspector.cc#62: can't read "insp": no such variable
+    while executing
+"inspector:bindSideButtons $insp"
+    (procedure "createWatchViewer" line 7)
+    invoked from within
+"createWatchViewer $insp.main"
+    (procedure "createWatchInspector" line 7)
+    invoked from within
+"createWatchInspector .inspector4 318x54+604+14:normal"
+
+
+----------------------------------------------------------------------
+
+
+Tcl error: watchinspector.cc#62: can't read "insp": no such variable
+    while executing
+"inspector:bindSideButtons $insp"
+    (procedure "createWatchViewer" line 7)
+    invoked from within
+"createWatchViewer $insp.main"
+    (procedure "createWatchInspector" line 7)
+    invoked from within
+"createWatchInspector .inspector1 318x54+898+47:normal"
+
+
+Tcl error: watchinspector.cc#62: can't read "insp": no such variable
+    while executing
+"inspector:bindSideButtons $insp"
+    (procedure "createWatchViewer" line 7)
+    invoked from within
+"createWatchViewer $insp.main"
+    (procedure "createWatchInspector" line 7)
+    invoked from within
+"createWatchInspector .inspector3 318x54+594+14:normal"
+
+
+Tcl error: watchinspector.cc#62: can't read "insp": no such variable
+    while executing
+"inspector:bindSideButtons $insp"
+    (procedure "createWatchViewer" line 7)
+    invoked from within
+"createWatchViewer $insp.main"
+    (procedure "createWatchInspector" line 7)
+    invoked from within
+"createWatchInspector .inspector4 318x54+895+130:normal"
+
+
+Tcl error: watchinspector.cc#62: can't read "insp": no such variable
+    while executing
+"inspector:bindSideButtons $insp"
+    (procedure "createWatchViewer" line 7)
+    invoked from within
+"createWatchViewer $insp.main"
+    (procedure "createWatchInspector" line 7)
+    invoked from within
+"createWatchInspector .inspector5 318x54+261+14:normal"
+
+
+----------------------------------------------------------------------
+
+
+Tcl error: watchinspector.cc#62: can't read "insp": no such variable
+    while executing
+"inspector:bindSideButtons $insp"
+    (procedure "createWatchViewer" line 7)
+    invoked from within
+"createWatchViewer $insp.main"
+    (procedure "createWatchInspector" line 7)
+    invoked from within
+"createWatchInspector .inspector0 318x54+888+37:normal"
+
+
+Tcl error: watchinspector.cc#62: can't read "insp": no such variable
+    while executing
+"inspector:bindSideButtons $insp"
+    (procedure "createWatchViewer" line 7)
+    invoked from within
+"createWatchViewer $insp.main"
+    (procedure "createWatchInspector" line 7)
+    invoked from within
+"createWatchInspector .inspector2 318x54+251+14:normal"
+
+
+Tcl error: watchinspector.cc#62: can't read "insp": no such variable
+    while executing
+"inspector:bindSideButtons $insp"
+    (procedure "createWatchViewer" line 7)
+    invoked from within
+"createWatchViewer $insp.main"
+    (procedure "createWatchInspector" line 7)
+    invoked from within
+"createWatchInspector .inspector3 318x54+885+120:normal"
+
+
+Tcl error: watchinspector.cc#62: can't read "insp": no such variable
+    while executing
+"inspector:bindSideButtons $insp"
+    (procedure "createWatchViewer" line 7)
+    invoked from within
+"createWatchViewer $insp.main"
+    (procedure "createWatchInspector" line 7)
+    invoked from within
+"createWatchInspector .inspector4 318x54+584+14:normal"
+
+
+----------------------------------------------------------------------
+
+
+Tcl error: watchinspector.cc#62: can't read "insp": no such variable
+    while executing
+"inspector:bindSideButtons $insp"
+    (procedure "createWatchViewer" line 7)
+    invoked from within
+"createWatchViewer $insp.main"
+    (procedure "createWatchInspector" line 7)
+    invoked from within
+"createWatchInspector .inspector1 318x54+878+27:normal"
+
+
+Tcl error: watchinspector.cc#62: can't read "insp": no such variable
+    while executing
+"inspector:bindSideButtons $insp"
+    (procedure "createWatchViewer" line 7)
+    invoked from within
+"createWatchViewer $insp.main"
+    (procedure "createWatchInspector" line 7)
+    invoked from within
+"createWatchInspector .inspector3 318x54+574+14:normal"
+
+
+Tcl error: watchinspector.cc#62: can't read "insp": no such variable
+    while executing
+"inspector:bindSideButtons $insp"
+    (procedure "createWatchViewer" line 7)
+    invoked from within
+"createWatchViewer $insp.main"
+    (procedure "createWatchInspector" line 7)
+    invoked from within
+"createWatchInspector .inspector4 318x54+875+110:normal"
+
+
+Tcl error: watchinspector.cc#62: can't read "insp": no such variable
+    while executing
+"inspector:bindSideButtons $insp"
+    (procedure "createWatchViewer" line 7)
+    invoked from within
+"createWatchViewer $insp.main"
+    (procedure "createWatchInspector" line 7)
+    invoked from within
+"createWatchInspector .inspector5 318x54+306+14:normal"
+
+
+----------------------------------------------------------------------
+
+
+Tcl error: watchinspector.cc#62: can't read "insp": no such variable
+    while executing
+"inspector:bindSideButtons $insp"
+    (procedure "createWatchViewer" line 7)
+    invoked from within
+"createWatchViewer $insp.main"
+    (procedure "createWatchInspector" line 7)
+    invoked from within
+"createWatchInspector .inspector0 318x54+868+17:normal"
+
+
+Tcl error: watchinspector.cc#62: can't read "insp": no such variable
+    while executing
+"inspector:bindSideButtons $insp"
+    (procedure "createWatchViewer" line 7)
+    invoked from within
+"createWatchViewer $insp.main"
+    (procedure "createWatchInspector" line 7)
+    invoked from within
+"createWatchInspector .inspector2 318x54+296+14:normal"
+
+
+Tcl error: watchinspector.cc#62: can't read "insp": no such variable
+    while executing
+"inspector:bindSideButtons $insp"
+    (procedure "createWatchViewer" line 7)
+    invoked from within
+"createWatchViewer $insp.main"
+    (procedure "createWatchInspector" line 7)
+    invoked from within
+"createWatchInspector .inspector3 318x54+865+100:normal"
+
+
+Tcl error: watchinspector.cc#62: can't read "insp": no such variable
+    while executing
+"inspector:bindSideButtons $insp"
+    (procedure "createWatchViewer" line 7)
+    invoked from within
+"createWatchViewer $insp.main"
+    (procedure "createWatchInspector" line 7)
+    invoked from within
+"createWatchInspector .inspector4 318x54+564+14:normal"
+
+
+----------------------------------------------------------------------
+
+
+Tcl error: watchinspector.cc#62: can't read "insp": no such variable
+    while executing
+"inspector:bindSideButtons $insp"
+    (procedure "createWatchViewer" line 7)
+    invoked from within
+"createWatchViewer $insp.main"
+    (procedure "createWatchInspector" line 7)
+    invoked from within
+"createWatchInspector .inspector1 318x54+858+14:normal"
+
+
+Tcl error: watchinspector.cc#62: can't read "insp": no such variable
+    while executing
+"inspector:bindSideButtons $insp"
+    (procedure "createWatchViewer" line 7)
+    invoked from within
+"createWatchViewer $insp.main"
+    (procedure "createWatchInspector" line 7)
+    invoked from within
+"createWatchInspector .inspector3 318x54+554+14:normal"
+
+
+Tcl error: watchinspector.cc#62: can't read "insp": no such variable
+    while executing
+"inspector:bindSideButtons $insp"
+    (procedure "createWatchViewer" line 7)
+    invoked from within
+"createWatchViewer $insp.main"
+    (procedure "createWatchInspector" line 7)
+    invoked from within
+"createWatchInspector .inspector4 318x54+855+90:normal"
+
+
+Tcl error: watchinspector.cc#62: can't read "insp": no such variable
+    while executing
+"inspector:bindSideButtons $insp"
+    (procedure "createWatchViewer" line 7)
+    invoked from within
+"createWatchViewer $insp.main"
+    (procedure "createWatchInspector" line 7)
+    invoked from within
+"createWatchInspector .inspector5 318x54+286+14:normal"
+
+
+----------------------------------------------------------------------
+
+
+Tcl error: watchinspector.cc#62: can't read "insp": no such variable
+    while executing
+"inspector:bindSideButtons $insp"
+    (procedure "createWatchViewer" line 7)
+    invoked from within
+"createWatchViewer $insp.main"
+    (procedure "createWatchInspector" line 7)
+    invoked from within
+"createWatchInspector .inspector0 318x54+848+14:normal"
+
+
+Tcl error: watchinspector.cc#62: can't read "insp": no such variable
+    while executing
+"inspector:bindSideButtons $insp"
+    (procedure "createWatchViewer" line 7)
+    invoked from within
+"createWatchViewer $insp.main"
+    (procedure "createWatchInspector" line 7)
+    invoked from within
+"createWatchInspector .inspector2 318x54+276+14:normal"
+
+
+Tcl error: watchinspector.cc#62: can't read "insp": no such variable
+    while executing
+"inspector:bindSideButtons $insp"
+    (procedure "createWatchViewer" line 7)
+    invoked from within
+"createWatchViewer $insp.main"
+    (procedure "createWatchInspector" line 7)
+    invoked from within
+"createWatchInspector .inspector3 318x54+873+123:normal"
+
+
+Tcl error: watchinspector.cc#62: can't read "insp": no such variable
+    while executing
+"inspector:bindSideButtons $insp"
+    (procedure "createWatchViewer" line 7)
+    invoked from within
+"createWatchViewer $insp.main"
+    (procedure "createWatchInspector" line 7)
+    invoked from within
+"createWatchInspector .inspector4 318x54+544+14:normal"
+
+
+----------------------------------------------------------------------
+
+
+Tcl error: watchinspector.cc#62: can't read "insp": no such variable
+    while executing
+"inspector:bindSideButtons $insp"
+    (procedure "createWatchViewer" line 7)
+    invoked from within
+"createWatchViewer $insp.main"
+    (procedure "createWatchInspector" line 7)
+    invoked from within
+"createWatchInspector .inspector1 318x54+838+14:normal"
+
+
+Tcl error: watchinspector.cc#62: can't read "insp": no such variable
+    while executing
+"inspector:bindSideButtons $insp"
+    (procedure "createWatchViewer" line 7)
+    invoked from within
+"createWatchViewer $insp.main"
+    (procedure "createWatchInspector" line 7)
+    invoked from within
+"createWatchInspector .inspector3 318x54+534+14:normal"
+
+
+Tcl error: watchinspector.cc#62: can't read "insp": no such variable
+    while executing
+"inspector:bindSideButtons $insp"
+    (procedure "createWatchViewer" line 7)
+    invoked from within
+"createWatchViewer $insp.main"
+    (procedure "createWatchInspector" line 7)
+    invoked from within
+"createWatchInspector .inspector4 318x54+863+113:normal"
+
+
+Tcl error: watchinspector.cc#62: can't read "insp": no such variable
+    while executing
+"inspector:bindSideButtons $insp"
+    (procedure "createWatchViewer" line 7)
+    invoked from within
+"createWatchViewer $insp.main"
+    (procedure "createWatchInspector" line 7)
+    invoked from within
+"createWatchInspector .inspector5 318x54+266+14:normal"
+
+
+----------------------------------------------------------------------
+
+
+Tcl error: watchinspector.cc#62: can't read "insp": no such variable
+    while executing
+"inspector:bindSideButtons $insp"
+    (procedure "createWatchViewer" line 7)
+    invoked from within
+"createWatchViewer $insp.main"
+    (procedure "createWatchInspector" line 7)
+    invoked from within
+"createWatchInspector .inspector0 318x54+828+14:normal"
+
+
+Tcl error: watchinspector.cc#62: can't read "insp": no such variable
+    while executing
+"inspector:bindSideButtons $insp"
+    (procedure "createWatchViewer" line 7)
+    invoked from within
+"createWatchViewer $insp.main"
+    (procedure "createWatchInspector" line 7)
+    invoked from within
+"createWatchInspector .inspector2 318x54+294+14:normal"
+
+
+Tcl error: watchinspector.cc#62: can't read "insp": no such variable
+    while executing
+"inspector:bindSideButtons $insp"
+    (procedure "createWatchViewer" line 7)
+    invoked from within
+"createWatchViewer $insp.main"
+    (procedure "createWatchInspector" line 7)
+    invoked from within
+"createWatchInspector .inspector3 318x54+853+103:normal"
+
+
+Tcl error: watchinspector.cc#62: can't read "insp": no such variable
+    while executing
+"inspector:bindSideButtons $insp"
+    (procedure "createWatchViewer" line 7)
+    invoked from within
+"createWatchViewer $insp.main"
+    (procedure "createWatchInspector" line 7)
+    invoked from within
+"createWatchInspector .inspector4 318x54+524+14:normal"
+
+
+Tcl error: watchinspector.cc#62: can't read "insp": no such variable
+    while executing
+"inspector:bindSideButtons $insp"
+    (procedure "createWatchViewer" line 7)
+    invoked from within
+"createWatchViewer $insp.main"
+    (procedure "createWatchInspector" line 7)
+    invoked from within
+"createWatchInspector .inspector8 318x54+818+14:normal"
+
+
+Tcl error: watchinspector.cc#62: can't read "insp": no such variable
+    while executing
+"inspector:bindSideButtons $insp"
+    (procedure "createWatchViewer" line 7)
+    invoked from within
+"createWatchViewer $insp.main"
+    (procedure "createWatchInspector" line 7)
+    invoked from within
+"createWatchInspector .inspector10 318x54+514+14:normal"
+
+
+Tcl error: watchinspector.cc#62: can't read "insp": no such variable
+    while executing
+"inspector:bindSideButtons $insp"
+    (procedure "createWatchViewer" line 7)
+    invoked from within
+"createWatchViewer $insp.main"
+    (procedure "createWatchInspector" line 7)
+    invoked from within
+"createWatchInspector .inspector11 318x54+843+93:normal"
+
+
+Tcl error: watchinspector.cc#62: can't read "insp": no such variable
+    while executing
+"inspector:bindSideButtons $insp"
+    (procedure "createWatchViewer" line 7)
+    invoked from within
+"createWatchViewer $insp.main"
+    (procedure "createWatchInspector" line 7)
+    invoked from within
+"createWatchInspector .inspector12 318x54+284+14:normal"
+
+
+----------------------------------------------------------------------
+
+
+Tcl error: watchinspector.cc#62: can't read "insp": no such variable
+    while executing
+"inspector:bindSideButtons $insp"
+    (procedure "createWatchViewer" line 7)
+    invoked from within
+"createWatchViewer $insp.main"
+    (procedure "createWatchInspector" line 7)
+    invoked from within
+"createWatchInspector .inspector0 318x54+808+14:normal"
+
+
+Tcl error: watchinspector.cc#62: can't read "insp": no such variable
+    while executing
+"inspector:bindSideButtons $insp"
+    (procedure "createWatchViewer" line 7)
+    invoked from within
+"createWatchViewer $insp.main"
+    (procedure "createWatchInspector" line 7)
+    invoked from within
+"createWatchInspector .inspector2 318x54+274+14:normal"
+
+
+Tcl error: watchinspector.cc#62: can't read "insp": no such variable
+    while executing
+"inspector:bindSideButtons $insp"
+    (procedure "createWatchViewer" line 7)
+    invoked from within
+"createWatchViewer $insp.main"
+    (procedure "createWatchInspector" line 7)
+    invoked from within
+"createWatchInspector .inspector3 318x54+854+101:normal"
+
+
+Tcl error: watchinspector.cc#62: can't read "insp": no such variable
+    while executing
+"inspector:bindSideButtons $insp"
+    (procedure "createWatchViewer" line 7)
+    invoked from within
+"createWatchViewer $insp.main"
+    (procedure "createWatchInspector" line 7)
+    invoked from within
+"createWatchInspector .inspector4 318x54+504+14:normal"
+
+
+----------------------------------------------------------------------
+
+
+Tcl error: watchinspector.cc#62: can't read "insp": no such variable
+    while executing
+"inspector:bindSideButtons $insp"
+    (procedure "createWatchViewer" line 7)
+    invoked from within
+"createWatchViewer $insp.main"
+    (procedure "createWatchInspector" line 7)
+    invoked from within
+"createWatchInspector .inspector1 318x54+798+14:normal"
+
+
+Tcl error: watchinspector.cc#62: can't read "insp": no such variable
+    while executing
+"inspector:bindSideButtons $insp"
+    (procedure "createWatchViewer" line 7)
+    invoked from within
+"createWatchViewer $insp.main"
+    (procedure "createWatchInspector" line 7)
+    invoked from within
+"createWatchInspector .inspector3 318x54+494+14:normal"
+
+
+Tcl error: watchinspector.cc#62: can't read "insp": no such variable
+    while executing
+"inspector:bindSideButtons $insp"
+    (procedure "createWatchViewer" line 7)
+    invoked from within
+"createWatchViewer $insp.main"
+    (procedure "createWatchInspector" line 7)
+    invoked from within
+"createWatchInspector .inspector4 318x54+844+91:normal"
+
+
+Tcl error: watchinspector.cc#62: can't read "insp": no such variable
+    while executing
+"inspector:bindSideButtons $insp"
+    (procedure "createWatchViewer" line 7)
+    invoked from within
+"createWatchViewer $insp.main"
+    (procedure "createWatchInspector" line 7)
+    invoked from within
+"createWatchInspector .inspector5 318x54+264+14:normal"
+
+
+Tcl error: watchinspector.cc#62: can't read "insp": no such variable
+    while executing
+"inspector:bindSideButtons $insp"
+    (procedure "createWatchViewer" line 7)
+    invoked from within
+"createWatchViewer $insp.main"
+    (procedure "createWatchInspector" line 7)
+    invoked from within
+"createWatchInspector .inspector7 318x54+788+14:normal"
+
+
+Tcl error: watchinspector.cc#62: can't read "insp": no such variable
+    while executing
+"inspector:bindSideButtons $insp"
+    (procedure "createWatchViewer" line 7)
+    invoked from within
+"createWatchViewer $insp.main"
+    (procedure "createWatchInspector" line 7)
+    invoked from within
+"createWatchInspector .inspector9 318x54+254+14:normal"
+
+
+Tcl error: watchinspector.cc#62: can't read "insp": no such variable
+    while executing
+"inspector:bindSideButtons $insp"
+    (procedure "createWatchViewer" line 7)
+    invoked from within
+"createWatchViewer $insp.main"
+    (procedure "createWatchInspector" line 7)
+    invoked from within
+"createWatchInspector .inspector10 318x54+842+112:normal"
+
+
+Tcl error: watchinspector.cc#62: can't read "insp": no such variable
+    while executing
+"inspector:bindSideButtons $insp"
+    (procedure "createWatchViewer" line 7)
+    invoked from within
+"createWatchViewer $insp.main"
+    (procedure "createWatchInspector" line 7)
+    invoked from within
+"createWatchInspector .inspector11 318x54+484+14:normal"
+
+
+----------------------------------------------------------------------
+
+
+Tcl error: watchinspector.cc#62: can't read "insp": no such variable
+    while executing
+"inspector:bindSideButtons $insp"
+    (procedure "createWatchViewer" line 7)
+    invoked from within
+"createWatchViewer $insp.main"
+    (procedure "createWatchInspector" line 7)
+    invoked from within
+"createWatchInspector .inspector1 318x54+778+14:normal"
+
+
+Tcl error: watchinspector.cc#62: can't read "insp": no such variable
+    while executing
+"inspector:bindSideButtons $insp"
+    (procedure "createWatchViewer" line 7)
+    invoked from within
+"createWatchViewer $insp.main"
+    (procedure "createWatchInspector" line 7)
+    invoked from within
+"createWatchInspector .inspector3 318x54+474+14:normal"
+
+
+Tcl error: watchinspector.cc#62: can't read "insp": no such variable
+    while executing
+"inspector:bindSideButtons $insp"
+    (procedure "createWatchViewer" line 7)
+    invoked from within
+"createWatchViewer $insp.main"
+    (procedure "createWatchInspector" line 7)
+    invoked from within
+"createWatchInspector .inspector4 318x54+832+102:normal"
+
+
+Tcl error: watchinspector.cc#62: can't read "insp": no such variable
+    while executing
+"inspector:bindSideButtons $insp"
+    (procedure "createWatchViewer" line 7)
+    invoked from within
+"createWatchViewer $insp.main"
+    (procedure "createWatchInspector" line 7)
+    invoked from within
+"createWatchInspector .inspector5 318x54+244+14:normal"
+
+
+----------------------------------------------------------------------
+
+
+Tcl error: watchinspector.cc#62: can't read "insp": no such variable
+    while executing
+"inspector:bindSideButtons $insp"
+    (procedure "createWatchViewer" line 7)
+    invoked from within
+"createWatchViewer $insp.main"
+    (procedure "createWatchInspector" line 7)
+    invoked from within
+"createWatchInspector .inspector0 318x54+768+14:normal"
+
+
+Tcl error: watchinspector.cc#62: can't read "insp": no such variable
+    while executing
+"inspector:bindSideButtons $insp"
+    (procedure "createWatchViewer" line 7)
+    invoked from within
+"createWatchViewer $insp.main"
+    (procedure "createWatchInspector" line 7)
+    invoked from within
+"createWatchInspector .inspector2 318x54+234+14:normal"
+
+
+Tcl error: watchinspector.cc#62: can't read "insp": no such variable
+    while executing
+"inspector:bindSideButtons $insp"
+    (procedure "createWatchViewer" line 7)
+    invoked from within
+"createWatchViewer $insp.main"
+    (procedure "createWatchInspector" line 7)
+    invoked from within
+"createWatchInspector .inspector3 318x54+822+92:normal"
+
+
+Tcl error: watchinspector.cc#62: can't read "insp": no such variable
+    while executing
+"inspector:bindSideButtons $insp"
+    (procedure "createWatchViewer" line 7)
+    invoked from within
+"createWatchViewer $insp.main"
+    (procedure "createWatchInspector" line 7)
+    invoked from within
+"createWatchInspector .inspector4 318x54+464+14:normal"
+
+
+----------------------------------------------------------------------
+
+
+Tcl error: watchinspector.cc#62: can't read "insp": no such variable
+    while executing
+"inspector:bindSideButtons $insp"
+    (procedure "createWatchViewer" line 7)
+    invoked from within
+"createWatchViewer $insp.main"
+    (procedure "createWatchInspector" line 7)
+    invoked from within
+"createWatchInspector .inspector1 318x54+758+14:normal"
+
+
+Tcl error: watchinspector.cc#62: can't read "insp": no such variable
+    while executing
+"inspector:bindSideButtons $insp"
+    (procedure "createWatchViewer" line 7)
+    invoked from within
+"createWatchViewer $insp.main"
+    (procedure "createWatchInspector" line 7)
+    invoked from within
+"createWatchInspector .inspector3 318x54+454+14:normal"
+
+
+Tcl error: watchinspector.cc#62: can't read "insp": no such variable
+    while executing
+"inspector:bindSideButtons $insp"
+    (procedure "createWatchViewer" line 7)
+    invoked from within
+"createWatchViewer $insp.main"
+    (procedure "createWatchInspector" line 7)
+    invoked from within
+"createWatchInspector .inspector4 318x54+812+82:normal"
+
+
+Tcl error: watchinspector.cc#62: can't read "insp": no such variable
+    while executing
+"inspector:bindSideButtons $insp"
+    (procedure "createWatchViewer" line 7)
+    invoked from within
+"createWatchViewer $insp.main"
+    (procedure "createWatchInspector" line 7)
+    invoked from within
+"createWatchInspector .inspector5 318x54+224+14:normal"
+
+
+----------------------------------------------------------------------
+
+
+Tcl error: watchinspector.cc#62: can't read "insp": no such variable
+    while executing
+"inspector:bindSideButtons $insp"
+    (procedure "createWatchViewer" line 7)
+    invoked from within
+"createWatchViewer $insp.main"
+    (procedure "createWatchInspector" line 7)
+    invoked from within
+"createWatchInspector .inspector0 318x54+748+14:normal"
+
+
+Tcl error: watchinspector.cc#62: can't read "insp": no such variable
+    while executing
+"inspector:bindSideButtons $insp"
+    (procedure "createWatchViewer" line 7)
+    invoked from within
+"createWatchViewer $insp.main"
+    (procedure "createWatchInspector" line 7)
+    invoked from within
+"createWatchInspector .inspector2 318x54+289+14:normal"
+
+
+Tcl error: watchinspector.cc#62: can't read "insp": no such variable
+    while executing
+"inspector:bindSideButtons $insp"
+    (procedure "createWatchViewer" line 7)
+    invoked from within
+"createWatchViewer $insp.main"
+    (procedure "createWatchInspector" line 7)
+    invoked from within
+"createWatchInspector .inspector3 318x54+802+72:normal"
+
+
+Tcl error: watchinspector.cc#62: can't read "insp": no such variable
+    while executing
+"inspector:bindSideButtons $insp"
+    (procedure "createWatchViewer" line 7)
+    invoked from within
+"createWatchViewer $insp.main"
+    (procedure "createWatchInspector" line 7)
+    invoked from within
+"createWatchInspector .inspector4 318x54+484+14:normal"
+
+
+----------------------------------------------------------------------
+
+
+Tcl error: watchinspector.cc#62: can't read "insp": no such variable
+    while executing
+"inspector:bindSideButtons $insp"
+    (procedure "createWatchViewer" line 7)
+    invoked from within
+"createWatchViewer $insp.main"
+    (procedure "createWatchInspector" line 7)
+    invoked from within
+"createWatchInspector .inspector0 318x54+748+14:normal"
+
+
+Tcl error: watchinspector.cc#62: can't read "insp": no such variable
+    while executing
+"inspector:bindSideButtons $insp"
+    (procedure "createWatchViewer" line 7)
+    invoked from within
+"createWatchViewer $insp.main"
+    (procedure "createWatchInspector" line 7)
+    invoked from within
+"createWatchInspector .inspector2 318x54+289+14:normal"
+
+
+Tcl error: watchinspector.cc#62: can't read "insp": no such variable
+    while executing
+"inspector:bindSideButtons $insp"
+    (procedure "createWatchViewer" line 7)
+    invoked from within
+"createWatchViewer $insp.main"
+    (procedure "createWatchInspector" line 7)
+    invoked from within
+"createWatchInspector .inspector3 318x54+802+72:normal"
+
+
+Tcl error: watchinspector.cc#62: can't read "insp": no such variable
+    while executing
+"inspector:bindSideButtons $insp"
+    (procedure "createWatchViewer" line 7)
+    invoked from within
+"createWatchViewer $insp.main"
+    (procedure "createWatchInspector" line 7)
+    invoked from within
+"createWatchInspector .inspector4 318x54+484+14:normal"
+
+
+----------------------------------------------------------------------
+
+
+Tcl error: watchinspector.cc#62: can't read "insp": no such variable
+    while executing
+"inspector:bindSideButtons $insp"
+    (procedure "createWatchViewer" line 7)
+    invoked from within
+"createWatchViewer $insp.main"
+    (procedure "createWatchInspector" line 7)
+    invoked from within
+"createWatchInspector .inspector1 318x54+738+14:normal"
+
+
+Tcl error: watchinspector.cc#62: can't read "insp": no such variable
+    while executing
+"inspector:bindSideButtons $insp"
+    (procedure "createWatchViewer" line 7)
+    invoked from within
+"createWatchViewer $insp.main"
+    (procedure "createWatchInspector" line 7)
+    invoked from within
+"createWatchInspector .inspector3 318x54+474+14:normal"
+
+
+Tcl error: watchinspector.cc#62: can't read "insp": no such variable
+    while executing
+"inspector:bindSideButtons $insp"
+    (procedure "createWatchViewer" line 7)
+    invoked from within
+"createWatchViewer $insp.main"
+    (procedure "createWatchInspector" line 7)
+    invoked from within
+"createWatchInspector .inspector4 318x54+792+62:normal"
+
+
+Tcl error: watchinspector.cc#62: can't read "insp": no such variable
+    while executing
+"inspector:bindSideButtons $insp"
+    (procedure "createWatchViewer" line 7)
+    invoked from within
+"createWatchViewer $insp.main"
+    (procedure "createWatchInspector" line 7)
+    invoked from within
+"createWatchInspector .inspector5 318x54+279+14:normal"
+
+
+----------------------------------------------------------------------
+
+
+Tcl error: watchinspector.cc#62: can't read "insp": no such variable
+    while executing
+"inspector:bindSideButtons $insp"
+    (procedure "createWatchViewer" line 7)
+    invoked from within
+"createWatchViewer $insp.main"
+    (procedure "createWatchInspector" line 7)
+    invoked from within
+"createWatchInspector .inspector0 318x54+728+14:normal"
+
+
+Tcl error: watchinspector.cc#62: can't read "insp": no such variable
+    while executing
+"inspector:bindSideButtons $insp"
+    (procedure "createWatchViewer" line 7)
+    invoked from within
+"createWatchViewer $insp.main"
+    (procedure "createWatchInspector" line 7)
+    invoked from within
+"createWatchInspector .inspector2 318x54+269+14:normal"
+
+
+Tcl error: watchinspector.cc#62: can't read "insp": no such variable
+    while executing
+"inspector:bindSideButtons $insp"
+    (procedure "createWatchViewer" line 7)
+    invoked from within
+"createWatchViewer $insp.main"
+    (procedure "createWatchInspector" line 7)
+    invoked from within
+"createWatchInspector .inspector3 318x54+782+52:normal"
+
+
+Tcl error: watchinspector.cc#62: can't read "insp": no such variable
+    while executing
+"inspector:bindSideButtons $insp"
+    (procedure "createWatchViewer" line 7)
+    invoked from within
+"createWatchViewer $insp.main"
+    (procedure "createWatchInspector" line 7)
+    invoked from within
+"createWatchInspector .inspector4 318x54+464+14:normal"
+
+
+----------------------------------------------------------------------
+
+
+Tcl error: watchinspector.cc#62: can't read "insp": no such variable
+    while executing
+"inspector:bindSideButtons $insp"
+    (procedure "createWatchViewer" line 7)
+    invoked from within
+"createWatchViewer $insp.main"
+    (procedure "createWatchInspector" line 7)
+    invoked from within
+"createWatchInspector .inspector1 318x54+718+14:normal"
+
+
+Tcl error: watchinspector.cc#62: can't read "insp": no such variable
+    while executing
+"inspector:bindSideButtons $insp"
+    (procedure "createWatchViewer" line 7)
+    invoked from within
+"createWatchViewer $insp.main"
+    (procedure "createWatchInspector" line 7)
+    invoked from within
+"createWatchInspector .inspector3 318x54+454+14:normal"
+
+
+Tcl error: watchinspector.cc#62: can't read "insp": no such variable
+    while executing
+"inspector:bindSideButtons $insp"
+    (procedure "createWatchViewer" line 7)
+    invoked from within
+"createWatchViewer $insp.main"
+    (procedure "createWatchInspector" line 7)
+    invoked from within
+"createWatchInspector .inspector4 318x54+772+42:normal"
+
+
+Tcl error: watchinspector.cc#62: can't read "insp": no such variable
+    while executing
+"inspector:bindSideButtons $insp"
+    (procedure "createWatchViewer" line 7)
+    invoked from within
+"createWatchViewer $insp.main"
+    (procedure "createWatchInspector" line 7)
+    invoked from within
+"createWatchInspector .inspector5 318x54+259+14:normal"
+
+
+----------------------------------------------------------------------
+
+
+Tcl error: watchinspector.cc#62: can't read "insp": no such variable
+    while executing
+"inspector:bindSideButtons $insp"
+    (procedure "createWatchViewer" line 7)
+    invoked from within
+"createWatchViewer $insp.main"
+    (procedure "createWatchInspector" line 7)
+    invoked from within
+"createWatchInspector .inspector0 318x54+708+14:normal"
+
+
+Tcl error: watchinspector.cc#62: can't read "insp": no such variable
+    while executing
+"inspector:bindSideButtons $insp"
+    (procedure "createWatchViewer" line 7)
+    invoked from within
+"createWatchViewer $insp.main"
+    (procedure "createWatchInspector" line 7)
+    invoked from within
+"createWatchInspector .inspector2 318x54+249+14:normal"
+
+
+Tcl error: watchinspector.cc#62: can't read "insp": no such variable
+    while executing
+"inspector:bindSideButtons $insp"
+    (procedure "createWatchViewer" line 7)
+    invoked from within
+"createWatchViewer $insp.main"
+    (procedure "createWatchInspector" line 7)
+    invoked from within
+"createWatchInspector .inspector3 318x54+762+32:normal"
+
+
+Tcl error: watchinspector.cc#62: can't read "insp": no such variable
+    while executing
+"inspector:bindSideButtons $insp"
+    (procedure "createWatchViewer" line 7)
+    invoked from within
+"createWatchViewer $insp.main"
+    (procedure "createWatchInspector" line 7)
+    invoked from within
+"createWatchInspector .inspector4 318x54+444+14:normal"
+
+
+----------------------------------------------------------------------
+
+
+Tcl error: watchinspector.cc#62: can't read "insp": no such variable
+    while executing
+"inspector:bindSideButtons $insp"
+    (procedure "createWatchViewer" line 7)
+    invoked from within
+"createWatchViewer $insp.main"
+    (procedure "createWatchInspector" line 7)
+    invoked from within
+"createWatchInspector .inspector1 318x54+698+14:normal"
+
+
+Tcl error: watchinspector.cc#62: can't read "insp": no such variable
+    while executing
+"inspector:bindSideButtons $insp"
+    (procedure "createWatchViewer" line 7)
+    invoked from within
+"createWatchViewer $insp.main"
+    (procedure "createWatchInspector" line 7)
+    invoked from within
+"createWatchInspector .inspector3 318x54+434+14:normal"
+
+
+Tcl error: watchinspector.cc#62: can't read "insp": no such variable
+    while executing
+"inspector:bindSideButtons $insp"
+    (procedure "createWatchViewer" line 7)
+    invoked from within
+"createWatchViewer $insp.main"
+    (procedure "createWatchInspector" line 7)
+    invoked from within
+"createWatchInspector .inspector4 318x54+752+22:normal"
+
+
+Tcl error: watchinspector.cc#62: can't read "insp": no such variable
+    while executing
+"inspector:bindSideButtons $insp"
+    (procedure "createWatchViewer" line 7)
+    invoked from within
+"createWatchViewer $insp.main"
+    (procedure "createWatchInspector" line 7)
+    invoked from within
+"createWatchInspector .inspector5 318x54+239+14:normal"
+
+
+----------------------------------------------------------------------
+
+
+Tcl error: watchinspector.cc#62: can't read "insp": no such variable
+    while executing
+"inspector:bindSideButtons $insp"
+    (procedure "createWatchViewer" line 7)
+    invoked from within
+"createWatchViewer $insp.main"
+    (procedure "createWatchInspector" line 7)
+    invoked from within
+"createWatchInspector .inspector0 318x54+688+14:normal"
+
+
+Tcl error: watchinspector.cc#62: can't read "insp": no such variable
+    while executing
+"inspector:bindSideButtons $insp"
+    (procedure "createWatchViewer" line 7)
+    invoked from within
+"createWatchViewer $insp.main"
+    (procedure "createWatchInspector" line 7)
+    invoked from within
+"createWatchInspector .inspector2 318x54+229+14:normal"
+
+
+Tcl error: watchinspector.cc#62: can't read "insp": no such variable
+    while executing
+"inspector:bindSideButtons $insp"
+    (procedure "createWatchViewer" line 7)
+    invoked from within
+"createWatchViewer $insp.main"
+    (procedure "createWatchInspector" line 7)
+    invoked from within
+"createWatchInspector .inspector3 318x54+742+14:normal"
+
+
+Tcl error: watchinspector.cc#62: can't read "insp": no such variable
+    while executing
+"inspector:bindSideButtons $insp"
+    (procedure "createWatchViewer" line 7)
+    invoked from within
+"createWatchViewer $insp.main"
+    (procedure "createWatchInspector" line 7)
+    invoked from within
+"createWatchInspector .inspector4 318x54+424+14:normal"
+
+
+----------------------------------------------------------------------
+
+
+Tcl error: watchinspector.cc#62: can't read "insp": no such variable
+    while executing
+"inspector:bindSideButtons $insp"
+    (procedure "createWatchViewer" line 7)
+    invoked from within
+"createWatchViewer $insp.main"
+    (procedure "createWatchInspector" line 7)
+    invoked from within
+"createWatchInspector .inspector1 318x54+678+14:normal"
+
+
+Tcl error: watchinspector.cc#62: can't read "insp": no such variable
+    while executing
+"inspector:bindSideButtons $insp"
+    (procedure "createWatchViewer" line 7)
+    invoked from within
+"createWatchViewer $insp.main"
+    (procedure "createWatchInspector" line 7)
+    invoked from within
+"createWatchInspector .inspector3 318x54+414+14:normal"
+
+
+Tcl error: watchinspector.cc#62: can't read "insp": no such variable
+    while executing
+"inspector:bindSideButtons $insp"
+    (procedure "createWatchViewer" line 7)
+    invoked from within
+"createWatchViewer $insp.main"
+    (procedure "createWatchInspector" line 7)
+    invoked from within
+"createWatchInspector .inspector4 318x54+732+14:normal"
+
+
+Tcl error: watchinspector.cc#62: can't read "insp": no such variable
+    while executing
+"inspector:bindSideButtons $insp"
+    (procedure "createWatchViewer" line 7)
+    invoked from within
+"createWatchViewer $insp.main"
+    (procedure "createWatchInspector" line 7)
+    invoked from within
+"createWatchInspector .inspector5 318x54+219+14:normal"
+
+
+Tcl error: watchinspector.cc#62: can't read "insp": no such variable
+    while executing
+"inspector:bindSideButtons $insp"
+    (procedure "createWatchViewer" line 7)
+    invoked from within
+"createWatchViewer $insp.main"
+    (procedure "createWatchInspector" line 7)
+    invoked from within
+"createWatchInspector .inspector7 318x54+827+211:normal"
+
+
+Tcl error: watchinspector.cc#62: can't read "insp": no such variable
+    while executing
+"inspector:bindSideButtons $insp"
+    (procedure "createWatchViewer" line 7)
+    invoked from within
+"createWatchViewer $insp.main"
+    (procedure "createWatchInspector" line 7)
+    invoked from within
+"createWatchInspector .inspector9 318x54+328+54:normal"
+
+
+Tcl error: watchinspector.cc#62: can't read "insp": no such variable
+    while executing
+"inspector:bindSideButtons $insp"
+    (procedure "createWatchViewer" line 7)
+    invoked from within
+"createWatchViewer $insp.main"
+    (procedure "createWatchInspector" line 7)
+    invoked from within
+"createWatchInspector .inspector10 318x54+820+14:normal"
+
+

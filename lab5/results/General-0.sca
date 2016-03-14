@@ -1,24 +1,24 @@
 version 2
-run General-0-20160302-23:14:35-9387
+run General-0-20160303-11:28:29-3460
 attr configname General
-attr datetime 20160302-23:14:35
+attr datetime 20160303-11:28:29
 attr experiment General
 attr inifile omnetpp.ini
 attr iterationvars ""
 attr iterationvars2 $repetition=0
 attr measurement ""
 attr network LayerNetwork
-attr processid 9387
+attr processid 3460
 attr repetition 0
 attr replication #0
 attr resultdir results
 attr runnumber 0
 attr seedset 0
 
-scalar LayerNetwork.node1.dLayer 	#sent 	111
-scalar LayerNetwork.node1.dLayer 	#received 	91
+scalar LayerNetwork.node1.dLayer 	#sent 	8
+scalar LayerNetwork.node1.dLayer 	#received 	3
 statistic LayerNetwork.node1.dLayer 	"delay vectot"
-field count 91
+field count 3
 field mean 0
 field stddev 0
 field sum 0
@@ -28,10 +28,10 @@ field max 0
 attr type  int
 bin	-INF	0
 bin	-1	0
-bin	0	91
+bin	0	3
 bin	1	0
 statistic LayerNetwork.node1.dLayer 	"RTT vector"
-field count 91
+field count 3
 field mean 0
 field stddev 0
 field sum 0
@@ -41,12 +41,12 @@ field max 0
 attr type  int
 bin	-INF	0
 bin	-1	0
-bin	0	91
+bin	0	3
 bin	1	0
-scalar LayerNetwork.node2.dLayer 	#sent 	96
-scalar LayerNetwork.node2.dLayer 	#received 	96
+scalar LayerNetwork.node2.dLayer 	#sent 	3
+scalar LayerNetwork.node2.dLayer 	#received 	3
 statistic LayerNetwork.node2.dLayer 	"delay vectot"
-field count 96
+field count 3
 field mean 0
 field stddev 0
 field sum 0
@@ -56,7 +56,7 @@ field max 0
 attr type  int
 bin	-INF	0
 bin	-1	0
-bin	0	96
+bin	0	3
 bin	1	0
 statistic LayerNetwork.node2.dLayer 	"RTT vector"
 field count 0
