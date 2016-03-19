@@ -1,0 +1,22 @@
+version 2
+run General-0-20160320-02:15:29-7249
+attr configname General
+attr datetime 20160320-02:15:29
+attr experiment General
+attr inifile omnetpp.ini
+attr iterationvars ""
+attr iterationvars2 $repetition=0
+attr measurement ""
+attr network ForwardingNetwork
+attr processid 7249
+attr repetition 0
+attr replication #0
+attr resultdir results
+attr runnumber 0
+attr seedset 0
+
+vector 0  ForwardingNetwork.n4D.aLayer  "delay vector"  ETV
+0	154	10.8	0.8
+0	190	12.4	12.4
+0	226	14	14
+0	262	15.6	15.6
